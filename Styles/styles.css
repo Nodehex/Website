@@ -29,3 +29,17 @@ max-width: 100%;
     justify-content: center;
     max-width: 100%;
 }
+
+#cardSection {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 400x;
+    width: 400px;
+}
