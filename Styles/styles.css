@@ -3,10 +3,25 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-/* font-family: 'Nova Square', cursive; */
 width: 100vw;
 height: 100vh;
 max-width: 100%;
+background-color: firebrick;
+}
+
+#landingImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#landingButtton { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
 }
 
 #landingSection h1 {
@@ -28,6 +43,7 @@ max-width: 100%;
     align-items: center;
     justify-content: center;
     max-width: 100%;
+    flex-direction: column;
 }
 
 #cardSection {
@@ -51,6 +67,7 @@ max-width: 100%;
     align-items: center;
     justify-content: center;
     max-width: 100%;
+    border: 1px black solid;
 }
 
 .formSection { 
