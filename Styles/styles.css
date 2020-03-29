@@ -98,7 +98,6 @@ border: 1px black solid;
 }
 
 .cardDetail {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -108,9 +107,29 @@ border: 1px black solid;
     padding: 2%;
 }
 
+
+
 .cardDetail h2 {
     font-family: 'Nova Square', cursive;
     text-transform: uppercase;
+}
+
+.cardDetail span {
+    width: 45%;
+    height: 1%;
+    border-bottom: 5px solid black;
+}
+
+.cardDetail h6 {
+    font-weight: bold;
+}
+
+.cardDetail a {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    padding: 1% 10%;
+    border-radius: 10%/50%;
 }
 
 .cards {
@@ -118,6 +137,7 @@ border: 1px black solid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 35%;
     width: 15%;
     border: 1px solid black;
