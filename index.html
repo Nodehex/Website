@@ -24,10 +24,9 @@
 
 <body>
 
-  <section id="landingSection">
-    <img
-      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80"
-      alt="">
+  <div id="particles-js"></div>
+
+  <section class="" id="landingSection">
     <div id="landingButton">
       <h1>AeonDS</h1>
       <a href="#introSection" class="arrow">
@@ -103,6 +102,13 @@
       </div>
     </div>
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS.load('particles-js','particles.json', function()
+  {
+    console.log('Particles.json loaded...')
+  });
+</script>
 </body>
-<script src="script.js"></script>
 </html>
