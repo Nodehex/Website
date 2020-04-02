@@ -10,20 +10,6 @@ html, body {
     height: 100%;
 }
 
-/* 
-Commented out due to being replaced by #particles-js
- 
-#landingSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    background-color: #344972;
-} */
-
 #particles-js {
     display: flex;
     flex-direction: column;
