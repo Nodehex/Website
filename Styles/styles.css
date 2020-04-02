@@ -10,7 +10,10 @@ html, body {
     height: 100%;
 }
 
-/* #landingSection {
+/* 
+Commented out due to being replaced by #particles-js
+ 
+#landingSection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +33,16 @@ html, body {
     height: 100vh;
     max-width: 100%;
     background-color: #344972;
+}
+
+#particles-js h1 {
+    position: absolute;
+    top: 45%;
+}
+
+#particles-js a {
+    position: absolute;
+    top: 80%;
 }
 
 .arrow{
@@ -264,3 +277,17 @@ html, body {
     font-size: 20px;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
