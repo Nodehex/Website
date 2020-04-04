@@ -10,6 +10,10 @@ html, body {
     height: 100%;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 #particles-js {
     display: flex;
     flex-direction: column;
@@ -174,6 +178,12 @@ html, body {
     box-shadow: 0px 0px 15px 0px rgba(23,22,23,0.77);
 }
 
+.cards p {
+    text-align: center;
+    font-size: 1em;
+    padding: 5%;
+}
+
 .cards:hover {
     border: 1px solid #232022;
     background-color: #2E364B;
@@ -264,7 +274,28 @@ html, body {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
+@media only screen and (max-width: 600px) {
+    #cardSection {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .cards {
+        width: 90%;
+        height: 100%;
+        margin: 5%;
+    }
+
+    .cards h4 {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .cards i {
+        font-size: 3rem;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {...}
