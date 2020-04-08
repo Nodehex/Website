@@ -10,6 +10,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -28,6 +32,11 @@ html, body {
 #particles-js h1 {
     position: absolute;
     top: 45%;
+}
+
+#particles-js h3 {
+    position: absolute;
+    top: 55%;
 }
 
 #particles-js a {
@@ -84,227 +93,3 @@ html, body {
     width: 100vw;
     max-width: 100%;
 }
-
-#landingSection h1 {
-    font-family: 'Nova Square', cursive; 
-    margin-bottom: 5%;
-}
-
-#landingSection a {
-    /* background-color: #232022; */
-    margin-bottom: 8%;
-}
-
-#calltoaction h3 {
-    font-family: 'Nova Square', cursive; 
-}
-
-#introSection {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    flex-direction: column;
-}
-
-#cardSection {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.cardDetail {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    height: 45%;
-    width: 40%;
-    padding: 2%;
-}
-
-.cardDetail h2 {
-    font-family: 'Nova Square', cursive;
-    text-transform: uppercase;
-    color: #232022;
-    margin-top: 0;
-}
-
-.cardDetail p {
-    text-align: justify;
-    padding-right: 20%;
-}
-
-.cardDetail span {
-    width: 62%;
-    height: 1%;
-    border-bottom: 5px solid #344972;
-    margin-bottom: 5%;
-}
-
-.cardDetail h6 {
-    font-weight: bold;
-    margin-top: 0;
-}
-
-.cardDetail a {
-    border: 1px solid #232022;
-    color: white;
-    background-color: #344972;
-    padding: 1% 10%;
-    border-radius: 10%/50%;
-}
-
-.cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #344972;
-    color: white;
-    height: 35%;
-    width: 15%;
-    border: 1px solid #232022;
-    border-radius: 5%;
-    transition: 0.3s;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(23,22,23,0.77);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(23,22,23,0.77);
-    box-shadow: 0px 0px 15px 0px rgba(23,22,23,0.77);
-}
-
-.cards p {
-    text-align: center;
-    font-size: 1em;
-    padding: 5%;
-}
-
-.cards:hover {
-    border: 1px solid #232022;
-    background-color: #2E364B;
-    color: white;
-}
-
-.cards i {
-    font-size: 5rem;
-}
-
-#forthSection {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-}
-
-/* #formSection { 
-    
-} */
-
-#footer {
-    width: 100vw;
-    display: block;
-    overflow: hidden;
-    padding: 70px 0;
-    box-sizing: border-box;
-    background-color: #344972;
-    max-width: 100%;
-}
-
-.innerFooter {
-    display: block;
-    margin: 0 auto;
-    width: 1100px;
-    height: 100%;
-}
-
-.innerFooter .logoContainer {
-    width: 35%;
-    float: left;
-    height: 100%;
-    display: block;
-}
-
-.innerFooter .logoContainer img {
-    width: 65px;
-    height: auto;
-}
-
-.innerFooter .footerThird {
-    width: calc(21.6666666667% - 20px);
-    margin-right: 10px;
-    float: left;
-    height: 100%;
-}
-
-.innerFooter .footerThird:last-child {
-    margin-right: 0;
-}
-
-.innerFooter .footerThird h1 {
-    font-family: 'arial';
-    font-size: 25px;
-    color: white;
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.innerFooter .footerThird a {
-    font-family: 'arial';
-    font-size: 15px;
-    color: white;
-    display: block;
-    width: 100%;
-    margin-bottom: 0px;
-    font-weight: 200px;
-    padding-bottom: 5px;
-}
-
-.innerFooter .footerThird li {
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 20px;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    #cardSection {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    .cards {
-        width: 90%;
-        height: 100%;
-        margin: 5%;
-    }
-
-    .cards h4 {
-        font-size: 2rem;
-        width: 80%;
-    }
-
-    .cards i {
-        font-size: 3rem;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
