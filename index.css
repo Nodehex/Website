@@ -1,0 +1,354 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+svg {
+  pointer-events: none;
+}
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  height: 150px;
+  line-height: 150px;
+  box-shadow: none;
+  background-color: #1C2139;
+  z-index: 100;
+}
+
+.navbar-fixed {
+  height: 0px;
+}
+
+nav svg {
+  border-bottom: solid 1px white;
+}
+
+.brand-logo img {
+  height: 50px;
+  width: auto;
+  margin-top: 50px;
+}
+
+nav ul a {
+  font-size: 1.8rem;
+}
+
+nav ul li {
+  padding: 0px 30px;
+}
+
+.icon-fixed-small {
+  position: fixed;
+  top: 35px;
+  right: 35px;
+}
+
+.icon-fixed-small img {
+  width: 80px; height: 80px;
+}
+
+.nav-svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+      width: 80%;
+  }
+  .hero-text {
+    max-width: 40%;
+  }
+}
+
+.container {
+  max-width: 1520px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*background-color: green;*/
+  background-image: url(assets/pietro-jeng-n6B49lTx7NM-unsplash.jpg);
+  background-size: contain;
+  background-repeat: none;
+  background-position: right;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: column;
+  padding-top: 150px;
+}
+
+.hero-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero .wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-text-container img {
+  height: 130px;
+  width: auto;
+  margin-right: 30px;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero-letterbox {
+  width: 100%;
+  height: 120px;
+  background-color: #1C2139;
+}
+
+/* ==================================================== services ================================================================ */
+.services {
+  margin-top: -42px;
+  min-height: 100%;
+  width: 100%;
+  color: #191919;
+  position: relative;
+  display: inline-block;
+  background-repeat: repeat;
+}
+
+.services .container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.services .images-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.service {
+  width: 350px;
+  margin: 50px 20px;
+  background-color: #f5f7f5;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px gray;
+}
+
+.service h4 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+}
+
+.services h1 {
+  text-align: center;
+  font-weight: 350;
+}
+
+img.title-icon {
+  height: 1em;
+  width: auto;
+}
+
+svg.services-background-top {
+  z-index: -1;
+  margin-top: 42px;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.services-background-hex {
+  background-image: url(assets/hex_pattern.svg);
+  z-index: -1;
+  position: absolute;
+  top: 50%; left: 0;
+  height: 50%;
+  width: 100%;
+}
+
+.services-background-bottom {
+  z-index: 5;
+  position: absolute;
+  top: 50%; left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.services .flex-balancer {
+  height: 100px;
+}
+
+/* ==================================================== about ================================================================ */
+
+.about {
+  min-height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 128% 80%;
+  position: relative;
+}
+@media only screen and (min-width: 600px) {
+  .about {
+    background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
+  }
+}
+
+.about-background-whole {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.about .container {
+  position: relative;
+  padding-top: 50px;
+  z-index: 6;
+  color: #191919;
+}
+
+.about-text {
+  font-size: 2em;
+}
+
+/* ==================================================== contact ================================================================ */
+
+.contact {
+  height: 100%;
+  position: relative;
+  background-color: #1C2139;
+}
+
+.contact .container {
+  padding-top: 50px;
+}
+
+.contact .container h1 {
+  margin-top: 0px;
+}
+
+.contact-background {
+  z-index: 5;
+  position: absolute;
+  top: -10%; left: 0;
+  height: 110%;
+  width: 100%;
+}
+
+.contact .title-icon {
+  filter: invert(1)
+}
+
+.contact textarea {
+  height: 10rem;
+  color: white;
+}
+
+.contact input {
+  color: white;
+}
+
+.contact .row {
+  position: relative;
+}
+
+.contact .hex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  position: absolute !important;
+}
+
+/*
+html, body {
+
+  height: 200%;
+  margin: 0;
+}
+
+.header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  border-bottom: solid 1px white;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 11;
+  text-align: center;
+}
+
+.logo-container {
+  width: 24%;
+  padding-top: 25px;
+}
+
+.spacer {
+  width: 30%;
+}
+
+.links {
+  width: 40%;
+}
+
+.logo-container img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-right img{
+  width: 80px; height: auto;
+  padding-top: 12px;
+}
+
+.homepage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-image: url(assets/pietro-jeng-n6B49lTx7NM-unsplash.jpg);
+  background-position: 90% -100%;
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+}
+
+.homepage svg {
+  overflow: visible;
+  z-index: 10;
+}
+*/

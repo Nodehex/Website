@@ -1,46 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeon/DS</title>
+    <!-- materialize -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162545543-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <link rel="stylesheet" href="index.css">
 
-    gtag('config', 'UA-162545543-1');
-  </script>
-  <script src="https://kit.fontawesome.com/e1bc6a30fb.js" crossorigin="anonymous"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>AeonDS</title>
-  <link rel="stylesheet" href="Styles/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <div id="particles-js">
-    <div id="landingButton">
-      <h1>AEON/DS</h1>
-      <h1>CI test</h1>
-      <h1>CI test2</h1>
-      <h3>We're launching soon! Please check in shortly. This is a test.</h3>
-      </a>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <svg class="nav-svg" width="100%" height="150px" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon points="0,0 10,0 17,100, 0,100" fill="#4C6CA8" /> <!-- blue -->
+          <polygon points="90,0 100,0 100,100, 83,100" fill="#AD4159" /> <!-- red -->
+        </svg>
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo"><img src="assets/aeon logo.svg" alt=""></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">HOME</a></li>
+            <li><a href="badges.html">SERVICES</a></li>
+            <li><a href="collapsible.html">ABOUT</a></li>
+            <li><a href="collapsible.html">CONTACT</a></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <a href="#" class="icon-fixed-small hide-on-small-only"><img src="assets/aeon icon.svg" alt=""></a>
+      </nav>
     </div>
-  </div>
+    <div class="hero">
+      <div class="hero-letterbox hide-on-small-only">
+        <svg width="100%" height="120px" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon points="0,0 17,0 22.6,100, 0,100" fill="#4C6CA8" /> <!-- blue -->
+          <polygon points="83,0 100,0 100,100, 77.4,100" fill="#AD4159" /> <!-- red -->
+        </svg>
+      </div>
+      <div class="wrapper">
+        <svg class="hero-background hide-on-small-only" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon points="0,0 45,0 55,50, 45,100, 0,100" fill="#1C2139" /> <!-- blue -->
+        </svg>
+        <div class="container">
+          <div class="hero-text-container">
+            <img src="assets/Hero Hexagons.svg" class="hide-on-small-only" alt="">
+            <h1 class ="hero-text">High-quality documentation for high performance data centres</h1>
+          </div>
+        </div>
+      </div>
+      <div class="hero-letterbox">
+        <svg width="100%" class="hide-on-small-only" height="120px" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon points="0,100 17,100 22.6,0, 0,0" fill="#4C6CA8" /> <!-- blue -->
+        </svg>
+      </div>
+    </div>
+    <div class="services">
+      <svg class="services-background-top hide-on-small-only" width="100%" height="364px" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0,0 17,0 0,100" fill="#4C6CA8" /> <!-- blue -->
+      </svg>
+      <div class="container">
+        <h1><img src="assets/page title icons.svg" class="title-icon" alt=""> SERVICES</h1>
+        <div class="services-images">
+          <div class="images-row">
+            <div class="service">
+              <img src="https://aeonds.com/assets/closeout-management.webp" alt="">
+              <h4>closeout management</h4>
+              <p>Coordination and delivery of high quality closeout by ensuring critical processes and check-points are in place from project initiation through to operations.</p>
+            </div>
+            <div class="service">
+              <img src="https://aeonds.com/assets/reportinganalysis.webp" alt="">
+              <h4>REPORTING & ANALYTICS</h4>
+              <p>Tracking closeout, analysis of pain points and clear, easy to digest dashboards to ensure that you have the information needed to accurately pinpoint documentation progress.</p>
+            </div>
+            <div class="service">
+              <img src="https://aeonds.com/assets/operationsmaintenance.webp" alt="">
+              <h4>OPERATIONS & MAINTENANCE MANUALS</h4>
+              <p>Maintaining a high quality building often requires a stellar foundation of information. We manage the manual process to ensure your operations team start on steady ground.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-balancer"></div>
+      </div>
+      <div class="services-background-hex"></div>
+      <svg class="services-background-bottom hide-on-small-only" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="100,5 100,40 95.7,50 86,50 74.2,77 69,77" fill="#1C2139" /> <!-- blue -->
+        <polygon points="77.6,35 83,35 71.2,62 66,62" fill="#AD4159" /> <!-- red -->
+      </svg>
+    </div>
+    <div class="about">
+      <div class="container">
+        <h1><img src="assets/page title icons.svg" class="title-icon" alt=""> ABOUT</h1>
+        <div class="row">
+          <div class="about-text col m6 s12">
+            <p>
+              We are a professional services company who specialise in documentation and reporting for hyperscale data centers. We simplify the process by removing the ambiguity and ensuring that at handover, your delivery to the client will make a lasting impression for information on mission-critical systems
+            </p>
+            <p>
+              Our services focus on providing a front-loaded effort to ensure an effective delivery throughout the design and construction phases. This being combined with support into the first year of operations and maintenance, a smooth transition and high-quality documentation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <svg class="about-background-whole" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0,0 85,0 65,50 85,100 0,100" fill="#fff" /> <!-- white -->
+      </svg>
+    </div>
+    <div class="contact">
+      <svg class="contact-background hide-on-small-only" width="100%" height="364px" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0,0 25,50 0,100" fill="#F4B545" /> <!-- yellow -->
+      </svg>
+      <div class="container">
+        <div class="row">
+          <div class="col s1 push-s4 hex-container">
+            <img src="assets/bottom-hexagons.svg" alt="">
+          </div>
+          <div class="col s12 m4 push-m6">
+            <h1><img src="assets/page title icons.svg" class="title-icon" alt=""> CONTACT</h1>
+            <h5>Enter Your Name</h5>
+            <input type="text" name="" value="">
+            <h5>Enter Your Email</h5>
+            <input type="email" name="" value="">
+            <h5>Enter Your Subject</h5>
+            <input type="text" name="" value="">
+            <h5>Enter Your Message</h5>
+            <textarea name="name" rows="10" cols="30"></textarea>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <script>
-    particlesJS.load('particles-js', 'particles.json', function () {
-      console.log('Particles.json loaded...')
-    });
-  </script>
-</body>
-
+            <a class="btn">Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
