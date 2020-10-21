@@ -190,7 +190,7 @@ svg.services-background-top {
 }
 
 .services-background-hex {
-  background-image: url(assets/hex_pattern.svg);
+  background-image: url(assets/hex_pattern_45_opacity.svg);
   z-index: -1;
   position: absolute;
   top: 50%; left: 0;
