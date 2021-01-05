@@ -105,3 +105,11 @@ nav {
 .services-background-top {
   z-index: 2;
 }
+
+li {
+  font-size: 1.2em;
+}
+
+li.tabbed {
+  margin-left: 30px;
+}
