@@ -6,7 +6,7 @@ window.addEventListener('scroll', e => {
 });
 
 const resizeHeader = (scrollYPart) => {
-  console.log(scrollYPart)
+  scrollYPart = 1;
   const barHeight = 150 - 75 * scrollYPart
   const logoIconTop = 35 - 22.5 * scrollYPart
   const logoMarginTop = 50 - 37.5 * scrollYPart
@@ -22,3 +22,6 @@ const resizeHeader = (scrollYPart) => {
   document.querySelectorAll('nav svg')
     .forEach(element => element.setAttribute("height", `${barHeight}px`));
 }
+
+
+resizeHeader(0);
