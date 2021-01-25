@@ -10,8 +10,8 @@ svg {
 }
 
 nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-  height: 150px;
-  line-height: 150px;
+  height: 75px;
+  line-height: 75px;
   box-shadow: none;
   background-color: #1C2139;
   z-index: 100;
@@ -72,16 +72,16 @@ nav ul li {
   width: 100%;
   height: 100%;
   /*background-color: green;*/
-  background-image: url(assets/pietro-jeng-n6B49lTx7NM-unsplash.jpg);
+  background-image: url(assets/scott-blake-x-ghf9LjrVg-unsplash.jpg);
   background-size: contain;
   background-repeat: none;
-  background-position: right;
+  background-position: 200% 0%;
   z-index: -1;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-direction: column;
-  padding-top: 150px;
+  padding-top: 75px;
 }
 
 .hero-background {
