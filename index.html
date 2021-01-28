@@ -8,52 +8,46 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
     <link rel="stylesheet" href="index.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/467034ff6c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="navbar-fixed">
       <nav>
-        <svg class="nav-svg" width="100%" height="150px" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <polygon points="0,0 13.5,0 17,100, 0,100" fill="#4C6CA8" /> <!-- blue -->
-          <polygon points="86.5,0 100,0 100,100, 83,100" fill="#AD4159" /> <!-- red -->
-        </svg>
         <div class="nav-wrapper container">
-          <a href="#" class="brand-logo"><img src="assets/aeon logo.svg" alt=""></a>
+          <a href="#" class="brand-logo"><img src="assets/aeon logo.svg" alt="" class="svg-color"></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#home">HOME</a></li>
             <li><a href="#services">SERVICES</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <li></li>
-            <li></li>
           </ul>
         </div>
-        <a href="#" class="icon-fixed-small hide-on-small-only"><img src="assets/aeon icon.svg" alt=""></a>
+        <a href="#" class="icon-fixed-small hide-on-small-only"><img src="assets/aeon icon.svg" class="svg-color" alt=""></a>
       </nav>
     </div>
     <div class="hero" id="home">
-      <div class="hero-letterbox hide-on-small-only">
-        <svg width="100%" height="120px" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <polygon points="0,0 17,0 22.6,100, 0,100" fill="#4C6CA8" /> <!-- blue -->
-          <polygon points="83,0 100,0 100,100, 77.4,100" fill="#AD4159" /> <!-- red -->
-        </svg>
-      </div>
-      <div class="wrapper">
-        <svg class="hero-background hide-on-small-only" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <polygon points="0,0 45,0 55,50, 45,100, 0,100" fill="#1C2139" /> <!-- blue -->
-        </svg>
-        <div class="container">
-          <div class="hero-text-container">
-            <img src="assets/Hero Hexagons.svg" class="hide-on-small-only" alt="">
-            <h1 class ="hero-text">High-quality documentation for high performance data centres</h1>
+      <div class="background-blur"></div>
+      <div class="left"></div>
+      <div class="side">
+        <div class="hero-text-container">
+          <div class="pusher"></div>
+          <div class="hero-text-background">
+            <div class="wrap">
+              <img src="assets/Hero Hexagons.svg" class="left-hex hide-on-small-only" alt="">
+              <div class="right">
+                <!-- <img src="assets/aeon icon.svg" alt="" class="svg-color icon-inline"> -->
+                <h2 class="title"><span class="sec-colour">Aeon</span> Data Services</h2>
+                <h2 class="second">High quality documentation</h2>
+                <h2 class="second">High performing data centres</h2>
+                <h2 class="right"><a href="#services">Explore <i class="fas fa-chevron-right chevron"></i></a></h2>
+              </div>
+              <div class="push-right show-on-large-only"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="hero-letterbox">
-        <svg width="100%" class="hide-on-small-only" height="120px" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <polygon points="0,100 17,100 22.6,0, 0,0" fill="#4C6CA8" /> <!-- blue -->
-        </svg>
       </div>
     </div>
     <div class="services" id="services">
@@ -66,21 +60,18 @@
           <div class="images-row">
             <a href="information-management.html">
               <div class="service">
-                <img src="https://aeonds.com/assets/closeout-management.webp" alt="">
                 <h4>INFORMATION MANAGEMENT</h4>
                 <p>Management and coordination of digital assets, data and consultancy on process and implementation for information management systems.</p>
               </div>
           </a>
           <a href="analytics.html">
             <div class="service">
-              <img src="https://aeonds.com/assets/reportinganalysis.webp" alt="">
               <h4>REPORTING & ANALYTICS</h4>
               <p>Tracking closeout, analysis of pain points and clear, easy to digest dashboards to ensure that you have the information needed to accurately pinpoint documentation progress.</p>
             </div>
           </a>
           <a href="operationsmaintenance.html">
             <div class="service">
-              <img src="https://aeonds.com/assets/operationsmaintenance.webp" alt="">
               <h4>OPERATIONS & MAINTENANCE MANUALS</h4>
               <p>Maintaining a high quality building often requires a stellar foundation of information. We manage the manual process to ensure your operations team start on steady ground.</p>
             </div>
@@ -120,7 +111,7 @@
       <div class="container">
         <div class="row">
           <div class="col s1 push-s4 hex-container">
-            <img src="assets/bottom-hexagons.svg" alt="">
+            <img class="hide-on-med-and-down" src="assets/bottom-hexagons.svg" alt="">
           </div>
           <div class="col s12 m4 push-m6">
             <h1><img src="assets/page title icons.svg" class="title-icon" alt=""> CONTACT</h1>
