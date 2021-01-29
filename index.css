@@ -257,6 +257,16 @@ nav ul li {
   justify-content: center;
 }
 
+.services .width-adjuster {
+  display: flex;
+  flex-direction: row;
+}
+
+.services .pusher-right {
+  position: relative;
+  width:25%;
+}
+
 .services .container {
   padding-top: 50px;
   display: flex;
@@ -267,6 +277,9 @@ nav ul li {
 .services-tabbing {
   display: flex;
   flex-direction: row;
+  -webkit-box-shadow: 10px 10px 32px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 32px -11px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 32px -11px rgba(0,0,0,0.75);
 }
 
 .services-tabbing .tabs {
@@ -311,7 +324,7 @@ nav ul li {
   height: 100%;
 }
 
-.service .btn {
+.btn {
   background-color: #1c1a18;
   color: #f4ce45e8;
 }
@@ -380,11 +393,18 @@ svg.services-background-top {
   position: relative;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  background-color: #1c1a18;
 }
 @media only screen and (min-width: 600px) {
   .about {
     background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
   }
+}
+
+#why-aeon.about {
+  background-image: none;
+  background-color: #505050;
+  min-height: 50%;
 }
 
 .about-background-whole {
@@ -398,11 +418,11 @@ svg.services-background-top {
   position: relative;
   padding-top: 50px;
   z-index: 6;
-  color: #191919;
+  color: #f5f7f5;
 }
 
 .about-text {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 /* ==================================================== contact ================================================================ */
@@ -411,7 +431,7 @@ svg.services-background-top {
   padding-top: 10%;
   height: 100%;
   position: relative;
-  background-color: #1C2139;
+  background-color: #1c1a18;
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
