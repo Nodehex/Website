@@ -2,8 +2,9 @@ html, body {
   width: 100%;
   height: 100%;
   color: rgb(239 239 239);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  color: white;
 }
 
 .scroll-snap-container {
@@ -41,6 +42,11 @@ nav ul a {
 
 nav ul a.scrolled {
   color: rgb(90 90 90);
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
 
@@ -244,7 +250,7 @@ nav ul li {
   display: inline-block;
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  background-color: #e4e4e4;
+  background-color: #505050;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,19 +264,61 @@ nav ul li {
   justify-content: space-between;
 }
 
-.services .images-row {
+.services-tabbing {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+}
+
+.services-tabbing .tabs {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+  height: auto;
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  border: none;
+  margin: 0;
+}
+
+.services-tabbing .tabs .indicator {
+  background-color: rgba(0,0,0,0);
+}
+
+.services-tabbing .tabs .tab {
+  height: 78px;
+  flex-grow: 0;
+}
+
+.services-tabbing .tabs .tab a {
+  background-color: #1c1a18;
+  color: #f4ce45e8;
+  height: 78px;
+}
+
+
+.services-tabbing .tabs .tab a.active {
+  background-color: #f5f7f5;
+  color: #1c1a18;
+  height: 78px;
 }
 
 .service {
-  width: 350px;
-  margin: 50px 20px;
   background-color: #f5f7f5;
   color: #1C2139;
-  padding: 10px;
+  padding: 10px 25px;
+  height: 100%;
+}
+
+.service .btn {
+  background-color: #1c1a18;
+  color: #f4ce45e8;
+}
+
+.services .push-bottom {
+  position: relative;
+  height: 30%;
 }
 
 .service h4 {
@@ -284,7 +332,7 @@ nav ul li {
 }
 
 .services h1 {
-  text-align: center;
+  text-align: left;
   font-weight: 350;
 }
 
@@ -315,6 +363,7 @@ svg.services-background-top {
   top: 50%; left: 0;
   height: 100%;
   width: 100%;
+  pointer-events: none;
 }
 
 .services .flex-balancer {
