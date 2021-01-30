@@ -1,55 +1,26 @@
-.mini-hero {
-  width: 100%;
-  height: 40%;
-  position: relative;
-  display: flex;
-  align-items: center;
+html, body {
+  background-color: rgb(28, 26, 24);
+}
+
+.grey-block {
+	width: 100%;
+  background-color: #505050;
+	display: flex;
+	align-items: start;
   justify-content: center;
-  background-image: url(assets/luke-chesser-JKUTrJ4vK00-unsplash.jpg);
-  background-size: contain;
-  background-repeat: none;
-  background-position: right;
 }
 
-.mini-hero svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 0;
-}
-
-.mini-hero .wrapper {
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-
-.hero-text-container {
-  margin-top: 50px;
-}
-
-.hero-text-container h1 {
-  font-size: 5rem;
-  font-weight: 400;
-}
-
-.hero-text-container img {
-  color: white;
-  margin-right: 5px;
-}
-
-.mini-hero .title-icon {
-  filter: invert(1)
-}
-
-.mini-hero {
-  font-weight: 400;
+.black-block {
+	width: 100%;
+  background-color: #1c1a18;
+	display: flex;
+	align-items: start;
+  justify-content: center;
 }
 
 .service-container {
+  padding-top: 75px;
 	width: 100%;
-	height: 70%;
-	position: relative;
 	display: flex;
 	align-items: start;
   justify-content: center;
@@ -63,7 +34,6 @@
 	width: 70%;
 	height: 70%;
   margin-top: 0px;
-  color: #191919;
 }
 
 .service-block h2{
@@ -82,6 +52,7 @@
 	margin-top: 10px;
   font-weight: 300;
   font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
