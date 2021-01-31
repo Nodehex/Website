@@ -316,7 +316,7 @@ svg {
 
 .services-content {
   max-width: 80%;
-  z-index: 6;
+  z-index: 6; /* Resizing the window to certain sizes would cause the svg to stick over the services content */
 }
 
 @media only screen and (min-width: 1000px) {
@@ -368,8 +368,13 @@ svg {
   height: 78px;
   text-align: center;
   line-height: 78px;
+  transition: 0.4s ease-in;
 }
 
+.services-tabbing .tabs .tab a:hover {
+  background-color: #f4ce45e8;
+  color: #1c1a18;
+}
 
 .services-tabbing .tabs .tab a.active {
   color: #1c1a18;
