@@ -45,7 +45,6 @@ nav ul a.scrolled {
   margin-top: 5px;
   height: 1em;
   width: auto;
-  /* 0080d1 */
 }
 
 .navbar-fixed {
@@ -173,7 +172,6 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
-  /*background-color: green;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,14 +191,12 @@ h1 {
   position: relative;
   width: 0%;
   height: 100%;
-  /* background-color: rgba(256,256,256,0.3); */
 }
 
 .hero .side {
   position: relative;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(256,256,256,0.3); */
 }
 
 .background-blur {
@@ -209,7 +205,6 @@ h1 {
   left: 0; top: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url(assets/scott-blake-x-ghf9LjrVg-unsplash.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
@@ -224,19 +219,14 @@ h1 {
 }
 
 .hero-text-container .title {
-  /* color: rgb(165, 60, 60); */
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
 .hero-text-background {
-  /* background-color: rgba(0,0,0,0.7); */
   padding: 15px 50px;
   width: 90%;
   border-radius: 15px;
-  /* -webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.36);
-  -moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.36);
-  box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.36); */
 }
 
 .hero-letterbox {
@@ -306,7 +296,6 @@ svg {
 .services {
   min-height: 100vh;
   width: 100%;
-  /* height: 100%; */
   color: #1C2139;
   position: relative;
   display: inline-block;
@@ -633,62 +622,3 @@ svg.services-background-top {
   float: right;
 }
 
-/*
-html, body {
-
-  height: 200%;
-  margin: 0;
-}
-
-.header {
-  height: 10%;
-  width: 100%;
-  display: flex;
-  border-bottom: solid 1px white;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 11;
-  text-align: center;
-}
-
-.logo-container {
-  width: 24%;
-  padding-top: 25px;
-}
-
-.spacer {
-  width: 30%;
-}
-
-.links {
-  width: 40%;
-}
-
-.logo-container img {
-  height: 50px;
-  width: auto;
-}
-
-.logo-right img{
-  width: 80px; height: auto;
-  padding-top: 12px;
-}
-
-.homepage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  background-image: url(assets/pietro-jeng-n6B49lTx7NM-unsplash.jpg);
-  background-position: 90% -100%;
-  background-repeat: no-repeat;
-  background-size: auto 90%;
-}
-
-.homepage svg {
-  overflow: visible;
-  z-index: 10;
-}
-*/
