@@ -297,6 +297,7 @@ svg {
 
 
 /* ==================================================== services ================================================================ */
+
 .services {
   min-height: 100vh;
   width: 100%;
@@ -400,10 +401,23 @@ svg {
   color: #f4ce45e8;
 }
 
+.btn:hover {
+  background-color: #f4ce45e8;
+  color: #1c1c1c;
+}
+
+.btn {
+  background-color: #f4ce45e8;
+  color: #1c1c1c;
+}
+.btn:hover {
+  background-color: #1c1c1c;
+  color: #f4ce45e8;
+}
 .services-content .content .service .btn {
   position:absolute;
-  bottom:0.3em;
-  right:0.3em;
+  bottom:0.6em;
+  right:0.7em;
 }
 
 .services .push-bottom {
