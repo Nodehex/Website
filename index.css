@@ -64,6 +64,11 @@ nav svg {
 
 nav ul a {
   font-size: 1.8rem;
+  transition: 0.3s;
+}
+
+nav ul a:hover {
+  color: #f4ce45e8;
 }
 
 nav ul li {
@@ -568,13 +573,28 @@ svg.services-background-top {
   filter: invert(1)
 }
 
+.contact input,
 .contact textarea {
-  height: 10rem;
   color: white;
+  transition: 0.2s;
 }
 
-.contact input {
-  color: white;
+.contact input[type=text]:focus,
+.contact input[type=email]:focus {
+  border-bottom: 1px solid #f4ce45e8 !important;
+  box-shadow: 0 1px 0 0 #f4ce45e8 !important;
+}
+
+.contact textarea {
+  height: 10rem;
+  border: 1px solid #9e9e9e !important;
+  border-radius: 4px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.contact textarea:focus {
+  border: 1px solid #f4ce45e8 !important;
 }
 
 .contact .row {
