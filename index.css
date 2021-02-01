@@ -67,14 +67,6 @@ nav ul li {
   margin-top: 12.5px;
 }
 
-.icon-inline {
-  position: relative;
-  top: 7px;
-  margin-top: 5px;
-  height: 1em;
-  width: auto;
-}
-
 .icon-fixed-small {
   position: fixed;
   top: 12.5px;
