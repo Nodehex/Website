@@ -1,3 +1,5 @@
+/* ==================================================== General ================================================================ */
+
 html, body {
   width: 100%;
   height: 100%;
@@ -7,16 +9,31 @@ html, body {
   color: white;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
 
 /* ==================================================== Navbar ================================================================ */
 
 nav {
   top: 0;
-  left: 0;
-  position: absolute;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
 }
 
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+.nav-left {
+  margin-left: 5em;
+}
+
+.nav-right {
+  margin-right: 7em;
+}
+
+nav, nav i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   height: 75px;
   line-height: 75px;
   box-shadow: none;
@@ -26,39 +43,22 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   transition-duration: 0.2s;
 }
 
-nav.scrolled, nav .nav-wrapper i .scrolled, nav a.sidenav-trigger .scrolled, nav a.sidenav-trigger i .scrolled {
-  background-color: #fff;
-  border-bottom: solid 1px #d4d4d4;
-}
-
-.hero a {
-  color: rgb(239 239 239);
-  background-color: rgba(0,0,0,0);
-  z-index: 100;
+nav svg {
+  border-bottom: solid 1px white;
 }
 
 nav ul a {
+  font-size: 1.6rem;
+  transition: 0.3s;
   color: rgb(239 239 239);
 }
 
-nav ul a.scrolled {
-  color: rgb(90 90 90);
+nav ul a:hover {
+  color: #f4ce45e8;
 }
 
-.icon-inline {
-  position: relative;
-  top: 7px;
-  margin-top: 5px;
-  height: 1em;
-  width: auto;
-}
-
-.navbar-fixed {
-  height: 0px;
-}
-
-nav svg {
-  border-bottom: solid 1px white;
+nav ul li {
+  padding: 0px 10px;
 }
 
 .brand-logo img {
@@ -67,17 +67,12 @@ nav svg {
   margin-top: 12.5px;
 }
 
-nav ul a {
-  font-size: 1.8rem;
-  transition: 0.3s;
-}
-
-nav ul a:hover {
-  color: #f4ce45e8;
-}
-
-nav ul li {
-  padding: 0px 30px;
+.icon-inline {
+  position: relative;
+  top: 7px;
+  margin-top: 5px;
+  height: 1em;
+  width: auto;
 }
 
 .icon-fixed-small {
@@ -90,16 +85,13 @@ nav ul li {
   width: 50px; height: 50px;
 }
 
-.nav-svg {
-  position: absolute;
-  top: 0; left: 0;
-}
-
 /* ==================================================== Hero ================================================================ */
 
-h1 {
-  font-family: 'Raleway', sans-serif;
-  color: white;
+
+.hero a {
+  color: rgb(239 239 239);
+  background-color: rgba(0,0,0,0);
+  z-index: 100;
 }
 
 .sec-colour {
@@ -495,6 +487,7 @@ svg.services-background-top {
   scroll-snap-stop: always;
   background-color: #1c1a18;
 }
+
 @media only screen and (min-width: 700px) {
   .about {
     background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
