@@ -14,7 +14,7 @@ html, body {
   color: rgb(239 239 239);
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
-  color: white;
+  color: var(--color-white);
 }
 
 
@@ -36,7 +36,7 @@ section, main {
 
 h1 {
   font-family: 'Raleway', sans-serif;
-  color: white;
+  color: var(--color-white);
 }
 
 svg {
@@ -479,7 +479,7 @@ svg.services-background-top {
 
 .contact input,
 .contact textarea {
-  color: white;
+  color: var(--color-white);
   transition: 0.2s;
 }
 
