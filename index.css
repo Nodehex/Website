@@ -1,5 +1,13 @@
 /* ==================================================== General ================================================================ */
 
+:root {
+  --color-white: white;
+  --color-yellow: #f4ce45e8;
+  --color-dark:#1c1a18;
+  --text-color-dark: #1C2139;
+  --color-grey: #505050;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -80,7 +88,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: #f4ce45e8;
+  color: var(--color-yellow);
 }
 
 nav ul li {
@@ -116,7 +124,7 @@ nav ul li {
   padding-top: 75px;
   font-family: 'Raleway', sans-serif;
   text-align: left;
-  background-color: rgb(28, 26, 24);
+  background-color: var(--color-dark);
 }
 
 .hero .wrap {
@@ -147,7 +155,7 @@ nav ul li {
 }
 
 .hero #title span {
-  color: #f4ce45e8;
+  color: var(--color-yellow);
   font-weight: bold;
   font-size: 4.2rem;
 }
@@ -163,12 +171,12 @@ nav ul li {
 
 #explore:hover,
 #explore:active {
-  color: #f4ce45e8;
+  color: var(--color-yellow);
 }
 
 #explore .chevron {
   font-size: 0.8em;
-  color: #f4ce45e8;
+  color: var(--color-yellow);
 }
 
 @media only screen and (max-width: 770px) and (min-width: 701px) {
@@ -201,10 +209,10 @@ nav ul li {
 .services {
   min-height: 100vh;
   width: 100%;
-  color: #1C2139;
+  color: var(--text-color-dark);
   position: relative;
   display: inline-block;
-  background-color: #505050;
+  background-color: var(--color-grey);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -268,8 +276,8 @@ nav ul li {
 }
 
 .services-tabbing .tabs .tab a {
-  background-color: #1c1a18;
-  color: #f4ce45e8;
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
   height: 78px;
   text-align: center;
   line-height: 78px;
@@ -277,13 +285,13 @@ nav ul li {
 }
 
 .services-tabbing .tabs .tab a:hover {
-  background-color: #f4ce45e8;
-  color: #1c1a18;
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
 }
 
 .services-tabbing .tabs .tab a.active {
-  color: #1c1a18;
-  background-color: #f4ce45e8;
+  color: var(--color-dark);
+  background-color: var(--color-yellow);
 }
 
 .service {
@@ -291,7 +299,7 @@ nav ul li {
   min-height: 220px;
   box-shadow: inset 4px 0 4px rgba(0, 0, 0, 0.148);
   background-color: #f5f7f5;
-  color: #1C2139;
+  color: var(--text-color-dark);
   padding: 10px 25px;
   height: 100%;
   position: relative;
@@ -311,22 +319,22 @@ nav ul li {
 }
 
 .btn {
-  background-color: #1c1a18;
-  color: #f4ce45e8;
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
 }
 
 .btn:hover {
-  background-color: #f4ce45e8;
+  background-color: var(--color-yellow);
   color: #1c1c1c;
 }
 
 .btn {
-  background-color: #f4ce45e8;
+  background-color: var(--color-yellow);
   color: #1c1c1c;
 }
 .btn:hover {
   background-color: #1c1c1c;
-  color: #f4ce45e8;
+  color: var(--color-yellow);
 }
 .services-content .content .service .btn {
   position:absolute;
@@ -396,7 +404,7 @@ svg.services-background-top {
   background-repeat: no-repeat;
   background-position: 128% 80%;
   position: relative;
-  background-color: #1c1a18;
+  background-color: var(--color-dark);
 }
 
 @media only screen and (min-width: 700px) {
@@ -407,7 +415,7 @@ svg.services-background-top {
 
 #why-aeon.about {
   background-image: none;
-  background-color: #505050;
+  background-color: var(--color-grey);
   min-height: 50%;
 }
 
@@ -439,7 +447,7 @@ svg.services-background-top {
 .contact {
   padding-top: 10%;
   min-height: 100%;
-  background-color: #1c1a18;
+  background-color: var(--color-dark);
 }
 
 
@@ -477,8 +485,8 @@ svg.services-background-top {
 
 .contact input[type=text]:focus,
 .contact input[type=email]:focus {
-  border-bottom: 1px solid #f4ce45e8 !important;
-  box-shadow: 0 1px 0 0 #f4ce45e8 !important;
+  border-bottom: 1px solid var(--color-yellow) !important;
+  box-shadow: 0 1px 0 0 var(--color-yellow) !important;
 }
 
 .contact textarea {
@@ -490,7 +498,7 @@ svg.services-background-top {
 }
 
 .contact textarea:focus {
-  border: 1px solid #f4ce45e8 !important;
+  border: 1px solid var(--color-yellow) !important;
 }
 
 .contact .row {
