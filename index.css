@@ -19,6 +19,9 @@ main {
 section, main {
   height: 100%;
   width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  position: relative;
 }
 
 
@@ -201,8 +204,6 @@ nav ul li {
   color: #1C2139;
   position: relative;
   display: inline-block;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   background-color: #505050;
   display: flex;
   flex-direction: column;
@@ -395,8 +396,6 @@ svg.services-background-top {
   background-repeat: no-repeat;
   background-position: 128% 80%;
   position: relative;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   background-color: #1c1a18;
 }
 
@@ -440,10 +439,7 @@ svg.services-background-top {
 .contact {
   padding-top: 10%;
   min-height: 100%;
-  position: relative;
   background-color: #1c1a18;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
 
 
