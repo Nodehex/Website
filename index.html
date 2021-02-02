@@ -13,45 +13,35 @@
     <script src="https://kit.fontawesome.com/467034ff6c.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="navbar-fixed">
+    <header>
       <nav>
-        <div class="nav-wrapper container">
-          <a href="#" class="brand-logo"><img src="assets/aeon logo.svg" alt="" class="svg-color"></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#why-aeon">WHY AEON</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-            <li></li>
-          </ul>
-        </div>
-        <a href="#" class="icon-fixed-small hide-on-small-only"><img src="assets/aeon icon.svg" class="svg-color" alt=""></a>
+          <div class="nav-left">
+            <a href="#" class="brand-logo"><img src="assets/aeon logo.svg" alt="" class="svg-color"></a>
+          </div>
+          <div class="nav-right">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#why-aeon">WHY AEON</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <a href="#" class="icon-fixed-small hide-on-small-only"><img src="assets/aeon icon.svg" class="svg-color" alt=""></a>
+          </div>
       </nav>
-    </div>
-    <div class="scroll-snap-container">
-      <div class="hero" id="home">
-        <div class="background-blur"></div>
-        <div class="left"></div>
-        <div class="side">
-          <div class="hero-text-container">
-            <div class="pusher"></div>
-            <div class="hero-text-background">
-              <div class="wrap">
-                <img src="assets/Hero Hexagons.svg" class="left-hex hide-on-small-only" alt="">
-                <div class="right">
-                  <!-- <img src="assets/aeon icon.svg" alt="" class="svg-color icon-inline"> -->
-                  <h2 class="title"><span class="sec-colour">Aeon</span> Data Services</h2>
-                  <h2 class="second">High quality documentation</h2>
-                  <h2 class="second">High performing data centres</h2>
-                  <h2 class="right"><a href="#services">Explore <i class="fas fa-chevron-right chevron"></i></a></h2>
-                </div>
-                <div class="push-right show-on-large-only"></div>
-              </div>
-            </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <img src="assets/Hero Hexagons.svg" class="left-hex hide-on-small-only" alt="">
+          <div>
+            <h1 id="title"><span>Aeon</span> Data Services</h1>
+            <h2>High quality documentation</h2>
+            <h2>High performing data centres</h2>
+            <a href="#services" id="explore" >Explore <i class="fas fa-chevron-right chevron"></i></a>
           </div>
         </div>
-      </div>
-      <div class="services" id="services">
+      </section>
+      <section class="services" id="services">
             <div class="services-content">
               <h1><img src="assets/aeon icon.svg" alt="" class="svg-color icon-inline"> SERVICES</h1>
               <div class="services-tabbing">
@@ -84,8 +74,8 @@
           <polygon points="100,5 100,40 95.7,50 86,50 74.2,77 69,77" fill="#1c1a18" /> <!-- black -->
           <polygon points="77.6,35 83,35 71.2,62 66,62" fill="#f4ce45e8" /> <!-- yellow -->
         </svg>
-      </div>
-      <div class="about" id="about">
+      </section>
+      <section class="about" id="about">
         <div class="container">
           <div class="row">
             <div class="about-text col m6 s12">
@@ -102,8 +92,8 @@
         <svg class="about-background-whole" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
           <polygon points="0,0 85,0 65,50 85,100 0,100" fill="#1c1a18" /> <!-- white -->
         </svg>
-      </div>
-      <div class="about" id="why-aeon">
+      </section>
+      <section class="about" id="why-aeon">
         <div class="container">
           <div class="row">
             <div class="about-text">
@@ -117,8 +107,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="contact" id="contact">
+      </section>
+      <section class="contact" id="contact">
         <svg class="contact-background hide-on-small-only" width="100%" height="364px" viewBox="0 0 100 100" preserveAspectRatio="none">
           <polygon points="0,0 25,50 0,100" fill="#F4B545" /> <!-- yellow -->
         </svg>
@@ -142,8 +132,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
