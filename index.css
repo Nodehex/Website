@@ -32,7 +32,19 @@ section, main {
   position: relative;
 }
 
+section:nth-child(even) {
+  background-color: var(--color-grey);
+}
 
+section:nth-child(odd) {
+  background-color: var(--color-dark);
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    height: auto;
+  }
+}
 
 h1 {
   font-family: 'Raleway', sans-serif;
@@ -49,6 +61,16 @@ svg {
 
 .container {
   max-width: 1520px;
+}
+
+.btn {
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
+}
+
+.btn:hover {
+  background-color: var(--color-yellow);
+  color: #1c1c1c;
 }
 
 @media only screen and (min-width: 993px) {
@@ -124,7 +146,6 @@ nav ul li {
   padding-top: 75px;
   font-family: 'Raleway', sans-serif;
   text-align: left;
-  background-color: var(--color-dark);
 }
 
 .hero .wrap {
@@ -146,7 +167,6 @@ nav ul li {
   padding-left: 25px;
   margin-top: 0px;
   font-size: 53.4px;
-  color: rgb(239 239 239);
 }
 
 #title {
@@ -207,12 +227,8 @@ nav ul li {
 /* ==================================================== services ================================================================ */
 
 .services {
-  min-height: 100vh;
-  width: 100%;
   color: var(--text-color-dark);
-  position: relative;
   display: inline-block;
-  background-color: var(--color-grey);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,24 +334,6 @@ nav ul li {
   }
 }
 
-.btn {
-  background-color: var(--color-dark);
-  color: var(--color-yellow);
-}
-
-.btn:hover {
-  background-color: var(--color-yellow);
-  color: #1c1c1c;
-}
-
-.btn {
-  background-color: var(--color-yellow);
-  color: #1c1c1c;
-}
-.btn:hover {
-  background-color: #1c1c1c;
-  color: var(--color-yellow);
-}
 .services-content .content .service .btn {
   position:absolute;
   bottom:0.6em;
@@ -399,12 +397,10 @@ svg.services-background-top {
 /* ==================================================== about ================================================================ */
 
 .about {
-  min-height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 128% 80%;
   position: relative;
-  background-color: var(--color-dark);
 }
 
 @media only screen and (min-width: 700px) {
@@ -413,10 +409,15 @@ svg.services-background-top {
   }
 }
 
-#why-aeon.about {
+#why-aeon {
   background-image: none;
-  background-color: var(--color-grey);
-  min-height: 50%;
+  height: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  #why-aeon {
+    height: auto;
+  }
 }
 
 .about-background-whole {
@@ -446,8 +447,6 @@ svg.services-background-top {
 
 .contact {
   padding-top: 10%;
-  min-height: 100%;
-  background-color: var(--color-dark);
 }
 
 
