@@ -26,6 +26,7 @@ main {
 
 section, main {
   height: 100%;
+  min-height: unset;
   width: 100%;
   scroll-snap-align: center;
   scroll-snap-stop: always;
@@ -40,11 +41,20 @@ section:nth-child(odd) {
   background-color: var(--color-dark);
 }
 
+@media only screen and (max-width: 1000px) {
+  section {
+    height: auto;
+    min-height: 100%;
+  }
+}
 @media only screen and (max-width: 700px) {
   section {
     height: auto;
+    min-height: unset;
   }
 }
+
+
 
 h1 {
   font-family: 'Raleway', sans-serif;
@@ -206,11 +216,18 @@ nav ul li {
   }
 
 }
+@media only screen and (max-width: 1000px) {
+ .hero .wrap {
+   margin-top: 10%;
+   margin-left: 24px;
+ }
+
 @media only screen and (max-width: 700px) {
  .hero .wrap {
    margin-top: 18%;
    margin-left: 18px;
  }
+
 
  #title,
  .hero h2 {
@@ -414,7 +431,7 @@ svg.services-background-top {
   height: 50%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   #why-aeon {
     height: auto;
   }
