@@ -25,7 +25,7 @@ main {
 }
 
 section, main {
-  height: 100%;
+  height: auto;
   min-height: auto;
   width: 100%;
   scroll-snap-align: center;
@@ -41,10 +41,23 @@ section:nth-child(odd) {
   background-color: var(--color-dark);
 }
 
+section h2 {
+  font-size: 63px;
+  font-weight: 400;
+  line-height: 69.3px;
+  margin-bottom: 25.2px;
+  font-family: "Raleway", sans-serif;
+  color: var(--color-white);
+}
+
 @media only screen and (max-width: 1000px) {
   section {
     height: auto;
     min-height: 100%;
+  }
+
+  section h2 {
+    font-size: 45px;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -70,7 +83,7 @@ svg {
 }
 
 .container {
-  max-width: 1520px;
+  max-width: 100%;
 }
 
 .btn {
@@ -156,6 +169,7 @@ nav ul li {
   padding-top: 75px;
   font-family: 'Raleway', sans-serif;
   text-align: left;
+  min-height: 100vh;
 }
 
 .hero .wrap {
@@ -218,7 +232,7 @@ nav ul li {
 }
 @media only screen and (max-width: 1000px) {
  .hero .wrap {
-   margin-top: 10%;
+   margin-top: 50%;
    margin-left: 24px;
  }
 
@@ -245,20 +259,25 @@ nav ul li {
 /* ==================================================== services ================================================================ */
 
 .services {
+  min-height: 100vh;
   color: var(--text-color-dark);
   display: inline-block;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 14% 12% 10%;
+}
+
+.services h2 {
+  padding-top: 0;
 }
 
 .services-content {
-  max-width: 80%;
   z-index: 6; /* Resizing the window to certain sizes would cause the svg to stick over the services content */
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1400px) {
 .services-content {
     margin-right: 15%;
     max-width: 100%;
@@ -339,9 +358,9 @@ nav ul li {
   position: relative;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
 .services-tabbing .tabs {
-  max-width: 450px;
+  max-width: 700px;
 }
   .services {
     padding-bottom: 25px;
@@ -414,28 +433,13 @@ svg.services-background-top {
 
 /* ==================================================== about ================================================================ */
 
-.about {
+#about {
+  min-height: 98vh;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 128% 80%;
   position: relative;
-}
-
-@media only screen and (min-width: 700px) {
-  .about {
-    background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
-  }
-}
-
-#why-aeon {
-  background-image: none;
-  height: 50%;
-}
-
-@media only screen and (max-width: 1000px) {
-  #why-aeon {
-    height: auto;
-  }
+  font-size: 1.5em;
 }
 
 .about-background-whole {
@@ -449,37 +453,66 @@ svg.services-background-top {
 .about .container {
   position: relative;
   padding-top: 50px;
+  width: 50%;
+  margin-right: 40%;
   z-index: 6;
-  color: #f5f7f5;
 }
 
-.about .container .row {
-  margin: 0;
+@media only screen and (min-width: 900px) {
+  .about {
+    background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
+  }
 }
 
-.about-text {
-  font-size: 1.5em;
+@media only screen and (max-width: 900px) {
+
+  .about {
+    display: block;
+  }
+
+  .about .container {
+    margin-right: 0;
+    overflow: hidden;
+    padding: 50px 32px 0 32px;
+    width: 100%;
+  }
 }
 
 /* ==================================================== contact ================================================================ */
 
+#why-aeon {
+  min-height: 50vh;
+  padding: 0 10%;
+  font-size: 1.5em;
+}
+
+#why-aeon {
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #why-aeon {
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+
+/* ==================================================== contact ================================================================ */
+
 .contact {
-  padding-top: 10%;
+  height: 98vh;
 }
 
 
 .contact .container {
-  padding-top: 50px;
+  padding-top: 7%;
 }
 
 @media only screen and (max-height: 1025px) {
   .contact {
     padding-top: 0;
   }
-}
-
-.contact .container h1 {
-  margin-top: 0px;
 }
 
 .contact-background {
