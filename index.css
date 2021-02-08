@@ -370,9 +370,15 @@ nav ul li {
 }
 
 @media screen and (max-width: 700px) {
+<<<<<<< HEAD
   .services-tabbing .tabs {
     max-width: 700px;
   }
+=======
+.services-tabbing .tabs {
+  max-width: 700px;
+}
+>>>>>>> master
   .services {
     padding-bottom: 25px;
   }
@@ -447,7 +453,10 @@ svg.services-background-top {
 
 #about {
   min-height: 98vh;
+<<<<<<< HEAD
   height: auto;
+=======
+>>>>>>> master
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 128% 80%;
@@ -474,6 +483,7 @@ svg.services-background-top {
 @media only screen and (min-width: 900px) {
   .about {
     background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
+<<<<<<< HEAD
 
   }
   .about .container {
@@ -495,6 +505,22 @@ svg.services-background-top {
     margin-top: 72px;
   }
 
+=======
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .about {
+    display: block;
+  }
+
+  .about .container {
+    margin-right: 0;
+    overflow: hidden;
+    padding: 50px 32px 0 32px;
+    width: 100%;
+  }
 }
 
 /* ==================================================== contact ================================================================ */
@@ -503,6 +529,7 @@ svg.services-background-top {
   min-height: 50vh;
   padding: 0 10%;
   font-size: 1.5em;
+>>>>>>> master
 }
 
 #why-aeon {
@@ -519,6 +546,37 @@ svg.services-background-top {
 
 /* ==================================================== contact ================================================================ */
 
+<<<<<<< HEAD
+#why-aeon {
+  min-height: 50vh;
+  padding: 0 10%;
+  font-size: 1.5em;
+}
+
+#why-aeon {
+  padding-top: 50px;
+=======
+.contact {
+  height: 98vh;
+}
+
+
+.contact .container {
+  padding-top: 7%;
+>>>>>>> master
+}
+
+@media only screen and (max-width: 1000px) {
+  #why-aeon {
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+<<<<<<< HEAD
+
+/* ==================================================== contact ================================================================ */
+
 .contact {
   height: 98vh;
 }
@@ -531,6 +589,8 @@ svg.services-background-top {
   height: 100%;
 }
 
+=======
+>>>>>>> master
 .contact-background {
   z-index: 5;
   position: absolute;
