@@ -60,10 +60,15 @@ section h2 {
     font-size: 45px;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   section {
     height: auto;
     min-height: auto;
+  }
+
+  section h2 {
+    font-size: 36px;
+    text-align: center;
   }
 }
 
@@ -235,8 +240,14 @@ nav ul li {
    margin-top: 50%;
    margin-left: 24px;
  }
+ .hero {
+   min-height: 80vh;
+ }
 
 @media only screen and (max-width: 700px) {
+  .hero h2 {
+    text-align: left;
+  }
  .hero .wrap {
    margin-top: 18%;
    margin-left: 18px;
@@ -359,12 +370,19 @@ nav ul li {
 }
 
 @media screen and (max-width: 700px) {
+<<<<<<< HEAD
+  .services-tabbing .tabs {
+    max-width: 700px;
+  }
+=======
 .services-tabbing .tabs {
   max-width: 700px;
 }
+>>>>>>> master
   .services {
     padding-bottom: 25px;
   }
+
   .service {
     box-shadow: none;
     min-height: 285px;
@@ -435,6 +453,10 @@ svg.services-background-top {
 
 #about {
   min-height: 98vh;
+<<<<<<< HEAD
+  height: auto;
+=======
+>>>>>>> master
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 128% 80%;
@@ -461,6 +483,29 @@ svg.services-background-top {
 @media only screen and (min-width: 900px) {
   .about {
     background-image: url(assets/ian-battaglia-9drS5E_Rguc-unsplash.jpg);
+<<<<<<< HEAD
+
+  }
+  .about .container {
+    padding-top: 8%;
+    padding-bottom: 72px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .about .container {
+    margin-right: 0;
+    overflow: hidden;
+    padding: 50px 32px 0 32px;
+    width: 100%;
+  }
+
+  .about h2 {
+    margin-top: 72px;
+  }
+
+=======
   }
 }
 
@@ -484,6 +529,7 @@ svg.services-background-top {
   min-height: 50vh;
   padding: 0 10%;
   font-size: 1.5em;
+>>>>>>> master
 }
 
 #why-aeon {
@@ -500,6 +546,16 @@ svg.services-background-top {
 
 /* ==================================================== contact ================================================================ */
 
+<<<<<<< HEAD
+#why-aeon {
+  min-height: 50vh;
+  padding: 0 10%;
+  font-size: 1.5em;
+}
+
+#why-aeon {
+  padding-top: 50px;
+=======
 .contact {
   height: 98vh;
 }
@@ -507,14 +563,34 @@ svg.services-background-top {
 
 .contact .container {
   padding-top: 7%;
+>>>>>>> master
 }
 
-@media only screen and (max-height: 1025px) {
-  .contact {
-    padding-top: 0;
+@media only screen and (max-width: 1000px) {
+  #why-aeon {
+    height: auto;
+    overflow: hidden;
   }
 }
 
+<<<<<<< HEAD
+
+/* ==================================================== contact ================================================================ */
+
+.contact {
+  height: 98vh;
+}
+
+.contact .container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+=======
+>>>>>>> master
 .contact-background {
   z-index: 5;
   position: absolute;
@@ -552,34 +628,23 @@ svg.services-background-top {
 }
 
 .contact .row {
-  position: relative;
   margin-bottom: 20px;
+  margin: 0;
+  padding: 0 4% 20px 0;
 }
 
 
-@media only screen and (max-width: 780px) {
-  .contact .row {
-    margin-top: 160px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .contact .row {
-    padding-bottom: 20px;
-    margin-bottom: 0;
-  }
-
-  .contact h1 {
-    text-align: center;
-  }
+#hex-svg {
+  /* height: 40vh;
+  width: 30vw; */
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  object-fit: contain;
 }
 
-.contact .hex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  position: absolute !important;
+.container .hex-container {
+  width: 25vw;
+  margin-right: 10%;
 }
 
 .contact .btn {
@@ -587,3 +652,38 @@ svg.services-background-top {
   float: right;
 }
 
+@media only screen and (max-width: 1100px) {
+  .contact {
+    padding-top: 0;
+    /* padding-bottom: 200px; */
+    height: auto;
+  }
+
+  .contact .container {
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .container .row {
+    margin: auto;
+    padding: auto;
+    padding-left: 20%;
+  }
+
+  .container .hex-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contact {
+    padding-bottom: 100px;
+  }
+  .contact .row {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+}

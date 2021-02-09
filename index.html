@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aeon/DS</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162545543-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-162545543-1');
+    </script>
+
     <!-- materialize -->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="shortcut icon" href="/assets/aeon icon.svg" type="image/svg">
@@ -103,10 +113,13 @@
             <polygon points="0,0 25,50 0,100" fill="#F4B545" /> <!-- yellow -->
           </svg>
           <div class="row">
+<<<<<<< HEAD
+=======
             <div class="col s1 push-s4 hex-container">
               <img class="hide-on-med-and-down" src="assets/bottom-hexagons.svg" alt="">
             </div>
             <div class="col s12 m8 push-m3 l4 push-l6">
+>>>>>>> master
               <h2><img src="assets/page title icons.svg" class="title-icon" alt=""> CONTACT</h2>
               <h5>Name</h5>
               <input type="text" name="" value="">
@@ -116,10 +129,11 @@
               <input type="text" name="" value="">
               <h5>Message</h5>
               <textarea name="name" rows="10" cols="30"></textarea>
-
               <a class="btn">Submit</a>
             </div>
-          </div>
+            <div class="hex-container">
+              <img id="hex-svg" src="assets/bottom-hexagons.svg" alt="">
+            </div>
         </div>
       </section>
     </main>
