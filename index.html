@@ -113,16 +113,20 @@
             <polygon points="0,0 25,50 0,100" fill="#F4B545" /> <!-- yellow -->
           </svg>
           <div class="row">
-              <h2><img src="assets/page title icons.svg" class="title-icon" alt=""> CONTACT</h2>
-              <h5>Name</h5>
-              <input type="text" name="" value="">
-              <h5>Email</h5>
-              <input type="email" name="" value="">
-              <h5>Subject</h5>
-              <input type="text" name="" value="">
-              <h5>Message</h5>
-              <textarea name="name" rows="10" cols="30"></textarea>
-              <a class="btn">Submit</a>
+              <form  action="https://formsubmit.io/send/contact-web@aeonds.com" method="POST">
+                <h2><img src="assets/page title icons.svg" class="title-icon" alt=""> CONTACT</h2>
+                <input name="_redirect" type="hidden" id="name" value="https://aeonds.com">
+                <h5>Name</h5>
+                <input type="text" name="name" value="" required>
+                <h5>Email</h5>
+                <input type="email" name="email" value="" required>
+                <h5>Subject</h5>
+                <input type="text" name="" value="" required>
+                <h5>Message</h5>
+                <textarea name="comment" rows="10" cols="30"></textarea>
+                <input name="_formsubmit_id" type="text" style="display:none">
+                <input value="Submit" class="btn" type="submit">
+              </form>
             </div>
             <div class="hex-container">
               <img id="hex-svg" src="assets/bottom-hexagons.svg" alt="">
