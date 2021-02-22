@@ -1,4 +1,10 @@
-/* ==================================================== General ================================================================ */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 
 :root {
   --color-white: white;
@@ -12,6 +18,7 @@ html, body {
   width: 100%;
   height: 100%;
   color: rgb(239 239 239);
+  background-color: var(--color-dark);
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
   color: var(--color-white);
@@ -21,7 +28,8 @@ html, body {
 main {
   scroll-behavior: smooth;
   scroll-snap-stop: always;
-  scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 section, main {
@@ -84,7 +92,8 @@ svg {
 }
 
 .svg-color {
-  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
+  -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
+          filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
 }
 
 .container {
@@ -113,15 +122,24 @@ svg {
 nav {
   top: 0;
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 75px;
   line-height: 75px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: rgb(28, 26, 24);
   z-index: 100;
+  -webkit-transition: all;
+  -o-transition: all;
   transition: all;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .nav-left {
@@ -134,6 +152,8 @@ nav {
 
 nav ul a {
   font-size: 1.6rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   color: rgb(239 239 239);
 }
@@ -165,7 +185,9 @@ nav ul li {
 
 @media only screen and (max-width: 700px) {
   nav {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -182,8 +204,13 @@ nav ul li {
   margin-top: 30%;
   margin-left: 7.5vw;
   width: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .hero .left-hex {
@@ -218,6 +245,8 @@ nav ul li {
   color: rgb(239 239 239);
   background-color: rgba(0,0,0,0);
   float: right;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   font-size: 53.4px;
 }
@@ -277,10 +306,19 @@ nav ul li {
   min-height: 100vh;
   color: var(--text-color-dark);
   display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 14% 12% 10%;
 }
 
@@ -308,28 +346,45 @@ nav ul li {
 }
 
 .services-tabbing {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-shadow: 10px 10px 32px -11px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 32px -11px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 32px -11px rgba(0,0,0,0.75);
 }
 @media only screen and (min-width: 700px) {
   .services-tabbing {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 .services-tabbing .tabs {
   max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   overflow: auto;
   height: auto;
   background-color: rgba(0,0,0,0);
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   margin: 0;
 }
@@ -340,7 +395,9 @@ nav ul li {
 
 .services-tabbing .tabs .tab {
   height: 78px;
-  flex-grow: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 .services-tabbing .tabs .tab a {
@@ -349,6 +406,8 @@ nav ul li {
   height: 78px;
   text-align: center;
   line-height: 78px;
+  -webkit-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
 }
 
@@ -365,7 +424,8 @@ nav ul li {
 .service {
   max-width: 800px;
   min-height: 220px;
-  box-shadow: inset 4px 0 4px rgba(0, 0, 0, 0.148);
+  -webkit-box-shadow: inset 4px 0 4px rgba(0, 0, 0, 0.148);
+          box-shadow: inset 4px 0 4px rgba(0, 0, 0, 0.148);
   background-color: #f5f7f5;
   color: var(--text-color-dark);
   padding: 10px 25px;
@@ -382,7 +442,8 @@ nav ul li {
   }
 
   .service {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     min-height: 285px;
   }
 }
@@ -540,9 +601,15 @@ svg.services-background-top {
 }
 
 .contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -556,26 +623,31 @@ svg.services-background-top {
 }
 
 .contact .title-icon {
-  filter: invert(1)
+  -webkit-filter: invert(1);
+          filter: invert(1)
 }
 
 .contact input,
 .contact textarea {
   color: var(--color-white);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
 .contact input[type=text]:focus,
 .contact input[type=email]:focus {
   border-bottom: 1px solid var(--color-yellow) !important;
-  box-shadow: 0 1px 0 0 var(--color-yellow) !important;
+  -webkit-box-shadow: 0 1px 0 0 var(--color-yellow) !important;
+          box-shadow: 0 1px 0 0 var(--color-yellow) !important;
 }
 
 .contact textarea {
   height: 10rem;
   border: 1px solid #9e9e9e !important;
   border-radius: 4px;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   outline: none !important;
 }
 
@@ -594,8 +666,10 @@ svg.services-background-top {
   /* height: 40vh;
   width: 30vw; */
   -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  object-fit: contain;
+  -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .container .hex-container {
@@ -624,8 +698,12 @@ svg.services-background-top {
   }
 
   .contact .container {
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
   }
 
