@@ -78,10 +78,6 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
-nav {
-  border-bottom: solid 1px white;
-}
-
 .service-container .services-background-hex {
   top: 25%; left: 0;
   height: 50%;
@@ -106,4 +102,79 @@ li {
 
 li.tabbed {
   margin-left: 30px;
+}
+
+
+/* ==================================================== Navbar ================================================================ */
+
+nav {
+  top: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 75px;
+  line-height: 75px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgb(28, 26, 24);
+  z-index: 100;
+  -webkit-transition: all;
+  -o-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.nav-left {
+  margin-left: 5em;
+}
+
+.nav-right {
+  margin-right: 7em;
+}
+
+nav ul a {
+  font-size: 1.6rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: rgb(239 239 239);
+}
+
+nav ul a:hover {
+  color: var(--color-yellow);
+}
+
+nav ul li {
+  padding: 0px 10px;
+}
+
+.brand-logo img {
+  height: 50px;
+  width: auto;
+  margin-top: 12.5px;
+}
+
+.icon-fixed-small {
+  position: fixed;
+  top: 12.5px;
+  right: 35px;
+}
+
+.icon-fixed-small img {
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
