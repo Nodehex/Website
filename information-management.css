@@ -1,3 +1,12 @@
+:root {
+  --color-white: white;
+  --color-yellow: #f4ce45e8;
+  --color-dark:#1c1a18;
+  --text-color-dark: #1C2139;
+  --color-grey: #505050;
+}
+
+
 html, body {
   background-color: rgb(28, 26, 24);
 }
@@ -28,6 +37,20 @@ html, body {
 
 .service-container h2 {
   margin-bottom: 30px;
+}
+
+.service-container h1 {
+  font-weight: 500px;
+  font-family: "Raleway", sans-serif;
+  color: var(--color-yellow);
+}
+
+.service-block h3 {
+  color: var(--color-yellow);
+}
+
+.service-block li::before {
+  content: "– ";
 }
 
 .service-block {
@@ -71,7 +94,7 @@ nav {
   height: 50%;
   position: absolute;
   z-index: -1;
-};
+}
 
 .services-background-top {
   z-index: 2;
