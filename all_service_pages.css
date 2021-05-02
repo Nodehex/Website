@@ -49,8 +49,14 @@
     color: var(--color-yellow);
   }
   
+  .service-block ul {
+    padding-left: 20px;
+  }
+
   .service-block li::before {
+    font-weight: bold;
     content: "– ";
+    color: var(--color-yellow)
   }
   
   .service-block {
