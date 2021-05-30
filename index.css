@@ -96,10 +96,6 @@ svg {
           filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
 }
 
-.container {
-  max-width: 100%;
-}
-
 .btn {
   background-color: var(--color-dark);
   color: var(--color-yellow);
@@ -612,6 +608,10 @@ svg.services-background-top {
           align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.contact .row {
+  z-index: 5;
 }
 
 .contact-background {
