@@ -560,6 +560,7 @@ svg.services-background-top {
 
 #why-aeon {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 1000px) {
