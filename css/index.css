@@ -518,6 +518,10 @@ svg.services-background-top {
   font-size: 1.5em;
 }
 
+.about p {
+  width: 80%;
+}
+
 .about-background-whole {
   position: absolute;
   top: 0; left: 0;
