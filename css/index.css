@@ -115,6 +115,8 @@ svg {
   }
 }
 
+
+
 /* ==================================================== Navbar ================================================================ */
 
 nav {
@@ -520,6 +522,13 @@ svg.services-background-top {
   font-size: 1.5em;
 }
 
+@media only screen and (min-width: 1060px){
+  #about {
+    font-size: 1.3em;
+  }
+  
+}
+
 .about p {
   width: 80%;
 }
@@ -586,6 +595,14 @@ svg.services-background-top {
   padding: 0 10%;
   font-size: 1.5em;
 }
+
+@media only screen and (min-width: 1060px){
+  #why-aeon {
+    font-size: 1.3em;
+  }
+  
+}
+
 
 #why-aeon {
   padding-top: 50px;
