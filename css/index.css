@@ -1,11 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-
 :root {
   --color-white: white;
   --color-yellow: #f4ce45e8;
@@ -33,7 +25,7 @@ main {
 }
 
 section, main {
-  height: auto;
+  height: 100vh;
   min-height: auto;
   width: 100%;
   scroll-snap-align: center;
@@ -61,7 +53,6 @@ section h2 {
 
 @media only screen and (max-width: 1000px) {
   section {
-    height: auto;
     min-height: 100%;
   }
 
@@ -71,7 +62,6 @@ section h2 {
 }
 @media only screen and (max-width: 800px) {
   section {
-    height: auto;
     min-height: auto;
   }
 
@@ -512,7 +502,7 @@ svg.services-background-top {
 /* ==================================================== about ================================================================ */
 
 #about {
-  min-height: 98vh;
+  min-height: 100vh;
   height: auto;
   background-size: contain;
   background-repeat: no-repeat;
@@ -521,12 +511,6 @@ svg.services-background-top {
   font-size: 1.5em;
 }
 
-@media only screen and (min-width: 1060px){
-  #about {
-    font-size: 1.3em;
-  }
-  
-}
 
 .about p {
   width: 80%;
@@ -548,14 +532,23 @@ svg.services-background-top {
   z-index: 6;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1060px){
   .about {
     background-image: url(../assets/datacenter.jpg);
 
   }
+  #about {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
   .about .container {
     padding-top: 8%;
     padding-bottom: 72px;
+  }
+  .about h2 {
+    text-align: left;
   }
 }
 
@@ -571,58 +564,18 @@ svg.services-background-top {
   .about h2 {
     margin-top: 72px;
   }
-
-}
-
-/* #why-aeon {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-@media only screen and (max-width: 1000px) {
-  #why-aeon {
-    height: auto;
-    overflow: hidden;
+  .about p {
+    width: 100%;
   }
-} */
 
-
-/* ==================================================== contact ================================================================ */
-
-/* #why-aeon {
-  min-height: 50vh;
-  padding: 0 10%;
-  font-size: 1.5em;
 }
-
-@media only screen and (min-width: 1060px){
-  #why-aeon {
-    font-size: 1.3em;
-  }
-  
-}
-
-
-#why-aeon {
-  padding-top: 50px;
-} */
-
-/* @media only screen and (max-width: 1000px) {
-  #why-aeon {
-    height: auto;
-    overflow: hidden;
-  }
-} */
-
 
 /* ==================================================== contact ================================================================ */
 
 .contact {
-  height: 98vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* flex: 1 1 0; */
   flex-wrap: nowrap;
   flex-direction: row;
   -webkit-box-pack: flex-end;
@@ -633,16 +586,17 @@ svg.services-background-top {
           align-items: center;
 }
 
-.contact:only-child {
-  z-index: 5
+#form-container, #why-aeon, .hex-container {
+  z-index: 6;
+  margin: 0 0 20px 0;
+  padding: 10% 4% 20px 0;
+  padding: 0 4% 20px 0;
+  width: 33.3%
 }
 
-#form-container, #why-aeon {
-  z-index: 6;
-  width: 33%;
-  margin-bottom: 20px;
-  margin: 0;
-  padding: 0 4% 20px 0;
+#why-aeon {
+  min-height: 50vh;
+  font-size: 1.5em;
 }
 
 .contact-background {
@@ -651,6 +605,10 @@ svg.services-background-top {
   top: -10%; left: 0;
   height: 110%;
   width: 100%;
+}
+
+#form-container {
+  background-color: unset;
 }
 
 .contact .title-icon {
@@ -696,7 +654,7 @@ svg.services-background-top {
      object-fit: contain;
 }
 
-.container .hex-container {
+.contact .hex-container {
   width: 25vw;
   margin-right: 10%;
 }
@@ -719,37 +677,50 @@ svg.services-background-top {
     padding-top: 0;
     /* padding-bottom: 200px; */
     height: auto;
+    flex-direction: column;
   }
 
-  .contact .container {
+  #form-container {
+    background-color: var(--color-dark);
+  }
+
+  .contact {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-
   }
 
-  .container .row {
+  .contact h2 {
+    text-align: left;
+  }
+
+  #form-container, #why-aeon, .hex-container {
     margin: auto;
     padding: auto;
-    padding-left: 20%;
+    padding: 48px 20%;
+    width: 100vw;
   }
-
-  .container .hex-container {
+  .contact .hex-container {
     display: none;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .contact {
-    padding-bottom: 100px;
-  }
-  .contact .row {
-    padding-bottom: 20px;
     margin-bottom: 0;
     padding-left: 0;
   }
 
+  #form-container, #why-aeon, .hex-container {
+    margin: auto;
+    padding: 48px 10%;
+    width: 100vw;
+  }
+
+  #form-container {
+    background-color: var(--color-dark);
+  }
 }
