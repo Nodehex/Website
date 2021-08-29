@@ -521,7 +521,7 @@ svg.services-background-top {
   font-size: 1.5em;
 }
 
-@media only screen and (min-width: 1060px){
+@media only screen and (min-width: 1900px) and (max-width: 1940px){
   #about {
     font-size: 1.3em;
   }
@@ -595,7 +595,7 @@ svg.services-background-top {
   font-size: 1.5em;
 }
 
-@media only screen and (min-width: 1060px){
+@media only screen and (min-width: 1900px) and (max-width: 1920px){
   #why-aeon {
     font-size: 1.3em;
   }
@@ -605,6 +605,7 @@ svg.services-background-top {
 
 #why-aeon {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -616,6 +617,18 @@ svg.services-background-top {
 
 
 /* ==================================================== contact ================================================================ */
+
+@media only screen and (min-width: 1900px) and (max-width: 1920px){
+  #contact {
+    font-size: 1.0em;
+  }
+  
+}
+
+#contact {
+  padding-top: 100px;
+  padding-bottom: 25px;
+}
 
 .contact {
   height: 98vh;
