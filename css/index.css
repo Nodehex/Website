@@ -3,7 +3,8 @@
   --color-yellow: #f4ce45e8;
   --color-dark:#1c1a18;
   --text-color-dark: #1C2139;
-  --color-grey: #505050;
+  --color-old-grey: #505050;
+  --color-grey: #3a3637;
 }
 
 html, body {
@@ -42,22 +43,28 @@ section:nth-child(odd) {
 }
 
 section h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 69.3px;
   margin-bottom: 25.2px;
   font-family: "Raleway", sans-serif;
   color: var(--color-white);
-  font-variant: small-caps;
+  text-transform: uppercase;
+}
+.polygon-yellow {
+  fill: var(--color-yellow);
 }
 
+.polygon-dark {
+  fill: var(--color-dark);
+}
 @media only screen and (max-width: 1000px) {
   section {
     min-height: 100%;
   }
 
   section h2 {
-    font-size: 45px;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -66,11 +73,9 @@ section h2 {
   }
 
   section h2 {
-    font-size: 36px;
     text-align: center;
   }
 }
-
 
 
 h1 {
@@ -100,14 +105,6 @@ svg {
 
 .btn:focus,.btn-large:focus,.btn-small:focus,.btn-floating:focus{background-color:var(--color-dark)}
 
-@media only screen and (min-width: 993px) {
-  .container {
-    width: 80%;
-  }
-}
-
-
-
 /* ==================================================== Navbar ================================================================ */
 
 nav {
@@ -123,7 +120,7 @@ nav {
   line-height: 75px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: rgb(28, 26, 24);
+  background-color: var(--color-dark);
   z-index: 100;
   -webkit-transition: all;
   -o-transition: all;
@@ -214,7 +211,7 @@ nav ul li {
 .hero h2 {
   padding-left: 25px;
   margin-top: 0px;
-  font-size: 53.4px;
+  font-size: 2.9rem;
 }
 
 #title {
@@ -239,7 +236,7 @@ nav ul li {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  font-size: 53.4px;
+  font-size: 2.9rem;
 }
 
 #explore:hover,
@@ -251,13 +248,6 @@ nav ul li {
   color: var(--color-yellow);
 }
 
-@media only screen and (max-width: 770px) and (min-width: 701px) {
-  #title,
-  .hero h2 {
-    font-size: 2.99rem;
-  }
-
-}
 @media only screen and (max-width: 1000px) {
  .hero .wrap {
    margin-top: 50%;
@@ -267,21 +257,33 @@ nav ul li {
    min-height: 80vh;
  }
 
-@media only screen and (max-width: 700px) {
+}
+
+@media only screen and (max-width: 900px) {
   .hero h2 {
     text-align: left;
   }
+}
+@media only screen and (max-width: 700px) {
  .hero .wrap {
-   margin-top: 18%;
+   margin-top: 40%;
    margin-left: 18px;
  }
-}
 
+ #title {
+   padding-left: unset;
+   margin: auto;
+   font-size: 2.5rem;
+   text-align: center;
+   font-weight: 600;
+ }
 
- #title,
  .hero h2 {
-   padding-left: 0px;
-   font-size: 3.6rem;
+   text-align: center;
+   padding-left: unset;
+   margin: 2rem 0;
+   font-size: 2rem;
+   line-height: normal;
  }
 
   #explore {
@@ -293,9 +295,7 @@ nav ul li {
 /* ==================================================== services ================================================================ */
 
 .services {
-  min-height: 100vh;
   color: var(--text-color-dark);
-  display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,11 +459,6 @@ nav ul li {
   height: auto;
 }
 
-.services h1 {
-  text-align: left;
-  font-weight: 350;
-}
-
 img.title-icon {
   height: 1em;
   width: auto;
@@ -494,10 +489,6 @@ svg.services-background-top {
   pointer-events: none;
 }
 
-.services .flex-balancer {
-  height: 100px;
-}
-
 /* ==================================================== about ================================================================ */
 
 #about {
@@ -510,14 +501,9 @@ svg.services-background-top {
   font-size: 1.5rem;
 }
 
-@media only screen and (min-width: 1900px) and (max-width: 1940px){
-  #about {
-    font-size: 1.3rem;
-  }
-}
-
 .about p {
   width: 80%;
+  font-size: 1.4rem;
 }
 
 .about-background-whole {
@@ -528,12 +514,17 @@ svg.services-background-top {
   z-index: 1;
 }
 
-.about .container {
+.about-text-container {
   position: relative;
-  padding-top: 50px;
+  padding-top: 8.5%;
+  margin-top: 0;
   width: 50%;
-  margin-right: 40%;
+  margin: 0 40% 0 10%;
   z-index: 6;
+}
+
+.about-background-whole {
+  fill: var(--color-dark);
 }
 
 @media only screen and (min-width: 1060px){
@@ -541,14 +532,10 @@ svg.services-background-top {
     background-image: url(../assets/datacenter.jpg);
 
   }
-  #about {
-    font-size: 1.3rem;
-  }
 }
 
 @media only screen and (max-width: 1025px) {
-  .about .container {
-    padding-top: 8%;
+  .about-text-container {
     padding-bottom: 72px;
   }
   .about h2 {
@@ -558,15 +545,15 @@ svg.services-background-top {
 
 @media only screen and (max-width: 900px) {
 
-  .about .container {
-    margin-right: 0;
+  .about-text-container {
+    margin: 0;
     overflow: hidden;
-    padding: 50px 32px 0 32px;
+    padding: 50px 24px 0 24px;
     width: 100%;
   }
 
   .about h2 {
-    margin-top: 72px;
+    margin-top: 24px;
   }
   .about p {
     width: 100%;
@@ -576,21 +563,6 @@ svg.services-background-top {
 
 /* ==================================================== contact ================================================================ */
 
-
-/* .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: stretch;
-  -webkit-box-pack: flex-end;
-      -ms-flex-pack: flex-end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-} */
 
 .contact {
   display: grid;
@@ -630,7 +602,6 @@ svg.services-background-top {
 .contact h3 {
   font-size: 1.6rem;
   margin: 0;
-  /* padding: 5px 0 5px 0; */
 }
 
 .contact input,
@@ -697,12 +668,6 @@ contact input[type=email] {
   margin-right: 10%;
 }
 
-@media only screen and (min-width: 1900px) and (max-width: 1920px){
-  .contact {
-    font-size: 1.0rem;
-  }
-}
-
 @media only screen and (max-width: 1500px) {
 
   #why-aeon p {
@@ -743,6 +708,9 @@ contact input[type=email] {
 }
 
 @media only screen and (max-width: 700px) {
+  .contact {
+    height: 115vh;
+  }
   #form-container, #why-aeon {
     height: auto;
     margin: auto;
