@@ -1,17 +1,10 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-
 :root {
   --color-white: white;
   --color-yellow: #f4ce45e8;
   --color-dark:#1c1a18;
   --text-color-dark: #1C2139;
-  --color-grey: #505050;
+  --color-old-grey: #505050;
+  --color-grey: #3a3637;
 }
 
 html, body {
@@ -33,7 +26,7 @@ main {
 }
 
 section, main {
-  height: auto;
+  height: 100vh;
   min-height: auto;
   width: 100%;
   scroll-snap-align: center;
@@ -50,37 +43,39 @@ section:nth-child(odd) {
 }
 
 section h2 {
-  font-size: 63px;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 69.3px;
   margin-bottom: 25.2px;
   font-family: "Raleway", sans-serif;
   color: var(--color-white);
-  font-variant: small-caps;
+  text-transform: uppercase;
+}
+.polygon-yellow {
+  fill: var(--color-yellow);
 }
 
+.polygon-dark {
+  fill: var(--color-dark);
+}
 @media only screen and (max-width: 1000px) {
   section {
-    height: auto;
     min-height: 100%;
   }
 
   section h2 {
-    font-size: 45px;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (max-width: 800px) {
   section {
-    height: auto;
     min-height: auto;
   }
 
   section h2 {
-    font-size: 36px;
     text-align: center;
   }
 }
-
 
 
 h1 {
@@ -110,14 +105,6 @@ svg {
 
 .btn:focus,.btn-large:focus,.btn-small:focus,.btn-floating:focus{background-color:var(--color-dark)}
 
-@media only screen and (min-width: 993px) {
-  .container {
-    width: 80%;
-  }
-}
-
-
-
 /* ==================================================== Navbar ================================================================ */
 
 nav {
@@ -133,7 +120,7 @@ nav {
   line-height: 75px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: rgb(28, 26, 24);
+  background-color: var(--color-dark);
   z-index: 100;
   -webkit-transition: all;
   -o-transition: all;
@@ -144,15 +131,15 @@ nav {
 }
 
 .nav-left {
-  margin-left: 5em;
+  margin-left: 5rem;
 }
 
 .nav-right {
-  margin-right: 7em;
+  margin-right: 7rem;
 }
 
 nav ul a {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -216,7 +203,7 @@ nav ul li {
 
 .hero .left-hex {
   padding-top: 20px;
-  height: 15em;
+  height: 15rem;
   width: auto;
 }
 
@@ -224,14 +211,14 @@ nav ul li {
 .hero h2 {
   padding-left: 25px;
   margin-top: 0px;
-  font-size: 53.4px;
+  font-size: 2.9rem;
 }
 
 #title {
   letter-spacing: 2px;
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 4.2em;
+  font-size: 4.2rem;
 }
 
 .hero #title span {
@@ -249,7 +236,7 @@ nav ul li {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  font-size: 53.4px;
+  font-size: 2.9rem;
 }
 
 #explore:hover,
@@ -258,17 +245,9 @@ nav ul li {
 }
 
 #explore .chevron {
-  font-size: 0.8em;
   color: var(--color-yellow);
 }
 
-@media only screen and (max-width: 770px) and (min-width: 701px) {
-  #title,
-  .hero h2 {
-    font-size: 2.99em;
-  }
-
-}
 @media only screen and (max-width: 1000px) {
  .hero .wrap {
    margin-top: 50%;
@@ -278,21 +257,33 @@ nav ul li {
    min-height: 80vh;
  }
 
-@media only screen and (max-width: 700px) {
+}
+
+@media only screen and (max-width: 900px) {
   .hero h2 {
     text-align: left;
   }
+}
+@media only screen and (max-width: 700px) {
  .hero .wrap {
-   margin-top: 18%;
+   margin-top: 40%;
    margin-left: 18px;
  }
-}
 
+ #title {
+   padding-left: unset;
+   margin: auto;
+   font-size: 2.5rem;
+   text-align: center;
+   font-weight: 600;
+ }
 
- #title,
  .hero h2 {
-   padding-left: 0px;
-   font-size: 3.6em;
+   text-align: center;
+   padding-left: unset;
+   margin: 2rem 0;
+   font-size: 2rem;
+   line-height: normal;
  }
 
   #explore {
@@ -304,9 +295,7 @@ nav ul li {
 /* ==================================================== services ================================================================ */
 
 .services {
-  min-height: 100vh;
   color: var(--text-color-dark);
-  display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,8 +440,8 @@ nav ul li {
 
 .services-content .content .service .btn {
   position:absolute;
-  bottom:0.6em;
-  right:0.7em;
+  bottom:0.6rem;
+  right:0.7rem;
 }
 
 .services .push-bottom {
@@ -462,17 +451,12 @@ nav ul li {
 
 .service h4 {
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .service img {
   width: 100%;
   height: auto;
-}
-
-.services h1 {
-  text-align: left;
-  font-weight: 350;
 }
 
 img.title-icon {
@@ -505,31 +489,21 @@ svg.services-background-top {
   pointer-events: none;
 }
 
-.services .flex-balancer {
-  height: 100px;
-}
-
 /* ==================================================== about ================================================================ */
 
 #about {
-  min-height: 98vh;
+  min-height: 100vh;
   height: auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 128% 80%;
   position: relative;
-  font-size: 1.5em;
-}
-
-@media only screen and (min-width: 1900px) and (max-width: 1940px){
-  #about {
-    font-size: 1.3em;
-  }
-  
+  font-size: 1.5rem;
 }
 
 .about p {
   width: 80%;
+  font-size: 1.4rem;
 }
 
 .about-background-whole {
@@ -540,116 +514,75 @@ svg.services-background-top {
   z-index: 1;
 }
 
-.about .container {
+.about-text-container {
   position: relative;
-  padding-top: 50px;
+  padding-top: 8.5%;
+  margin-top: 0;
   width: 50%;
-  margin-right: 40%;
+  margin: 0 40% 0 10%;
   z-index: 6;
 }
 
-@media only screen and (min-width: 900px) {
+.about-background-whole {
+  fill: var(--color-dark);
+}
+
+@media only screen and (min-width: 1060px){
   .about {
     background-image: url(../assets/datacenter.jpg);
 
   }
-  .about .container {
-    padding-top: 8%;
+}
+
+@media only screen and (max-width: 1025px) {
+  .about-text-container {
     padding-bottom: 72px;
+  }
+  .about h2 {
+    text-align: left;
   }
 }
 
 @media only screen and (max-width: 900px) {
 
-  .about .container {
-    margin-right: 0;
+  .about-text-container {
+    margin: 0;
     overflow: hidden;
-    padding: 50px 32px 0 32px;
+    padding: 50px 24px 0 24px;
     width: 100%;
   }
 
   .about h2 {
-    margin-top: 72px;
+    margin-top: 24px;
+  }
+  .about p {
+    width: 100%;
   }
 
 }
-
-#why-aeon {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-@media only screen and (max-width: 1000px) {
-  #why-aeon {
-    height: auto;
-    overflow: hidden;
-  }
-}
-
 
 /* ==================================================== contact ================================================================ */
 
-#why-aeon {
-  min-height: 50vh;
-  padding: 0 10%;
-  font-size: 1.5em;
-}
-
-@media only screen and (min-width: 1900px) and (max-width: 1920px){
-  #why-aeon {
-    font-size: 1.3em;
-  }
-  
-}
-
-
-#why-aeon {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-@media only screen and (max-width: 1000px) {
-  #why-aeon {
-    height: auto;
-    overflow: hidden;
-  }
-}
-
-
-/* ==================================================== contact ================================================================ */
-
-@media only screen and (min-width: 1900px) and (max-width: 1920px){
-  #contact {
-    font-size: 1.0em;
-  }
-  
-}
-
-#contact {
-  padding-top: 100px;
-  padding-bottom: 25px;
-}
 
 .contact {
-  height: 98vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 3rem;
 }
 
-.contact .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: flex-end;
-      -ms-flex-pack: flex-end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#form-container, #why-aeon, .hex-container {
+  z-index: 6;
+  padding: 13vh 48px 0 0;
   width: 100%;
-  height: 100%;
 }
 
-.contact .row {
-  z-index: 5;
+#why-aeon {
+  grid-column-start: 2;
+}
+
+#why-aeon p {
+  font-size: 1.5rem;
 }
 
 .contact-background {
@@ -660,9 +593,15 @@ svg.services-background-top {
   width: 100%;
 }
 
-.contact .title-icon {
-  -webkit-filter: invert(1);
-          filter: invert(1)
+#form-container {
+  background-color: unset;
+  padding-right: 10%;
+  grid-column-start: 3;
+}
+
+.contact h3 {
+  font-size: 1.6rem;
+  margin: 0;
 }
 
 .contact input,
@@ -673,6 +612,14 @@ svg.services-background-top {
   transition: 0.2s;
 }
 
+.contact input[type=text],
+contact input[type=email] {
+  margin-bottom: 15px;
+}
+
+.contact textarea {
+  margin-top: 15px;
+}
 .contact input[type=text]:focus,
 .contact input[type=email]:focus {
   border-bottom: 1px solid var(--color-yellow) !important;
@@ -681,7 +628,7 @@ svg.services-background-top {
 }
 
 .contact textarea {
-  height: 10em;
+  height: 10rem;
   border: 1px solid #9e9e9e !important;
   border-radius: 4px;
   -webkit-box-shadow: none !important;
@@ -693,30 +640,8 @@ svg.services-background-top {
   border: 1px solid var(--color-yellow) !important;
 }
 
-.contact .row {
-  margin-bottom: 20px;
-  margin: 0;
-  padding: 0 4% 20px 0;
-}
-
-
-#hex-svg {
-  /* height: 40vh;
-  width: 30vw; */
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-      transform: scaleX(-1);
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.container .hex-container {
-  width: 25vw;
-  margin-right: 10%;
-}
-
 .contact .btn {
-  margin-top: 5px;
+  margin-top: 8px;
   float: right;
   background-color: var(--color-yellow);
   color: var(--color-dark);
@@ -728,42 +653,71 @@ svg.services-background-top {
   color:  var(--color-yellow);
 }
 
+#hex-svg {
+  /* height: 40vh;
+  width: 30vw; */
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.contact .hex-container {
+  width: 25vw;
+  margin-right: 10%;
+}
+
+@media only screen and (max-width: 1500px) {
+
+  #why-aeon p {
+    font-size: 1.3rem;
+  }
+
+  #form-container {
+    padding-right: 2%;
+  }
+}
 @media only screen and (max-width: 1100px) {
   .contact {
-    padding-top: 0;
-    /* padding-bottom: 200px; */
+    height: 100vh;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0;
+  }
+  #why-aeon, #form-container {
+    grid-column-start: auto;
     height: auto;
+    padding: 2%;
+  }
+  #form-container {
+    background-color: var(--color-dark);
+  }
+  .contact h2 {
+    text-align: left;
   }
 
-  .contact .container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-
-  }
-
-  .container .row {
+  #form-container, #why-aeon {
     margin: auto;
     padding: auto;
-    padding-left: 20%;
+    padding: 10px 10% 10vh 10%;
   }
-
-  .container .hex-container {
+  .contact .hex-container {
     display: none;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .contact {
-    padding-bottom: 100px;
+    height: 115vh;
   }
-  .contact .row {
-    padding-bottom: 20px;
-    margin-bottom: 0;
-    padding-left: 0;
+  #form-container, #why-aeon {
+    height: auto;
+    margin: auto;
+    padding: 10px 10% 10vh 10%;
   }
 
+  #form-container {
+    background-color: var(--color-dark);
+  }
 }
