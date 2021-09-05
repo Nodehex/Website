@@ -630,7 +630,7 @@ svg.services-background-top {
 .contact h3 {
   font-size: 1.6rem;
   margin: 0;
-  padding: 5px 0 5px 0;
+  /* padding: 5px 0 5px 0; */
 }
 
 .contact input,
@@ -641,6 +641,14 @@ svg.services-background-top {
   transition: 0.2s;
 }
 
+.contact input[type=text],
+contact input[type=email] {
+  margin-bottom: 15px;
+}
+
+.contact textarea {
+  margin-top: 15px;
+}
 .contact input[type=text]:focus,
 .contact input[type=email]:focus {
   border-bottom: 1px solid var(--color-yellow) !important;
@@ -662,7 +670,7 @@ svg.services-background-top {
 }
 
 .contact .btn {
-  margin-top: 5px;
+  margin-top: 8px;
   float: right;
   background-color: var(--color-yellow);
   color: var(--color-dark);
@@ -735,9 +743,6 @@ svg.services-background-top {
 }
 
 @media only screen and (max-width: 700px) {
-  /* .contact {
-    justify-content: unset;
-  } */
   #form-container, #why-aeon {
     height: auto;
     margin: auto;
