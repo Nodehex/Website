@@ -740,7 +740,8 @@ contact input[type="email"] {
   #form-container {
     grid-column-start: auto;
     height: auto;
-    padding: 2%;
+    margin: auto;
+    padding: 10px 10% 10vh 10%;
   }
   #form-container {
     background-color: var(--color-dark);
@@ -749,12 +750,6 @@ contact input[type="email"] {
     text-align: left;
   }
 
-  #form-container,
-  #why-aeon {
-    margin: auto;
-    padding: auto;
-    padding: 10px 10% 10vh 10%;
-  }
   .contact .hex-container {
     display: none;
   }
@@ -768,7 +763,7 @@ contact input[type="email"] {
   #why-aeon {
     height: auto;
     margin: auto;
-    padding: 10px 10% 10vh 10%;
+    padding: 50px 24px 0 24px;
   }
 
   #form-container {
