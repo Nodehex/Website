@@ -365,16 +365,6 @@ nav ul li {
   padding-top: 0;
 }
 
-.services-content {
-  z-index: 6; /* Resizing the window to certain sizes would cause the svg to stick over the services content */
-}
-
-@media only screen and (min-width: 1400px) {
-  .services-content {
-    margin-right: 15%;
-    max-width: 100%;
-  }
-}
 
 .icon-inline {
   position: relative;
@@ -384,80 +374,70 @@ nav ul li {
   width: auto;
 }
 
-.services-tabbing {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.card-container {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-shadow: 10px 10px 32px -11px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 32px -11px rgba(0, 0, 0, 0.75);
-}
-@media only screen and (min-width: 700px) {
-  .services-tabbing {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
+  justify-content: space-between;
+  width: 100%;
 }
 
-.services-tabbing .tabs {
-  max-width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: auto;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  margin: 0;
-}
-
-.services-tabbing .tabs .indicator {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.services-tabbing .tabs .tab {
-  height: 78px;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-}
-
-.services-tabbing .tabs .tab a {
+.card {
+  border: 1px var(--color-yellow) solid;
+  width: 30%;
+  height: 400px;
   background-color: var(--color-dark);
-  color: var(--color-yellow);
-  height: 78px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-text {
+  color: var(--color-white);
+  height: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
-  line-height: 78px;
-  -webkit-transition: 0.4s ease-in;
-  -o-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
 }
 
-.services-tabbing .tabs .tab a:hover {
-  background-color: var(--color-yellow);
-  color: var(--color-dark);
+.card-icons {
+  -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%)
+    saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
+  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
+    hue-rotate(324deg) brightness(99%) contrast(104%);
+  height: 50%;
+  width: 30%; 
 }
 
-.services-tabbing .tabs .tab a.active {
-  color: var(--color-dark);
-  background-color: var(--color-yellow);
+
+@media only screen and (max-width: 1400px) {
+  
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95vw;
+    height: 100%;
+    padding-left: 5%;
+  }
+
+  .card {
+    height: 30%;
+    width: 100%;
+    font-size: ;
+  }
+
+  .card-icons {
+    padding-top: 10px;
+  }
+
+
 }
 
 .service {
@@ -473,9 +453,6 @@ nav ul li {
 }
 
 @media screen and (max-width: 700px) {
-  .services-tabbing .tabs {
-    max-width: 700px;
-  }
   .services {
     padding-bottom: 25px;
   }
