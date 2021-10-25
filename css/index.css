@@ -408,8 +408,21 @@ nav ul li {
     hue-rotate(324deg) brightness(99%) contrast(104%);
   height: 50%;
   width: 30%; 
+  margin-top: 20px;
 }
 
+.card .btn {
+  margin-bottom: 40px;
+  border: 1px solid var(--color-yellow);
+  justify-content: center;
+  align-items: center;
+}
+
+.card h5 {
+  font-family: "Spartan", sans-serif;
+  color: var(--color-yellow);
+  text-transform: uppercase;
+}
 
 @media only screen and (max-width: 1400px) {
   
@@ -430,7 +443,6 @@ nav ul li {
   .card {
     height: 30%;
     width: 100%;
-    font-size: ;
   }
 
   .card-icons {
