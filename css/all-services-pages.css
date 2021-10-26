@@ -160,3 +160,11 @@ footer ul a {
   font-size: 1rem;
   color: rgb(239 239 239);
 }
+
+footer h2 {
+  color: var(--color-yellow);
+}
+
+p.footer-tag {
+  color: var(--color-yellow);
+}
