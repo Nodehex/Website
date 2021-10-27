@@ -10,13 +10,11 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       bigLogo.classList.remove("fade-out")
       smallLogo.classList.add("fade-out")
-      navBar.classList.remove("tan")
       return
     }
 
     smallLogo.classList.remove("fade-out")
     bigLogo.classList.add("fade-out")
-    navBar.classList.add("tan")
   })
 })
 
