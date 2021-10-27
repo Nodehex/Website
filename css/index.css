@@ -52,6 +52,7 @@ section h2 {
   color: var(--color-white);
   text-transform: uppercase;
 }
+
 .polygon-yellow {
   fill: var(--color-yellow);
 }
@@ -59,6 +60,7 @@ section h2 {
 .polygon-dark {
   fill: var(--color-dark);
 }
+
 @media only screen and (max-width: 1000px) {
   section {
     min-height: 100%;
@@ -86,6 +88,7 @@ h1 {
 svg {
   pointer-events: none;
 }
+
 
 .svg-color {
   -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%)
@@ -123,8 +126,8 @@ nav {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 75px;
-  line-height: 75px;
+  height: 50px;
+  line-height: 50px;
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: var(--color-dark);
@@ -139,14 +142,16 @@ nav {
 
 .nav-left {
   margin-left: 5rem;
+  height: inherit;
 }
 
 .nav-right {
   margin-right: 7rem;
+  height: inherit;
 }
 
 nav ul a {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -161,12 +166,56 @@ nav ul li {
   padding: 0px 10px;
 }
 
-.brand-logo img {
-  height: 50px;
+/* .small-brand-logo,
+.brand-logo {
+  height: 30px;
+  margin-top: 7.5px;
   width: auto;
-  margin-top: 12.5px;
+} */
+
+.small-brand-logo img,
+.brand-logo img {
+  height: 30px;
+  margin-top: 10px;
+  width: auto;
 }
 
+
+@media (prefers-reduced-motion: no-preference) {
+  .small-brand-logo,
+  .brand-logo {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
+    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
+      -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+      -o-transition: transform 2s ease-out, opacity 2s ease-out;
+          transition: transform 2s ease-out, opacity 2s ease-out;
+  }
+
+  .fade-out {
+    opacity: 0;
+    transform: translateX(50px);
+    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
+    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
+      -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+      -o-transition: transform 2s ease-out, opacity 2s ease-out;
+          transition: transform 2s ease-out, opacity 2s ease-out;
+  }
+  /* nav {
+    -webkit-transition: height 2s ease-out;
+    -moz-transition: height 2s ease-out;
+      -ms-transition: height 2s ease-out;
+      -o-transition: height 2s ease-out;
+          transition: height 2s ease-out;
+  } */
+
+}
+.tan {
+  /* background-color: rgb(201, 67, 134) !important; */
+  height: 50px;
+  line-height: 50px;
+}
 .icon-fixed-small {
   position: fixed;
   top: 12.5px;
