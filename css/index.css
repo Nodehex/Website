@@ -202,13 +202,6 @@ nav ul li {
       -o-transition: transform 2s ease-out, opacity 2s ease-out;
           transition: transform 2s ease-out, opacity 2s ease-out;
   }
-  /* nav {
-    -webkit-transition: height 2s ease-out;
-    -moz-transition: height 2s ease-out;
-      -ms-transition: height 2s ease-out;
-      -o-transition: height 2s ease-out;
-          transition: height 2s ease-out;
-  } */
 
 }
 .tan {
@@ -456,7 +449,7 @@ nav ul li {
   filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
     hue-rotate(324deg) brightness(99%) contrast(104%);
   height: 50%;
-  width: 30%; 
+  width: 30%;
   margin-top: 20px;
 }
 
@@ -474,7 +467,7 @@ nav ul li {
 }
 
 @media only screen and (max-width: 1400px) {
-  
+
 }
 
 
