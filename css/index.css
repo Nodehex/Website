@@ -166,13 +166,6 @@ nav ul li {
   padding: 0px 10px;
 }
 
-/* .small-brand-logo,
-.brand-logo {
-  height: 30px;
-  margin-top: 7.5px;
-  width: auto;
-} */
-
 .small-brand-logo img,
 .brand-logo img {
   height: 30px;
@@ -180,6 +173,9 @@ nav ul li {
   width: auto;
 }
 
+.hide {
+  opacity: 0;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .small-brand-logo,
@@ -203,11 +199,6 @@ nav ul li {
           transition: transform 2s ease-out, opacity 2s ease-out;
   }
 
-}
-.tan {
-  /* background-color: rgb(201, 67, 134) !important; */
-  height: 50px;
-  line-height: 50px;
 }
 .icon-fixed-small {
   position: fixed;
