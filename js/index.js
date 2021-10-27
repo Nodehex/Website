@@ -3,13 +3,14 @@ let instance = M.Tabs.init(element)
 
 const bigLogo = document.querySelector(".brand-logo")
 const smallLogo = document.querySelector(".small-brand-logo")
-const navBar = document.getElementsByTagName("nav")[0]
+smallLogo.classList.add("hide")
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       bigLogo.classList.remove("fade-out")
       smallLogo.classList.add("fade-out")
+      smallLogo.classList.remove("hide")
       return
     }
 
