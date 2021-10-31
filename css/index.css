@@ -62,9 +62,9 @@ section h2 {
 }
 
 @media only screen and (max-width: 1000px) {
-  section {
+  /* section {
     min-height: 100%;
-  }
+  } */
 
   section h2 {
     font-size: 2.4rem;
@@ -88,7 +88,6 @@ h1 {
 svg {
   pointer-events: none;
 }
-
 
 .svg-color {
   -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%)
@@ -184,9 +183,9 @@ nav ul li {
     transform: translateX(0);
     -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
     -moz-transition: transform 2s ease-out, opacity 2s ease-out;
-      -ms-transition: transform 2s ease-out, opacity 2s ease-out;
-      -o-transition: transform 2s ease-out, opacity 2s ease-out;
-          transition: transform 2s ease-out, opacity 2s ease-out;
+    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+    -o-transition: transform 2s ease-out, opacity 2s ease-out;
+    transition: transform 2s ease-out, opacity 2s ease-out;
   }
 
   .fade-out {
@@ -194,11 +193,10 @@ nav ul li {
     transform: translateX(50px);
     -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
     -moz-transition: transform 2s ease-out, opacity 2s ease-out;
-      -ms-transition: transform 2s ease-out, opacity 2s ease-out;
-      -o-transition: transform 2s ease-out, opacity 2s ease-out;
-          transition: transform 2s ease-out, opacity 2s ease-out;
+    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+    -o-transition: transform 2s ease-out, opacity 2s ease-out;
+    transition: transform 2s ease-out, opacity 2s ease-out;
   }
-
 }
 .icon-fixed-small {
   position: fixed;
@@ -329,6 +327,12 @@ nav ul li {
   color: var(--color-yellow);
 }
 
+@media only screen and (max-width: 1100px) {
+  .hide-svg {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .hero .wrap {
     margin-top: 50%;
@@ -347,7 +351,7 @@ nav ul li {
     text-align: left;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .hero .wrap {
     margin-top: 40%;
     margin-left: 18px;
@@ -398,7 +402,6 @@ nav ul li {
   padding-top: 0;
 }
 
-
 .icon-inline {
   position: relative;
   top: 7px;
@@ -418,9 +421,9 @@ nav ul li {
   width: 30%;
   height: 400px;
   background-color: var(--color-dark);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -458,12 +461,9 @@ nav ul li {
 }
 
 @media only screen and (max-width: 1400px) {
-
 }
 
-
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .card-container {
     display: flex;
     flex-direction: column;
@@ -481,8 +481,6 @@ nav ul li {
   .card-icons {
     padding-top: 10px;
   }
-
-
 }
 
 .service {
@@ -566,7 +564,6 @@ svg.services-background-top {
 /* ==================================================== about ================================================================ */
 
 #about {
-  min-height: 100vh;
   height: auto;
   background-size: contain;
   background-repeat: no-repeat;
@@ -602,13 +599,17 @@ svg.services-background-top {
   fill: var(--color-dark);
 }
 
-@media only screen and (min-width: 1060px) {
+@media only screen and (min-width: 1100px) {
   .about {
     background-image: url(../assets/datacenter.jpg);
   }
+
+  #about {
+    min-height: 100vh;
+  }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1100px) {
   .about-text-container {
     padding-bottom: 72px;
   }
@@ -617,11 +618,11 @@ svg.services-background-top {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   .about-text-container {
     margin: 0;
     overflow: hidden;
-    padding: 50px 24px 0 24px;
+    padding: 10px 10% 10vh 10%;
     width: 100%;
   }
 
@@ -751,12 +752,15 @@ contact input[type="email"] {
     padding-right: 2%;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1400px) {
   .contact {
     height: 100vh;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 0;
+  }
+  #content-polygon {
+    display: none;
   }
   #why-aeon,
   #form-container {
@@ -793,7 +797,7 @@ contact input[type="email"] {
   }
 }
 /* ==================================================== footer ================================================================ */
-footer{
+footer {
   padding: 10px 10% 10vh 10%;
 }
 
