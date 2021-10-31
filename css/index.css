@@ -216,6 +216,16 @@ nav ul li {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    height: 40px;
+  }
+  .nav-left {
+    margin: 0 auto;
+  }
+  .small-brand-logo img,
+  .brand-logo img {
+    height: 30px;
+    margin-top: 5px;
+    width: auto;
   }
 }
 
