@@ -17,6 +17,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="shortcut icon" href="/assets/aeon icon.svg" type="image/svg">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/flag-icons.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Roboto&family=Spartan:wght@200,500,600,700&display=swap" rel="text/html">
     <script src="https://kit.fontawesome.com/467034ff6c.js" crossorigin="anonymous"></script>
@@ -30,9 +31,11 @@
           </div>
           <div class="nav-right hide-on-med-and-down">
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#services">SERVICES</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#contact">CONTACT</a></li>
+              <li><a href="#services" i18n="header_services">SERVICES</a></li>
+              <li><a href="#about" i18n="header_about">ABOUT</a></li>
+              <li><a href="#contact" i18n="header_contact">CONTACT</a></li>
+              <li><a class="locale-btn" id="locale-btn-se" onClick="localizeButtonClick('se')"><span class="flag-icon flag-icon-se"></span></a></li>
+              <li><a class="locale-btn" id="locale-btn-en" onClick="localizeButtonClick('en')" hidden><span class="flag-icon flag-icon-gb"></span></a></li>
             </ul>
           </div>
       </nav>
@@ -43,7 +46,7 @@
           <img src="assets/Hero Hexagons.svg" class="left-hex hide-on-small-only" alt="">
           <div>
             <h1 id="title"><span>AEON</span> DATA SERVICES</h1>
-            <h2>Construction data - digitalised</h2>
+            <h2 i18n="hero_tagline">Construction data - digitalised</h2>
           </div>
         </div>
         <div class="arrow-wrapper">
@@ -53,39 +56,39 @@
         </div>
       </section>
       <section class="services" id="services">
-              <h2><img src="assets/aeon icon.svg" alt="" class="svg-color icon-inline"> SERVICES</h2>
+              <h2 i18n="services_title"><img src="assets/aeon icon.svg" alt="" class="svg-color icon-inline"> SERVICES</h2>
               <div class="card-container">
                 <div class="card">
                   <img src="assets/Information_Management_ICON.svg" class="card-icons"  alt="">
-                  <h5>Information Management</h3>
-                  <p class="card-text">Management and coordination of digital assets, data and consultancy on process and implementation of information management systems for hyperscale data centers, residential and specialist infrastructure.</p>
-                  <a href="/services/information-management.html" class="btn">READ MORE</a>
+                  <h5 i18n="services_title_infomgmt">Information Management</h3>
+                  <p i18n="services_content_infomgmt" class="card-text">Management and coordination of digital assets, data and consultancy on process and implementation of information management systems for hyperscale data centers, residential and specialist infrastructure.</p>
+                  <a href="/services/information-management.html" i18n="read_more" class="btn">READ MORE</a>
                 </div>
                 <div class="card">
                   <img src="assets/OM_Manuals_ICON.svg" class="card-icons" alt="">
-                  <h5>O&M Manuals</h5>
-                  <p class="card-text">Maintaining a high quality building often requires a stellar foundation of information. We manage the manual process to ensure your operations team start on steady ground.</p>
-                  <a href="/services/operations-maintenance.html" class="btn">READ MORE</a>
+                  <h5 i18n="services_title_om">O&M Manuals</h5>
+                  <p i18n="services_content_om" class="card-text">Maintaining a high quality building often requires a stellar foundation of information. We manage the manual process to ensure your operations team start on steady ground.</p>
+                  <a href="/services/operations-maintenance.html" i18n="read_more" class="btn">READ MORE</a>
                 </div>
                 <div class="card">
                   <img src="assets/Reporting__Analytics_ICON.svg" class="card-icons" alt="">
-                  <h5>Reporting & Analytics</h5>
-                  <p class="card-text">Tracking closeout, analysis of pain points and clear, easy to digest dashboards to ensure that you have the information needed to accurately pinpoint documentation progress.</p>
-                  <a href="/services/reporting-analytics.html" class="btn">READ MORE</a>
+                  <h5 i18n="services_title_reporting">Reporting & Analytics</h5>
+                  <p i18n="services_content_reporting" class="card-text">Tracking closeout, analysis of pain points and clear, easy to digest dashboards to ensure that you have the information needed to accurately pinpoint documentation progress.</p>
+                  <a href="/services/reporting-analytics.html" i18n="read_more" class="btn">READ MORE</a>
                 </div>
               </div>
         <svg class="services-background-bottom hide-on-small-only hide-svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <polygon class="polygon-dark" class="hide-svg" points="100,5 100,40 95.7,50 86,50 74.2,77 69,77" fill="#1c1a18" /> <!-- black -->
+          <polygon class="polygon-dark" class="hide-svg" points="100,5 100,40 95.7,50 86,50 74.2,77 69,77" fill="#1c1a18" />
           <polygon class="polygon-yellow" class="hide-svg" points="77.6,35 83,35 71.2,62 66,62" />
         </svg>
       </section>
       <section class="about" id="about">
         <div class="about-text-container">
-              <h2><img src="assets/page title icons.svg" class="title-icon svg-color" alt=""> ABOUT AEON</h2>
-              <p>
+              <h2 i18n="about_title"><img src="assets/page title icons.svg" class="title-icon svg-color" alt=""> ABOUT AEON</h2>
+              <p i18n="about_p1">
                 AEONDS is an information management specialist group for hyperscale data centers and commercial builds. Our team has a wealth of experience delivering and managing documentation services across a vast number of hyperscale datacenter projects and the specialist infrastructure, offices and ancillary buildings that enable them. We simplify the process by removing the ambiguity around documentation, understanding client needs and requirements and then implementing a structure to ensure a lasting impression for information management across all mission-critical systems.
               </p>
-              <p>
+              <p i18n="about_p2">
                 Our services focus on providing a high quality, data driven and front-loaded effort to ensure an effective delivery from design to decommissioning. This being combined with support into the first year of operations, a smooth transition and high-quality documentation for the operations team to execute on, a facility is only as good as the information it’s supported by.
               </p>
         </div>
@@ -98,25 +101,25 @@
             <polygon class="polygon-yellow" id="content-polygon" points="0,0 25,50 0,100" fill="#F4B545" />
           </svg>
             <div id="why-aeon">
-                <h2><img src="assets/page title icons.svg" class="title-icon svg-color" alt=""> WHY AEON</h2>
-                <p>
+                <h2 i18n="why_title"><img src="assets/page title icons.svg" class="title-icon svg-color" alt=""> WHY AEON</h2>
+                <p i18n="why_p1">
                   AEONDS is a multi-disciplinary, multi-cultural team of information management specialists, data scientists, software developers and designers that have been working within the construction and technology industries over the last 10 years.
                 </p>
-                <p>
+                <p i18n="why_p2">
                   Our expertise has been developed over large scale infrastructure projects, specialist hyperscale data center buildings and specialist facilities. We aim to leverage emerging technologies within the digital construction sector to extract the immense value of the data contained within projects and provide expertise consultancy on process and information management.
                 </p>
             </div>
             <div id="form-container">
               <form action="https://formsubmit.co/contact-web@aeonds.com" method="POST">
-                <h2><img src="assets/page title icons.svg" class="title-icon svg-color" alt=""> CONTACT</h2>
+                <h2 i18n="contact_title"><img src="assets/page title icons.svg" class="title-icon svg-color" alt=""> CONTACT</h2>
                 <input name="_redirect" type="hidden" id="name" value="https://aeonds.com">
-                <h3>Name</h5>
+                <h3 i18n="contact_name">Name</h5>
                 <input type="text" name="name" value="" required>
-                <h3>Email</h5>
+                <h3 i18n="contact_email">Email</h5>
                 <input type="email" name="email" value="" required>
-                <h3>Subject</h5>
+                <h3 i18n="contact_subject">Subject</h5>
                 <input type="text" name="subject" value="" required>
-                <h3>Message</h5>
+                <h3 i18n="contact_message">Message</h5>
                 <textarea name="comment" rows="10" cols="30"></textarea>
                 <input name="_formsubmit_id" type="text" style="display:none">
                 <input value="Submit" class="btn" type="submit">
@@ -132,21 +135,21 @@
           <div class="footer-1">
             <img src="assets/aeon icon.svg" alt="" class="svg-color icon-inline-footer">
             <h2>AeonDS</h2>
-            <p class="footer-tag">Construction data - digitalised</p>
+            <p class="footer-tag" i18n="footer_tagline">Construction data - digitalised</p>
           </div>
           <div class="footer-2">
-              <h2>Services</h2>
+              <h2 i18n="footer_services">Services</h2>
               <ul id="" class="footer_ul">
-                <li><a href="/services/information-management.html">INFORMATION MANAGEMENT</a></li>
-                <li><a href="/services/reporting-analytics.html">REPORTING & ANALYTICS</a></li>
-                <li><a href="/services/operations-maintenance.html">OPERATIONS & MAINTENANCE MANUALS</a></li>
+                <li><a i18n="footer_infomgmt" href="/services/information-management.html">INFORMATION MANAGEMENT</a></li>
+                <li><a i18n="footer_reporting" href="/services/reporting-analytics.html">REPORTING & ANALYTICS</a></li>
+                <li><a i18n="footer_om" href="/services/operations-maintenance.html">OPERATIONS & MAINTENANCE MANUALS</a></li>
               </ul>
           </div>
           <div class="footer-3">
             <h2>Aeon</h2>
             <ul id="" class="footer_ul">
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#contact">CONTACT AEONDS</a></li>
+              <li><a i18n="footer_about" href="#about">ABOUT</a></li>
+              <li><a i18n="footer_contact" href="#contact">CONTACT AEONDS</a></li>
             </ul>
           </div>
         </div>
@@ -154,6 +157,9 @@
     </main>
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/url.js"></script>
+    <script type="text/javascript" src="js/strings.js"></script>
+    <script type="text/javascript" src="js/i18n.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
