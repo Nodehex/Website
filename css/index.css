@@ -437,6 +437,7 @@ nav ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .card-text {
@@ -471,9 +472,30 @@ nav ul li {
 }
 
 @media only screen and (max-width: 1400px) {
+  .services {
+    height: auto;
+  }
+
+  .card {
+    border: 1px var(--color-yellow) solid;
+    width: 30%;
+    height: auto;
+    background-color: var(--color-dark);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 750px) {
+  .services {
+    height: auto;
+  }
+  
   .card-container {
     display: flex;
     flex-direction: column;
@@ -508,13 +530,15 @@ nav ul li {
 @media screen and (max-width: 700px) {
   .services {
     padding-bottom: 25px;
+    height: auto;
   }
 
   .service {
     -webkit-box-shadow: none;
     box-shadow: none;
-    min-height: 285px;
   }
+
+
 }
 
 .services-content .content .service .btn {
