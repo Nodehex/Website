@@ -1,8 +1,8 @@
 let element = document.getElementById("service-tabs")
 let instance = M.Tabs.init(element)
 
-const bigLogo = document.querySelector(".brand-logo")
-const smallLogo = document.querySelector(".small-brand-logo")
+const bigLogo = document.querySelector("#big-logo")
+const smallLogo = document.querySelector("#small-logo")
 smallLogo.classList.add("hide")
 bigLogo.classList.add("hide")
 let firstPageLoad = true
