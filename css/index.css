@@ -3,7 +3,6 @@
   --color-yellow: #f4ce45e8;
   --color-dark: #1c1a18;
   --text-color-dark: #1c2139;
-  --color-old-grey: #505050;
   --color-grey: #3a3637;
 }
 
@@ -62,10 +61,6 @@ section h2 {
 }
 
 @media only screen and (max-width: 1000px) {
-  /* section {
-    min-height: 100%;
-  } */
-
   section h2 {
     font-size: 2.4rem;
   }
@@ -114,6 +109,10 @@ svg {
   background-color: var(--color-dark);
 }
 
+.hide {
+  opacity: 0;
+}
+
 /* ==================================================== Navbar ================================================================ */
 
 nav {
@@ -144,6 +143,34 @@ nav {
   height: inherit;
 }
 
+.brand-logo img {
+  height: 30px;
+  margin-top: 10px;
+  width: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-logo {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
+    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
+    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+    -o-transition: transform 2s ease-out, opacity 2s ease-out;
+    transition: transform 2s ease-out, opacity 2s ease-out;
+  }
+
+  .fade-out {
+    opacity: 0;
+    transform: translateX(50px);
+    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
+    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
+    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+    -o-transition: transform 2s ease-out, opacity 2s ease-out;
+    transition: transform 2s ease-out, opacity 2s ease-out;
+  }
+}
+
 .nav-right {
   margin-right: 7rem;
   height: inherit;
@@ -165,65 +192,88 @@ nav ul li {
   padding: 0px 10px;
 }
 
-.small-brand-logo img,
-.brand-logo img {
-  height: 30px;
-  margin-top: 10px;
-  width: auto;
+#nav-menu-checkbox, .nav-menu-toggle {
+  display: none;
 }
 
-.hide {
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .small-brand-logo,
-  .brand-logo {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
-    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
-    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
-    -o-transition: transform 2s ease-out, opacity 2s ease-out;
-    transition: transform 2s ease-out, opacity 2s ease-out;
-  }
-
-  .fade-out {
-    opacity: 0;
-    transform: translateX(50px);
-    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
-    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
-    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
-    -o-transition: transform 2s ease-out, opacity 2s ease-out;
-    transition: transform 2s ease-out, opacity 2s ease-out;
-  }
-}
-.icon-fixed-small {
-  position: fixed;
-  top: 12.5px;
-  right: 35px;
-}
-
-.icon-fixed-small img {
-  width: 50px;
-  height: 50px;
-}
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     height: 40px;
   }
+
   .nav-left {
     margin: 0 auto;
   }
-  .small-brand-logo img,
+
   .brand-logo img {
     height: 30px;
     margin-top: 5px;
     width: auto;
+  }
+
+  .nav-right {
+    margin-top: 40px;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .nav-right .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    background-color: inherit;
+  }
+
+  .nav-right .right li,
+  .nav-right .right li a {
+    padding: 0;
+  }
+
+  #nav-menu-checkbox-label {
+    left: 90%;
+    position: absolute;
+  }
+
+  .nav-menu-toggle {
+    clear: both;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    padding-right: 12px;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  .nav-menu-toggle:hover {
+    color: var(--color-yellow);
+  }
+
+  #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right {
+    width: 0;
+    overflow: hidden;
+    box-shadow: unset;
+    background-color: #1b1917;
+  }
+
+  #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
+    width: 100vw;
+    background-color: #1b1917;
+    box-shadow: -2px 3px 5px #111111;
+  }
+
+  #nav-menu-checkbox:checked ~ label > span.nav-menu-toggle {
+    color: var(--color-yellow)
+  }
+
+}
+
+@media only screen and (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
+  #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right,
+  #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
+      transition: width 1s cubic-bezier(0.215, 0.610, 0.355, 1);
   }
 }
 
