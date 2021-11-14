@@ -26,18 +26,26 @@
     <header>
       <nav class="nav">
           <div class="nav-left">
-            <a href="#" class="brand-logo"><img src="assets/aeon logo.svg" alt="" class="svg-color"></a>
-            <a href="#" class="small-brand-logo"><img src="assets/aeon icon.svg" alt="" class="svg-color"></a>
+            <a href="#" class="brand-logo" id="big-logo"><img src="assets/aeon logo.svg" alt="" class="svg-color"></a>
+            <a href="#" class="brand-logo" id="small-logo"><img src="assets/aeon icon.svg" alt="" class="svg-color"></a>
           </div>
-          <div class="nav-right hide-on-med-and-down">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <input type="checkbox" id="nav-menu-checkbox" />
+          <label for="nav-menu-checkbox" id="nav-menu-checkbox-label">
+            <span class="nav-menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </label>
+          <div class="nav-right">
+            <ul class="right">
               <li><a href="#services" i18n="header_services">SERVICES</a></li>
               <li><a href="#about" i18n="header_about">ABOUT</a></li>
               <li><a href="#contact" i18n="header_contact">CONTACT</a></li>
               <li><a class="locale-btn" id="locale-btn-se" onClick="localizeButtonClick('se')"><span class="flag-icon flag-icon-se"></span></a></li>
               <li><a class="locale-btn" id="locale-btn-en" onClick="localizeButtonClick('en')" hidden><span class="flag-icon flag-icon-gb"></span></a></li>
             </ul>
-          </div>
       </nav>
     </header>
     <main>

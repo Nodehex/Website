@@ -3,7 +3,6 @@
   --color-yellow: #f4ce45e8;
   --color-dark: #1c1a18;
   --text-color-dark: #1c2139;
-  --color-old-grey: #505050;
   --color-grey: #3a3637;
 }
 
@@ -62,10 +61,6 @@ section h2 {
 }
 
 @media only screen and (max-width: 1000px) {
-  /* section {
-    min-height: 100%;
-  } */
-
   section h2 {
     font-size: 2.4rem;
   }
@@ -114,6 +109,10 @@ svg {
   background-color: var(--color-dark);
 }
 
+.hide {
+  opacity: 0;
+}
+
 /* ==================================================== Navbar ================================================================ */
 
 nav {
@@ -144,6 +143,35 @@ nav {
   height: inherit;
 }
 
+.brand-logo img {
+  height: 30px;
+  margin-top: 10px;
+  width: auto;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-logo {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
+    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
+    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+    -o-transition: transform 2s ease-out, opacity 2s ease-out;
+    transition: transform 2s ease-out, opacity 2s ease-out;
+  }
+
+  .fade-out {
+    opacity: 0;
+    transform: translateX(50px);
+    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
+    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
+    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
+    -o-transition: transform 2s ease-out, opacity 2s ease-out;
+    transition: transform 2s ease-out, opacity 2s ease-out;
+  }
+}
+
 .nav-right {
   margin-right: 7rem;
   height: inherit;
@@ -165,65 +193,167 @@ nav ul li {
   padding: 0px 10px;
 }
 
-.small-brand-logo img,
-.brand-logo img {
-  height: 30px;
-  margin-top: 10px;
-  width: auto;
+#nav-menu-checkbox, .nav-menu-toggle {
+  display: none;
 }
 
-.hide {
-  opacity: 0;
+.nav-menu-toggle {
+  width: 24px;
+  height: inherit;
+  position: absolute;
+  left: 90%;
+  margin: auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .small-brand-logo,
-  .brand-logo {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
-    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
-    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
-    -o-transition: transform 2s ease-out, opacity 2s ease-out;
-    transition: transform 2s ease-out, opacity 2s ease-out;
-  }
-
-  .fade-out {
-    opacity: 0;
-    transform: translateX(50px);
-    -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
-    -moz-transition: transform 2s ease-out, opacity 2s ease-out;
-    -ms-transition: transform 2s ease-out, opacity 2s ease-out;
-    -o-transition: transform 2s ease-out, opacity 2s ease-out;
-    transition: transform 2s ease-out, opacity 2s ease-out;
-  }
-}
-.icon-fixed-small {
-  position: fixed;
-  top: 12.5px;
-  right: 35px;
+.nav-menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--color-yellow);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
-.icon-fixed-small img {
-  width: 50px;
-  height: 50px;
+.nav-menu-toggle span:nth-child(1) {
+  top: 10px;
 }
 
-@media only screen and (max-width: 700px) {
+.nav-menu-toggle span:nth-child(2),
+.nav-menu-toggle span:nth-child(3) {
+  top: 18px;
+  /* top: 12px; */
+}
+
+.nav-menu-toggle span:nth-child(4) {
+  top: 26px;
+}
+
+@media only screen and (max-width: 1000px) {
   nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     height: 40px;
   }
+
   .nav-left {
     margin: 0 auto;
   }
-  .small-brand-logo img,
+
   .brand-logo img {
     height: 30px;
     margin-top: 5px;
     width: auto;
+  }
+
+  .nav-right {
+    margin-top: 40px;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .nav-right .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    background-color: inherit;
+  }
+
+  .nav-right .right li,
+  .nav-right .right li a {
+    padding: 0;
+  }
+
+  #nav-menu-checkbox-label {
+    left: 90%;
+    position: absolute;
+    width: 24px;
+    height: inherit;
+  }
+
+  .nav-menu-toggle {
+    clear: both;
+    cursor: pointer;
+    display: block;
+    padding-right: 12px;
+    margin: 0;
+    font-size: 1.3rem;
+    /* user-select: none; */
+    height: inherit;
+  }
+  .nav-menu-toggle:hover {
+    color: var(--color-yellow);
+  }
+
+  #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right {
+    width: 0;
+    overflow: hidden;
+    box-shadow: unset;
+    background-color: #1b1917;
+  }
+
+  #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
+    width: 100vw;
+    background-color: #1b1917;
+    box-shadow: -2px 3px 5px #111111;
+  }
+
+  #nav-menu-checkbox:checked ~ label > .nav-menu-toggle {
+    color: var(--color-yellow)
+  }
+
+  #nav-menu-checkbox:checked ~ label > .nav-menu-toggle span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #nav-menu-checkbox:checked ~ label > .nav-menu-toggle span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #nav-menu-checkbox:checked ~ label > .nav-menu-toggle span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #nav-menu-checkbox:checked ~ label > .nav-menu-toggle span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
+  #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right,
+  #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
+      transition: width 1s cubic-bezier(0.215, 0.610, 0.355, 1);
   }
 }
 
@@ -769,9 +899,11 @@ contact input[type="email"] {
 }
 
 @media only screen and (max-width: 700px) {
+
   .contact {
     height: 115vh;
   }
+
   #form-container,
   #why-aeon {
     height: auto;
@@ -782,8 +914,11 @@ contact input[type="email"] {
   #form-container {
     background-color: var(--color-dark);
   }
+
 }
+
 /* ==================================================== footer ================================================================ */
+
 footer {
   padding: 10px 10% 10vh 10%;
 }
