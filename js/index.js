@@ -1,3 +1,16 @@
+function setDebugMode(enabled) {
+  if (location.hostname) return false
+  return enabled
+}
+
+function debugLog(string) {
+  if (debugMode) console.log(string)
+}
+
+const debugMode = setDebugMode(false)
+
+let element = document.getElementById("service-tabs")
+let instance = M.Tabs.init(element)
 
 const bigLogo = document.querySelector("#big-logo")
 const smallLogo = document.querySelector("#small-logo")
@@ -20,5 +33,7 @@ const observer = new IntersectionObserver(entries => {
     bigLogo.classList.remove("hide")
   }
 })
+
+initializeLocalization()
 
 observer.observe(document.querySelector(".icon-animation"))

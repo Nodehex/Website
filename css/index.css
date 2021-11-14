@@ -567,6 +567,7 @@ nav ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .card-text {
@@ -601,9 +602,31 @@ nav ul li {
 }
 
 @media only screen and (max-width: 1400px) {
+  .services {
+    height: auto;
+  }
+
+  .card {
+    border: 1px var(--color-yellow) solid;
+    width: 30%;
+    height: auto;
+    background-color: var(--color-dark);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 750px) {
+
+  .services {
+    padding-bottom: 25px;
+  }
+
   .card-container {
     display: flex;
     flex-direction: column;
@@ -621,51 +644,7 @@ nav ul li {
   .card-icons {
     padding-top: 10px;
   }
-}
 
-.service {
-  max-width: 800px;
-  min-height: 220px;
-  -webkit-box-shadow: inset 4px 0 4px rgba(0, 0, 0, 0.148);
-  box-shadow: inset 4px 0 4px rgba(0, 0, 0, 0.148);
-  background-color: #f5f7f5;
-  color: var(--text-color-dark);
-  padding: 10px 25px;
-  height: 100%;
-  position: relative;
-}
-
-@media screen and (max-width: 700px) {
-  .services {
-    padding-bottom: 25px;
-  }
-
-  .service {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    min-height: 285px;
-  }
-}
-
-.services-content .content .service .btn {
-  position: absolute;
-  bottom: 0.6rem;
-  right: 0.7rem;
-}
-
-.services .push-bottom {
-  position: relative;
-  height: 30%;
-}
-
-.service h4 {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
-.service img {
-  width: 100%;
-  height: auto;
 }
 
 img.title-icon {
@@ -753,12 +732,12 @@ svg.services-background-top {
   .about-text-container {
     padding-bottom: 72px;
   }
+
   .about h2 {
     text-align: left;
+    margin-top: 24px;
   }
-}
 
-@media only screen and (max-width: 1100px) {
   .about-text-container {
     margin: 0;
     overflow: hidden;
@@ -766,12 +745,10 @@ svg.services-background-top {
     width: 100%;
   }
 
-  .about h2 {
-    margin-top: 24px;
-  }
   .about p {
     width: 100%;
   }
+
 }
 
 /* ==================================================== contact ================================================================ */
