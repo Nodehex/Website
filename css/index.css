@@ -197,22 +197,12 @@ nav ul li {
   display: none;
 }
 
-/* .nav-menu-toggle .bar {
-  padding: 0;
-  width: 30px;
-  height: 4px;
-  background-color: maroon;
-  display: block;
-  border-radius: 4px;
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-} */
-
 .nav-menu-toggle {
   width: 24px;
   height: inherit;
-  position: relative;
-  margin: 50px auto;
+  position: absolute;
+  left: 90%;
+  margin: auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -229,7 +219,7 @@ nav ul li {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #d3531a;
+  background: var(--color-yellow);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -242,6 +232,7 @@ nav ul li {
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
+
 .nav-menu-toggle span:nth-child(1) {
   top: 10px;
 }
@@ -296,6 +287,8 @@ nav ul li {
   #nav-menu-checkbox-label {
     left: 90%;
     position: absolute;
+    width: 24px;
+    height: inherit;
   }
 
   .nav-menu-toggle {
@@ -305,7 +298,8 @@ nav ul li {
     padding-right: 12px;
     margin: 0;
     font-size: 1.3rem;
-    user-select: none;
+    /* user-select: none; */
+    height: inherit;
   }
   .nav-menu-toggle:hover {
     color: var(--color-yellow);
@@ -928,9 +922,11 @@ contact input[type="email"] {
 }
 
 @media only screen and (max-width: 700px) {
+
   .contact {
     height: 115vh;
   }
+
   #form-container,
   #why-aeon {
     height: auto;
@@ -941,8 +937,11 @@ contact input[type="email"] {
   #form-container {
     background-color: var(--color-dark);
   }
+
 }
+
 /* ==================================================== footer ================================================================ */
+
 footer {
   padding: 10px 10% 10vh 10%;
 }
