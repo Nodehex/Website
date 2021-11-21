@@ -1,8 +1,8 @@
-li {
+.container li {
   font-size: 1.2em;
 }
 
-li.tabbed {
+.container li.tabbed {
   margin-left: 30px;
 }
 
@@ -100,71 +100,4 @@ li.tabbed {
 
 .services-background-top {
   z-index: 2;
-}
-
-svg {
-  pointer-events: none;
-}
-
-.svg-color {
-  -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%)
-    saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
-  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
-    hue-rotate(324deg) brightness(99%) contrast(104%);
-}
-
-/* ==================================================== footer ================================================================ */
-footer{
-  padding: 10px 10% 10vh 10%;
-}
-
-.footer-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 120px;
-  line-height: 40px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background-color: var(--color-dark);
-}
-
-.footer-1 {
-  margin-left: 5rem;
-}
-
-.footer-3 {
-  margin-right: 7rem;
-}
-
-.icon-inline-footer {
-  position: relative;
-  top: 7px;
-  margin-top: 5px;
-  height: 2rem;
-  width: auto;
-  padding-right: 7px;
-}
-
-footer h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  display: inline-block;
-}
-
-footer ul a {
-  font-size: 1rem;
-  color: rgb(239 239 239);
-}
-
-footer h2 {
-  color: var(--color-yellow);
-}
-
-p.footer-tag {
-  color: var(--color-yellow);
 }
