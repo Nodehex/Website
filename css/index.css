@@ -1,6 +1,6 @@
 :root {
   --color-white: white;
-  --color-yellow: #f4ce45e8;
+  --color-yellow: #e4c040;
   --color-dark: #1c1a18;
   --text-color-dark: #1c2139;
   --color-grey: #3a3637;
@@ -252,6 +252,12 @@ nav ul li {
     -ms-flex-pack: center;
     justify-content: center;
     height: 40px;
+  }
+
+  nav ul li {
+    text-align: center;
+    width: 100%;
+    float: none
   }
 
   .nav-left {
