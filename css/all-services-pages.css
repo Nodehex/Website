@@ -1,3 +1,38 @@
+ul li ul {
+	background: var(--color-dark);
+	visibility: hidden;
+  opacity: 0;
+	position: absolute;
+  transition: opacity 0.5s ease-in;
+  width: min-content;
+  box-shadow: 2px 3px 5px #111111;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  width: 100%;
+  white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+  ul li ul {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+  }
+
+}
+
 .container li {
   font-size: 1.2em;
 }
