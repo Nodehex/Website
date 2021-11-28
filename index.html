@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aeon/DS</title>
+    <script>
+      window['ga-disable-MEASUREMENT_ID'] = true;
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162545543-1"></script>
     <script>
@@ -164,10 +167,19 @@
       </footer>
     </main>
 
+    <div id="cookies">
+      <h4>We use cookies</h4>
+      <p>We use cookies and other tracking technologies to improve your browsing experience on our website to analyze our website traffic, and to understand where our visitors are coming from.</p>
+      <!-- <button>I agree</button><button>I decline</button> -->
+      <input value="Allow cookies" class="btn" type="submit" onClick="storeCookieUsage(true)">
+      <input value="Disable cookies" class="btn" type="submit" onClick="storeCookieUsage(false)">
+    </div>
+
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/url.js"></script>
     <script type="text/javascript" src="js/strings.js"></script>
     <script type="text/javascript" src="js/i18n.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
