@@ -91,11 +91,10 @@ img.title-icon {
   }
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Spartan", sans-serif;
   color: var(--color-white);
 }
-
 
 .btn {
   background-color: var(--color-yellow);
@@ -541,14 +540,14 @@ nav ul li {
     width: auto;
   }
   }
-  
+
 @media only screen and (max-width: 400px) {
   .hero .main-logo {
     padding-top: 15rem;
     padding-left: 0px;
     width: 85vw;
   }
-  
+
   .hero .wrap {
     margin: auto;
   }
@@ -576,6 +575,7 @@ nav ul li {
 
 .services h2 {
   padding-top: 0;
+  margin-bottom: 72px;
 }
 
 .icon-inline {
@@ -598,9 +598,8 @@ nav ul li {
 
 .card {
   border: 1px var(--color-yellow) solid;
-  width: 30%;
-  min-height: 400px;
-  flex-grow: 1;
+  --container-height: 40vh;
+  --container-width: 100vw;
   background-color: var(--color-dark);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
@@ -609,7 +608,10 @@ nav ul li {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: auto 24px;
+  margin: 0 0.5vw;
+  flex: 1 1 0;
+  width: 0;
+  max-width: 600px;
 }
 
 .card-icons {
@@ -617,24 +619,24 @@ nav ul li {
     saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
   filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
     hue-rotate(324deg) brightness(99%) contrast(104%);
-  width: 30%;
+  width: 25%;
   max-height: 25%;
   margin-top: 20px;
 }
 
 .card-text {
   color: var(--color-white);
-  height: 50%;
   padding-left: 18px;
   padding-right: 20px;
   text-align: left;
+  font-size: calc(1rem + 0.3vw);
 }
 
 .card .btn {
   margin-bottom: 40px;
   border: 1px solid var(--color-dark);
   align-self: flex-end;
-  margin-right: 25px;
+  margin: auto 25px 25px auto;
   background-color: var(--color-yellow);
   color: var(--color-dark);
 }
@@ -646,11 +648,11 @@ nav ul li {
 }
 
 .card h3 {
-  font-family: "Spartan", sans-serif;
-  font-size: 1.8rem;
+  font-size: calc(1rem + 0.5vw);
   color: var(--color-yellow);
   text-transform: uppercase;
   white-space: nowrap;
+  margin: 20px;
 }
 
 svg.services-background-top {
@@ -681,46 +683,45 @@ svg.services-background-top {
   pointer-events: none;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1920px) {
+  .card {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 1440px) {
   .services {
-    height: auto;
-    min-height: 60vh;
+    min-height: 85h;
+  }
+
+  .services h2 {
+    margin-bottom: 36px;
   }
 
   .card-container {
-    padding: unset;
+    margin: 0;
+    padding: 12px;
   }
 
-  .card {
-    height: auto;
-    /* width: auto; */
-    margin: auto 6px;
-  }
-}
-
-@media only screen and (max-width: 1250px) {
   .card h3 {
-    font-family: "Spartan", sans-serif;
-    font-size: 1.6rem;
-  }
-}
-
-@media only screen and (max-width: 1250px) {
-  .card h3 {
-    font-family: "Spartan", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .services {
     padding-bottom: 25px;
+    height: auto;
+  }
+
+  .services h2 {
+    margin-bottom: 0;
+    padding-top: 36px;
   }
 
   .card-container {
     flex-direction: column;
     justify-content: center;
-    width: 90vw;
+    width: 85vw;
     height: 100%;
   }
 
@@ -730,9 +731,8 @@ svg.services-background-top {
     margin: 12px auto;
   }
 
-  .card-icons {
-    padding-top: 10px;
-    width: 25%;
+  .card h3 {
+    font-size: 1.5rem;
   }
 }
 
