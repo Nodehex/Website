@@ -1,8 +1,16 @@
+:root {
+  --color-white: white;
+  --color-yellow: #e4c040;
+  --color-dark: #1c1a18;
+  --text-color-dark: #1c2139;
+  --color-grey: #3a3637;
+}
+
 .nav-right .right li ul {
-	background: var(--color-dark);
-	visibility: hidden;
+  background: var(--color-dark);
+  visibility: hidden;
   opacity: 0;
-	position: absolute;
+  position: absolute;
   transition: opacity 0.5s ease-in;
   width: min-content;
   box-shadow: 2px 3px 5px #111111;
@@ -20,9 +28,7 @@
   white-space: nowrap;
 }
 
-
 @media only screen and (max-width: 1000px) {
-
   .nav-right .right li ul {
     visibility: visible;
     opacity: 1;
@@ -30,7 +36,6 @@
     box-shadow: none;
     width: 100%;
   }
-
 }
 
 .container li {
@@ -92,7 +97,7 @@
 .service-block li::before {
   font-weight: bold;
   content: "– ";
-  color: var(--color-yellow)
+  color: var(--color-yellow);
 }
 
 .service-block {
@@ -101,7 +106,7 @@
   margin-top: 0px;
 }
 
-.service-block h2{
+.service-block h2 {
   font-size: 3rem;
   font-weight: 300;
   position: relative;
@@ -116,11 +121,12 @@
   margin-top: 10px;
   font-weight: 300;
   font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .service-container .services-background-hex {
-  top: 25%; left: 0;
+  top: 25%;
+  left: 0;
   height: 50%;
   width: 100%;
 }
@@ -135,4 +141,87 @@
 
 .services-background-top {
   z-index: 2;
+}
+
+.service-header {
+  background-color: #eeeeee;
+  color: #111111;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.service-header .service-block {
+  height: auto;
+}
+
+.service-header h2 {
+  color: #111111;
+  font-weight: bold;
+}
+
+.service-header p {
+  padding-left: 50px;
+}
+
+hr {
+  border-color: var(--color-yellow);
+}
+
+.before-li {
+  margin-left: 60px;
+  font-weight: bold;
+}
+
+span.yellow-text {
+  color: var(--color-yellow);
+}
+
+.services-triangle-right {
+  z-index: 5;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.triangle {
+  z-index: 5;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.triangle-right-2 {
+  top: 200%;
+}
+
+.triangle-left {
+  top: 100%;
+}
+
+.workflow {
+  margin-top: 40px;
+}
+
+.service-block li::before {
+  display: inline-block;
+  margin-right: 20px;
+  content: "";
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/icons/HEX 1.svg");
+  color: var(--color-yellow);
+}
+
+.service-block li {
+  padding-top: 15px;
 }
