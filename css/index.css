@@ -247,7 +247,7 @@ nav ul li {
   top: 26px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 992px) {
   nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -397,12 +397,15 @@ nav ul li {
   height: 30rem;
   width: auto;
 }
+
 .hero .main-logo {
   padding-top: 15rem;
   height: 21rem;
   width: auto;
+  max-width: 90vw;
   padding-left: 25px;
 }
+
 
 #title,
 .hero h2 {
@@ -490,32 +493,22 @@ nav ul li {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .hero .wrap {
-    margin-top: 50%;
-    margin-left: 24px;
+@media only screen and (max-width: 992px) {
+  .hero .main-logo {
+    margin: auto;
+    display: block;
+    padding-left: 0;
   }
   .hero {
     min-height: 80vh;
   }
   .arrow-wrapper {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .hero h2 {
-    text-align: left;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .hero .wrap {
-    margin-top: 40%;
-    margin-left: 18px;
-  }
-
   #title {
-    padding-left: unset;
     margin: auto;
     font-size: 2.5rem;
     text-align: center;
@@ -524,7 +517,6 @@ nav ul li {
 
   .hero h2 {
     text-align: center;
-    padding-left: unset;
     margin: 2rem 0;
     font-size: 2rem;
     line-height: normal;
@@ -532,6 +524,26 @@ nav ul li {
 
   #explore {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .hero .main-logo {
+    padding-top: 15rem;
+    height: 21rem;
+    width: auto;
+  }
+  }
+  
+@media only screen and (max-width: 400px) {
+  .hero .main-logo {
+    padding-top: 15rem;
+    padding-left: 0px;
+    width: 85vw;
+  }
+  
+  .hero .wrap {
+    margin: auto;
   }
 }
 
@@ -930,6 +942,12 @@ contact input[type="email"] {
 }
 
 /* ==================================================== footer ================================================================ */
+
+@media only screen and (max-width: 700px) {
+footer{
+  display: none;
+}
+}
 
 footer {
   padding: 10px 10% 10vh 10%;
