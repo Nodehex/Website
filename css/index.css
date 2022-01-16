@@ -26,7 +26,6 @@ main {
 
 section,
 main {
-  height: 100vh;
   min-height: auto;
   width: 100%;
   scroll-snap-align: center;
