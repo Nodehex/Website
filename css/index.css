@@ -20,13 +20,15 @@ body {
 main {
   scroll-behavior: smooth;
   scroll-snap-stop: always;
+  scroll-snap-align: center;
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
 }
 
-section,
-main {
+section
+ {
   min-height: auto;
+  height: 100vh;
   width: 100%;
   scroll-snap-align: center;
   scroll-snap-stop: always;
