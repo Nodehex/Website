@@ -786,18 +786,18 @@ svg.services-background-top {
 }
 
 #form-container,
-#why-aeon,
+#why-nodehex,
 .hex-container {
   z-index: 6;
   padding: 13vh 48px 0 0;
   width: 100%;
 }
 
-#why-aeon {
+#why-nodehex {
   grid-column-start: 2;
 }
 
-#why-aeon p {
+#why-nodehex p {
   font-size: 1.5rem;
 }
 
@@ -886,7 +886,7 @@ contact input[type="email"] {
 }
 
 @media only screen and (max-width: 1500px) {
-  #why-aeon p {
+  #why-nodehex p {
     font-size: 1.3rem;
   }
 
@@ -904,7 +904,7 @@ contact input[type="email"] {
   #content-polygon {
     display: none;
   }
-  #why-aeon,
+  #why-nodehex,
   #form-container {
     grid-column-start: auto;
     height: auto;
@@ -929,7 +929,7 @@ contact input[type="email"] {
   }
 
   #form-container,
-  #why-aeon {
+  #why-nodehex {
     height: auto;
     margin: auto;
     padding: 50px 24px 0 24px;
