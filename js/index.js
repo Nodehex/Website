@@ -34,6 +34,8 @@ const observer = new IntersectionObserver(entries => {
   }
 })
 
+debugLog('Initializing scripts')
 initializeLocalization()
+initializeCookies()
 
 observer.observe(document.querySelector(".icon-animation"))

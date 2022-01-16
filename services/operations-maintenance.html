@@ -4,17 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aeon - Operation and Maintenance Manuals</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162545543-1"></script>
+  <title>Nodehex - Operation and Maintenance Manuals</title>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-162545543-1');
+    window['ga-disable-MEASUREMENT_ID'] = true;
   </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNFQZV5NSN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-CNFQZV5NSN');
+    </script>
+    
   <link rel="shortcut icon" href="../assets/aeon icon.svg" type="image/svg">
   <!-- materialize -->
   <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
@@ -31,8 +34,8 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-        <a href="#" class="brand-logo" id="big-logo"><img src="../assets/aeon logo.svg" alt="" class="svg-color"></a>
-        <a href="#" class="brand-logo" id="small-logo"><img src="../assets/aeon icon.svg" alt="" class="svg-color"></a>
+        <a href="#" class="brand-logo" id="big-logo"><img src="../assets/logo large/NODEHEX 2.svg" alt="" class="svg-color"></a>
+        <a href="#" class="brand-logo" id="small-logo"><img src="../assets/logo small/LOGO ICON 4.svg" alt="" class="svg-color"></a>
       </div>
       <input type="checkbox" id="nav-menu-checkbox" />
       <label for="nav-menu-checkbox" id="nav-menu-checkbox-label">
@@ -138,9 +141,8 @@
   <footer>
     <div class="footer-box">
       <div class="footer-1">
-        <img src="../assets/aeon icon.svg" alt="" class="svg-color icon-inline-footer">
-        <h2>AeonDS</h2>
-        <p class="footer-tag">Construction data - digitalised</p>
+        <img src="../assets/logo large/NODEHEX 2.svg" alt="" class="svg-color icon-inline-footer">
+        <p class="footer-tag">Construction data, digitalised</p>
       </div>
       <div class="footer-2">
           <h2>Services</h2>
@@ -151,18 +153,28 @@
           </ul>
       </div>
       <div class="footer-3">
-        <h2>Aeon</h2>
         <ul id="" class="footer_ul">
-          <li><a href="/#about">ABOUT</a></li>
-          <li><a href="/#contact">CONTACT AEONDS</a></li>
+          <li><a i18n="footer_about" href="/#about">ABOUT</a></li>
+          <li><a i18n="footer_contact" href="/#contact">CONTACT NODEHEX</a></li>
+          <li><a i18n="footer_privacy" href="/privacy">PRIVACY</a></li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <div id="cookies">
+    <h4>We use cookies</h4>
+    <p>We use cookies and other tracking technologies to improve your browsing experience on our website to analyze our website traffic, and to understand where our visitors are coming from.</p>
+    <!-- <button>I agree</button><button>I decline</button> -->
+    <input value="Allow cookies" class="btn" type="submit" onClick="storeCookieUsage(true)">
+    <input value="Disable cookies" class="btn" type="submit" onClick="storeCookieUsage(false)">
+  </div>
+
   <script type="text/javascript" src="../js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/url.js"></script>
   <script type="text/javascript" src="../js/strings.js"></script>
   <script type="text/javascript" src="../js/i18n.js"></script>
+  <script type="text/javascript" src="../js/cookies.js"></script>
   <script type="text/javascript" src="../js/index.js"></script>
 </body>
 

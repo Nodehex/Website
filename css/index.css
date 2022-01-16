@@ -193,7 +193,8 @@ nav ul li {
   padding: 0px 10px;
 }
 
-#nav-menu-checkbox, .nav-menu-toggle {
+#nav-menu-checkbox,
+.nav-menu-toggle {
   display: none;
 }
 
@@ -207,10 +208,10 @@ nav ul li {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -227,10 +228,10 @@ nav ul li {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .nav-menu-toggle span:nth-child(1) {
@@ -246,7 +247,7 @@ nav ul li {
   top: 26px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 992px) {
   nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -257,7 +258,7 @@ nav ul li {
   nav ul li {
     text-align: center;
     width: 100%;
-    float: none
+    float: none;
   }
 
   .nav-left {
@@ -324,7 +325,7 @@ nav ul li {
   }
 
   #nav-menu-checkbox:checked ~ label > .nav-menu-toggle {
-    color: var(--color-yellow)
+    color: var(--color-yellow);
   }
 
   #nav-menu-checkbox:checked ~ label > .nav-menu-toggle span:nth-child(1) {
@@ -352,13 +353,12 @@ nav ul li {
     width: 0%;
     left: 50%;
   }
-
 }
 
 @media only screen and (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
   #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right,
   #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
-      transition: width 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 }
 
@@ -394,9 +394,18 @@ nav ul li {
 
 .hero .left-hex {
   padding-top: 20px;
-  height: 15rem;
+  height: 30rem;
   width: auto;
 }
+
+.hero .main-logo {
+  padding-top: 15rem;
+  height: 21rem;
+  width: auto;
+  max-width: 90vw;
+  padding-left: 25px;
+}
+
 
 #title,
 .hero h2 {
@@ -484,32 +493,22 @@ nav ul li {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .hero .wrap {
-    margin-top: 50%;
-    margin-left: 24px;
+@media only screen and (max-width: 992px) {
+  .hero .main-logo {
+    margin: auto;
+    display: block;
+    padding-left: 0;
   }
   .hero {
     min-height: 80vh;
   }
   .arrow-wrapper {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .hero h2 {
-    text-align: left;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .hero .wrap {
-    margin-top: 40%;
-    margin-left: 18px;
-  }
-
   #title {
-    padding-left: unset;
     margin: auto;
     font-size: 2.5rem;
     text-align: center;
@@ -518,7 +517,6 @@ nav ul li {
 
   .hero h2 {
     text-align: center;
-    padding-left: unset;
     margin: 2rem 0;
     font-size: 2rem;
     line-height: normal;
@@ -526,6 +524,26 @@ nav ul li {
 
   #explore {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .hero .main-logo {
+    padding-top: 15rem;
+    height: 21rem;
+    width: auto;
+  }
+  }
+  
+@media only screen and (max-width: 400px) {
+  .hero .main-logo {
+    padding-top: 15rem;
+    padding-left: 0px;
+    width: 85vw;
+  }
+  
+  .hero .wrap {
+    margin: auto;
   }
 }
 
@@ -633,7 +651,6 @@ nav ul li {
 }
 
 @media only screen and (max-width: 750px) {
-
   .services {
     padding-bottom: 25px;
   }
@@ -655,7 +672,6 @@ nav ul li {
   .card-icons {
     padding-top: 10px;
   }
-
 }
 
 img.title-icon {
@@ -759,7 +775,6 @@ svg.services-background-top {
   .about p {
     width: 100%;
   }
-
 }
 
 /* ==================================================== contact ================================================================ */
@@ -910,7 +925,6 @@ contact input[type="email"] {
 }
 
 @media only screen and (max-width: 700px) {
-
   .contact {
     height: 115vh;
   }
@@ -925,10 +939,15 @@ contact input[type="email"] {
   #form-container {
     background-color: var(--color-dark);
   }
-
 }
 
 /* ==================================================== footer ================================================================ */
+
+@media only screen and (max-width: 700px) {
+footer{
+  display: none;
+}
+}
 
 footer {
   padding: 10px 10% 10vh 10%;
@@ -983,4 +1002,37 @@ footer h2 {
 
 p.footer-tag {
   color: var(--color-yellow);
+}
+
+/* ==================================================== cookies ================================================================ */
+
+#cookies {
+  color: var(--color-yellow);
+  padding: 20px;
+}
+#cookies h4 {
+  margin-top: 0;
+}
+
+#cookies {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  width: 90%;
+  /* height: 100px; */
+  border-radius: 5px;
+  background-color: var(--color-grey);
+  border: solid 1px var(--color-yellow);
+  z-index: 100;
+}
+
+#cookies button {
+  background-color: var(--color-yellow);
+  border: solid 1px var(--color-dark);
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: var(--color-dark);
+  margin: 0px 10px;
 }
