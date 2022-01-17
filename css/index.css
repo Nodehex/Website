@@ -20,13 +20,15 @@ body {
 main {
   scroll-behavior: smooth;
   scroll-snap-stop: always;
+  scroll-snap-align: center;
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
 }
 
-section,
-main {
+section
+ {
   min-height: auto;
+  height: 100vh;
   width: 100%;
   scroll-snap-align: center;
   scroll-snap-stop: always;
@@ -59,6 +61,22 @@ section h2 {
   fill: var(--color-dark);
 }
 
+svg {
+  pointer-events: none;
+}
+
+.svg-color {
+  -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%)
+    saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
+  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
+    hue-rotate(324deg) brightness(99%) contrast(104%);
+}
+
+img.title-icon {
+  height: 1em;
+  width: auto;
+}
+
 @media only screen and (max-width: 1000px) {
   section h2 {
     font-size: 2.4rem;
@@ -74,31 +92,20 @@ section h2 {
   }
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Spartan", sans-serif;
   color: var(--color-white);
 }
 
-svg {
-  pointer-events: none;
-}
-
-.svg-color {
-  -webkit-filter: brightness(0) saturate(100%) invert(84%) sepia(100%)
-    saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
-  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
-    hue-rotate(324deg) brightness(99%) contrast(104%);
-}
-
 .btn {
-  background-color: var(--color-dark);
-  color: var(--color-yellow);
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
 }
 
 .btn:hover,
 .btn:active {
-  background-color: var(--color-yellow);
-  color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
 }
 
 .btn:focus,
@@ -106,6 +113,7 @@ svg {
 .btn-small:focus,
 .btn-floating:focus {
   background-color: var(--color-dark);
+  color: var(--color-yellow);
 }
 
 .hide {
@@ -533,14 +541,14 @@ nav ul li {
     width: auto;
   }
   }
-  
+
 @media only screen and (max-width: 400px) {
   .hero .main-logo {
     padding-top: 15rem;
     padding-left: 0px;
     width: 85vw;
   }
-  
+
   .hero .wrap {
     margin: auto;
   }
@@ -550,6 +558,7 @@ nav ul li {
 
 .services {
   color: var(--text-color-dark);
+  max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,11 +572,11 @@ nav ul li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 14% 12% 10%;
 }
 
 .services h2 {
   padding-top: 0;
+  margin-bottom: 72px;
 }
 
 .icon-inline {
@@ -581,13 +590,17 @@ nav ul li {
 .card-container {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  flex-basis: auto;
   width: 100%;
+  z-index: 6;
+  padding: 0 5%;
 }
 
 .card {
   border: 1px var(--color-yellow) solid;
-  width: 30%;
-  height: 400px;
+  --container-height: 40vh;
+  --container-width: 100vw;
   background-color: var(--color-dark);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
@@ -596,14 +609,10 @@ nav ul li {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.card-text {
-  color: var(--color-white);
-  height: 50%;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: center;
+  margin: 0 0.5vw;
+  flex: 1 1 0;
+  width: 0;
+  max-width: 600px;
 }
 
 .card-icons {
@@ -611,71 +620,40 @@ nav ul li {
     saturate(665%) hue-rotate(324deg) brightness(99%) contrast(104%);
   filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(665%)
     hue-rotate(324deg) brightness(99%) contrast(104%);
-  height: 50%;
-  width: 30%;
+  width: 25%;
+  max-height: 25%;
   margin-top: 20px;
+}
+
+.card-text {
+  color: var(--color-white);
+  padding-left: 18px;
+  padding-right: 20px;
+  text-align: left;
+  font-size: calc(1rem + 0.3vw);
 }
 
 .card .btn {
   margin-bottom: 40px;
-  border: 1px solid var(--color-yellow);
-  justify-content: center;
-  align-items: center;
+  border: 1px solid var(--color-dark);
+  align-self: flex-end;
+  margin: auto 25px 25px auto;
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
 }
 
-.card h5 {
-  font-family: "Spartan", sans-serif;
+.card .btn:hover,
+.card .btn:active {
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
+}
+
+.card h3 {
+  font-size: calc(1rem + 0.5vw);
   color: var(--color-yellow);
   text-transform: uppercase;
-}
-
-@media only screen and (max-width: 1400px) {
-  .services {
-    height: auto;
-  }
-
-  .card {
-    border: 1px var(--color-yellow) solid;
-    width: 30%;
-    height: auto;
-    background-color: var(--color-dark);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .services {
-    padding-bottom: 25px;
-  }
-
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 95vw;
-    height: 100%;
-    padding-left: 5%;
-  }
-
-  .card {
-    height: 30%;
-    width: 100%;
-  }
-
-  .card-icons {
-    padding-top: 10px;
-  }
-}
-
-img.title-icon {
-  height: 1em;
-  width: auto;
+  white-space: nowrap;
+  margin: 20px;
 }
 
 svg.services-background-top {
@@ -705,6 +683,60 @@ svg.services-background-top {
   width: 100%;
   pointer-events: none;
 }
+
+@media only screen and (max-width: 1920px) {
+  .card {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .services {
+    min-height: 85h;
+  }
+
+  .services h2 {
+    margin-bottom: 36px;
+  }
+
+  .card-container {
+    margin: 0;
+    padding: 12px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .services {
+    padding-bottom: 25px;
+    height: auto;
+  }
+
+  .services h2 {
+    margin-bottom: 0;
+    padding-top: 36px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 85vw;
+    height: 100%;
+  }
+
+  .card {
+    height: 30%;
+    width: 100%;
+    margin: 12px auto;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+}
+
 
 /* ==================================================== about ================================================================ */
 
