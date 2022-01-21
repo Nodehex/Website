@@ -974,28 +974,50 @@ contact input[type="email"] {
 
 /* ==================================================== footer ================================================================ */
 
-@media only screen and (max-width: 700px) {
-footer{
-  display: none;
-}
-}
 
 footer {
-  padding: 10px 10% 10vh 10%;
-}
-
-.footer-box {
+  padding: 0 10% 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 120px;
+  align-items: stretch;
+  height: auto;
   line-height: 40px;
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: var(--color-dark);
+}
+
+footer div {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+footer h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  color: var(--color-yellow);
+  vertical-align: text-top;
+  display: inline-block;
+}
+
+footer ul {
+  margin-top: 5px;
+}
+
+footer ul li a {
+  font-size: 0.9rem;
+  color: rgb(239 239 239);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer ul li a:hover {
+  color: var(--color-yellow);
 }
 
 .footer-1 {
@@ -1006,33 +1028,25 @@ footer {
   margin-right: 7rem;
 }
 
-.icon-inline-footer {
+#icon-inline-footer {
   position: relative;
-  top: 7px;
-  margin-top: 5px;
   height: 2rem;
   width: auto;
   padding-right: 7px;
-}
-
-footer h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+  margin-top: 0;
   display: inline-block;
-}
-
-footer ul a {
-  font-size: 1rem;
-  color: rgb(239 239 239);
-}
-
-footer h2 {
-  color: var(--color-yellow);
+  vertical-align: text-top;
 }
 
 p.footer-tag {
   color: var(--color-yellow);
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    display: none;
+  }
 }
 
 /* ==================================================== cookies ================================================================ */
@@ -1041,6 +1055,7 @@ p.footer-tag {
   color: var(--color-yellow);
   padding: 20px;
 }
+
 #cookies h4 {
   margin-top: 0;
 }
@@ -1051,7 +1066,6 @@ p.footer-tag {
   bottom: 5%;
   left: 5%;
   width: 90%;
-  /* height: 100px; */
   border-radius: 5px;
   background-color: var(--color-grey);
   border: solid 1px var(--color-yellow);
