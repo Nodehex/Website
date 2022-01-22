@@ -157,6 +157,10 @@ nav {
   user-select: none;
 }
 
+#small-logo {
+  padding-left: 31px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .brand-logo {
     opacity: 1;
@@ -170,7 +174,7 @@ nav {
 
   .fade-out {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(0px);
     -webkit-transition: transform 2s ease-out, opacity 2s ease-out;
     -moz-transition: transform 2s ease-out, opacity 2s ease-out;
     -ms-transition: transform 2s ease-out, opacity 2s ease-out;
