@@ -64,8 +64,8 @@
   padding-top: 70px;
   padding-bottom: 50px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -80px;
+  margin-right: -80px;
 }
 
 .service-container {
@@ -120,7 +120,7 @@
   position: relative;
   margin-top: 10px;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 2rem;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -146,7 +146,7 @@
 .service-header {
   background-color: #eeeeee;
   color: #111111;
-  height: 80%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -158,7 +158,7 @@
 
 .service-header h2 {
   color: #111111;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .service-header p {
@@ -178,10 +178,14 @@ span.yellow-text {
   color: var(--color-yellow);
 }
 
+span.emphasized-text {
+  color: var(--color-white);
+}
+
 .services-triangle-right {
   z-index: 5;
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 0;
   height: 100%;
   width: 100%;
@@ -199,11 +203,11 @@ span.yellow-text {
 }
 
 .triangle-right-2 {
-  top: 200%;
+  top: 300%;
 }
 
 .triangle-left {
-  top: 100%;
+  top: 175%;
 }
 
 .workflow {
@@ -224,4 +228,34 @@ span.yellow-text {
 
 .service-block li {
   padding-top: 15px;
+}
+
+hr {
+  margin: 35px -30px;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+a {
+  color: var(--color-yellow);
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 83%;
+  }
+}
+
+#ra-background {
+  background-image: url("../assets/background images/R&A background.png");
+  background-size: 100%;
+}
+
+#im-background {
+  background-image: url("../assets/background images/IM background.png");
+  background-size: 100%;
 }
