@@ -61,21 +61,45 @@
       </div>
     </nav>
   </header>
-  <div class="service-container icon-animation">
+  <div
+    class="service-container icon-animation service-header"
+    id="om-background"
+  >
     <div class="service-block">
       <div class="container">
-        <h1><img src="assets/OM_Manuals_ICON.svg" alt="" class="svg-color icon-inline"> OPERATION AND MAINTENANCE
-          MANUALS</h1>
-        <p>Operations and Maintenance Manuals are the cornerstone of a high-performance operations team. They’re
+        <h2>Operations & Maintenance Manuals</h2>
+        <p>
+          Operations and Maintenance Manuals are the cornerstone of a high-performance operations team. They’re
           comprehensive documents that provide all of the necessary details regarding the building systems and assets
           contained in those systems, within the Client’s datacenters and mission-critical infrastructure.
+        </p>
       </div>
     </div>
+    <svg
+      class="services-triangle-right hide-on-small-only"
+      width="100%"
+      height="100%"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <polygon points="  100,0   85,50   100,100" fill="#f4ce45e8" />
+      <!-- yellow -->
+      <polygon points="100.3,0 85.3,50 100.3,50" fill="#eeeeee" />
+      <!-- eeeeee -->
+      <polygon points="100.3,100 85.3,50 100.3,50" fill="#1c1a18" />
+      <!-- gray -->
+    </svg>
   </div>
   <div class="grey-block">
     <div class="service-block">
       <div class="container">
-        <p>Given the ever-growing scope of information management and its application in leveraging data for increased
+        <svg class="triangle triangle-left hide-on-small-only" width="100%" height="100%" viewBox="0 0 100 100"
+          preserveAspectRatio="none">
+          <polygon points="0,0 15,50 0,100" fill="#f4ce45e8" /> <!-- yellow -->
+          <polygon points="-0.3,100 14.7,50 -0.3,0" fill="#1c1a18" /> <!-- gray -->
+        </svg>
+        <img class="workflow" src="https://via.placeholder.com/1100x800" alt="Information Management Workflow">
+        <p class="margin-top-om">Given the ever-growing scope of information management and its application in leveraging data for increased
           value to Design, Construction, Commissioning and Owner teams, it’s imperative to identify and more
           importantly, improve on data collection for operations and maintenance manuals. During a hyperscale datacenter
           build, the sheer amount of information produced can be staggering and finding effective ways to manage the
@@ -84,49 +108,46 @@
         <p>Coordinating and staggering this information across a project takes a knowledge of the phasing for a
           hyperscale datacenter and ancillary buildings, such as substations and utility buildings, a deep understanding
           of the information lifecycle the integration of quality and project management best practices at the right
-          times to ensure an optimal outcome. A typical O&M will include a wealth of information, typically based on
-          systems within the building being operated, such as: </p>
+          times to ensure an optimal outcome.</p>
+          <h5 class="before-li">A typical O&M will include a wealth of information, typically based on
+          systems within the building being operated, such as:</h5>
+        <hr>
         <p>
-        <ul>
-          <li>System Description</li>
-          <li class="tabbed">Design and construction intent of the system itself and the principles behind the operation
-            of the system and the components contained therein.</li>
-          <li>Specification </li>
-          <li class="tabbed">Client specifications and requirements detailing the specific system information that
-            supports the overall product needs. </li>
-          <li>Drawing, Models and graphical data</li>
-          <li class="tabbed">References and embedded information pertaining to the outputs from the Design and
-            Construction teams at the specified level of detail by from the Client's information requirements. </li>
-          <li>Sequence of Operations</li>
-          <li class="tabbed">Information pertaining to safe start up, systems operation within normal procedures and
-            failsafe procedures and plant. </li>
-          <li>Asset Register and Spares Registers</li>
-          <li class="tabbed">Assets and spares registers detail the specific assets being utilised within the system and
-            core information requirements around those assets and the minimum spares required for planned preventative
-            maintenance. </p>
-          </li>
-          <li>Commissioning and Testing Information</li>
-          <li class="tabbed">A series of testing ensuring that the systems that have been installed and are benchmarked
-            against the Client’s requirements over a series of phases.</p>
-          </li>
-          <li>Health and Safety information</li>
-          <li class="tabbed">Any information pertaining to the safe operation and maintenance of the systems, this can
-            include hazardous substance handling, risk assessments and local or country level regulatory requirements.
-            </p>
-          </li>
-          <li>Maintenance Procedures</li>
-          <li class="tabbed">General maintenance procedures and processes that is often accompanied by manufacturers
-            literature for the specific assets within the system.</p>
-          </li>
-          <li>Submittal / General technical literature</li>
-          <li class="tabbed">Manufacturer's literature, datasheets and various other technical information for a
-            complete understanding of a systems asset details, safe operations and in-house testing. </p>
-          </li>
-          <li>Warranties, certifications and guarantees</li>
-          <li class="tabbed">Standard vendor warranties, guarantees and certification that accompany the assets within a
-            system. </p>
-          </li>
-        </ul>
+        <div class="information-grid">
+          <div class="information-row">
+            <div class="information-cell">
+              <h4 class="plus">System Description</h4>
+              <p>Design and construction intent of the system itself and the principles behind the operation
+                of the system and the components contained therein.</p>
+            </div>
+            <div class="information-cell">
+              <h4 class="plus">Specification</h4>
+              <p>Client specifications and requirements detailing the specific system information that
+                supports the overall product needs.</p>
+            </div>
+          </div>
+          <div class="information-row">
+            <div class="information-cell">
+              <h4 class="plus">Drawing, Models and graphical data</h4>
+              <p>References and embedded information pertaining to the outputs from the Design and
+                Construction teams at the specified level of detail by from the Client's information requirements.</p>
+            </div>
+            <div class="information-cell">
+              <h4 class="plus">Sequence of Operations</h4>
+              <p>Information pertaining to safe start up, systems operation within normal procedures and
+                failsafe procedures and plant.</p>
+            </div>
+          </div>
+          <div class="information-row">
+            <div class="information-cell">
+              <h4 class="hex">Drawings, Models and graphical data</h4>
+            </div>
+            <div class="information-cell">
+              <h4 class="hex">Sequence of operations</h4>
+            </div>
+          </div>
+        </div>
+        <hr>
         <p>At Nodehex, we can author, maintain and implement a variety of solutions to ensure that handover, operations
           and beyond, the information to operate the systems within your project can be done both safely and
           efficiently. Whether this is a full authoring and coordination of information across a project, consolidating
