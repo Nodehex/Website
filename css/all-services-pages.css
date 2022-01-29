@@ -228,7 +228,6 @@ span.emphasized-text {
   left: 0;
   height: 100%;
   width: 100%;
-  pointer-events: none;
 }
 
 .triangle {
@@ -238,7 +237,6 @@ span.emphasized-text {
   left: 0;
   height: 100%;
   width: 100%;
-  pointer-events: none;
 }
 
 .triangle-right-2 {
@@ -247,6 +245,12 @@ span.emphasized-text {
 
 .triangle-left {
   top: 175%;
+}
+
+.polygon-triangle-stroke-color {
+  stroke-width: 0.25;
+  stroke: #f4ce45e8;
+  fill: none;
 }
 
 .workflow {
