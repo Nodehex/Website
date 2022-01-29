@@ -382,10 +382,10 @@ nav ul li {
 
 /* ==================================================== Hero ================================================================ */
 
-.big_logo_small_screen {
+.big-logo-small-screen {
   display: none;
 }
-.big_logo_big_screen {
+.big-logo-big-screen {
   padding-right: calc(6% + 0.1vw);
   padding-top: 15%;
   display: unset;
@@ -526,7 +526,7 @@ nav ul li {
   .hero img {
     width: 70%;
   }
-  .big_logo_big_screen {
+  .big-logo-big-screen {
     padding-right: calc(7% + 0.1vw);
   }
 }
@@ -536,7 +536,7 @@ nav ul li {
   .hero img {
     width: 70%;
   }
-  .big_logo_big_screen {
+  .big-logo-big-screen {
     padding-right: calc(10% + 0.1vw);
   }
 }
@@ -564,10 +564,10 @@ nav ul li {
   .arrow-wrapper {
     margin-bottom: 10%;
   }
-  .big_logo_big_screen {
+  .big-logo-big-screen {
     display: none;
   }
-  .big_logo_small_screen {
+  .big-logo-small-screen {
     display: unset;
   }
 }
@@ -594,7 +594,7 @@ nav ul li {
   .blsct {
     margin-bottom: -25%;
   }
-  
+
   .blscb {
     margin-top: -25%;
   }
@@ -605,7 +605,7 @@ nav ul li {
   .blsct {
     margin-bottom: -35%;
   }
-  
+
   .blscb {
     margin-top: -35%;
   }
@@ -617,7 +617,7 @@ nav ul li {
   .blsct {
     margin-bottom: -50%;
   }
-  
+
   .blscb {
     margin-top: -50%;
   }
@@ -645,7 +645,7 @@ nav ul li {
   .blsct {
     margin-bottom: -60%;
   }
-  
+
   .blscb {
     margin-top: -60%;
   }
