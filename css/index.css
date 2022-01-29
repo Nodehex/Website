@@ -370,7 +370,7 @@ nav ul li {
 @media only screen and (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
   #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right,
   #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
-    transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: width 1s cu+c-bezier(0.215, 0.61, 0.355, 1);
   }
 }
 
@@ -966,6 +966,10 @@ footer ul li a:hover {
 
 .footer-left {
   margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .footer-right {
@@ -982,9 +986,11 @@ footer ul li a:hover {
   vertical-align: text-top;
 }
 
-p.footer-tag {
+.footer-tag {
   color: var(--color-yellow);
-  margin-top: 0;
+  margin-top: 30;
+  height: 100px;
+  width: 150px;
 }
 
 @media only screen and (max-width: 800px) {
