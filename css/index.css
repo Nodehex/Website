@@ -964,11 +964,11 @@ footer ul li a:hover {
   color: var(--color-yellow);
 }
 
-.footer-1 {
+.footer-left {
   margin-left: 5rem;
 }
 
-.footer-3 {
+.footer-right {
   margin-right: 7rem;
 }
 
