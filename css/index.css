@@ -382,23 +382,6 @@ nav ul li {
 
 /* ==================================================== Hero ================================================================ */
 
-.big-logo-small-screen {
-  display: none;
-}
-.big-logo-big-screen {
-  padding-right: calc(6% + 0.1vw);
-  padding-top: 15%;
-  display: unset;
-}
-
-.blsct {
-  margin-bottom: -20%;
-}
-
-.blscb {
-  margin-top: -20%;
-}
-
 .hero {
   padding-top: 75px;
   font-family: "Spartan", sans-serif;
@@ -428,40 +411,14 @@ nav ul li {
   height: 85%;
 }
 
-.hero .left-hex {
-  padding-top: 20px;
-  height: 30rem;
-  width: auto;
+.big-logo-small-screen {
+  display: none;
 }
 
-.hero .main-logo {
-  padding-top: 15rem;
-  height: 21rem;
-  width: auto;
-  max-width: 90vw;
-  padding-left: 25px;
-}
-
-#title,
-.hero h2 {
-  padding-left: 25px;
-  margin-top: 0px;
-  font-size: 2.9rem;
-}
-
-#title {
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 4.2rem;
-}
-
-.hero #title span {
-  color: var(--color-yellow);
-}
-
-.hero .wrap h2:last-of-type {
-  margin-bottom: 0;
+.big-logo-big-screen {
+  padding-right: calc(6% + 0.1vw);
+  padding-top: 15%;
+  display: unset;
 }
 
 .arrow-wrapper {
@@ -489,6 +446,7 @@ nav ul li {
 .arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
+
 @keyframes animate {
   0% {
     opacity: 0;
@@ -501,25 +459,6 @@ nav ul li {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
   }
-}
-
-#explore {
-  color: rgb(239 239 239);
-  background-color: rgba(0, 0, 0, 0);
-  float: right;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  font-size: 2.9rem;
-}
-
-#explore:hover,
-#explore:active {
-  color: var(--color-yellow);
-}
-
-#explore .chevron {
-  color: var(--color-yellow);
 }
 
 @media only screen and (max-width: 1600px) {
@@ -573,24 +512,6 @@ nav ul li {
 }
 
 @media only screen and (max-width: 900px) {
-  #title {
-    margin: auto;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: 600;
-  }
-
-  .hero h2 {
-    text-align: center;
-    margin: 2rem 0;
-    font-size: 2rem;
-    line-height: normal;
-  }
-
-  #explore {
-    display: none;
-  }
-
   .blsct {
     margin-bottom: -25%;
   }
@@ -632,16 +553,6 @@ nav ul li {
 }
 
 @media only screen and (max-width: 400px) {
-  .hero .main-logo {
-    padding-top: 15rem;
-    padding-left: 0px;
-    width: 85vw;
-  }
-
-  .hero .wrap {
-    margin: auto;
-  }
-
   .blsct {
     margin-bottom: -60%;
   }
