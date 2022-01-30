@@ -370,7 +370,7 @@ nav ul li {
 @media only screen and (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
   #nav-menu-checkbox:not(:checked) ~ div.nav-right > ul.right,
   #nav-menu-checkbox:checked ~ div.nav-right > ul.right {
-    transition: width 1s cu+c-bezier(0.215, 0.61, 0.355, 1);
+    transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 }
 
