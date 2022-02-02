@@ -14,7 +14,7 @@ function highlightUnlocalized() {
   const elementsWithText = findElementsWithText()
   debugLog(`${elementsWithText.length} elements found that might contain text`)
   elementsWithText.forEach(el => {
-    if(!el.getAttribute('i18n')) {
+    if (!el.getAttribute('i18n')) {
       el.style.backgroundColor = '#F00'
     }
   })
@@ -64,13 +64,13 @@ function applyStringTable(stringTable) {
   const i18nElements = Array.from(document.querySelectorAll('[i18n]'))
   if (i18nElements.length === 0) return false
 
-  const {converted, failed} = i18nElements.reduce((acc, element) => {
-    return localizeElement(stringTable, element) ? 
-      {converted: acc.converted++, ...acc} :
-      {failure: acc.failed++, ...acc}
-    }, {converted: 0, failed: 0})
+  const { converted, failed } = i18nElements.reduce((acc, element) => {
+    return localizeElement(stringTable, element) ?
+      { converted: acc.converted++, ...acc } :
+      { failure: acc.failed++, ...acc }
+  }, { converted: 0, failed: 0 })
 
-    debugLog(`i18n completed, ${converted} out of ${i18nElements.length} converted, ${failed} elements could not be converted`)
+  debugLog(`i18n completed, ${converted} out of ${i18nElements.length} converted, ${failed} elements could not be converted`)
 
   return true
 }
@@ -79,7 +79,7 @@ function localizeElement(stringTable, element) {
   const stringName = element.getAttribute('i18n')
   debugLog(`Localizing element with string name ${stringName}`)
   if (stringTable[stringName]) {
-    element.innerText = stringTable[stringName]
+    element.innerHTML = stringTable[stringName]
     return true
   }
   return false
@@ -88,10 +88,10 @@ function localizeElement(stringTable, element) {
 function initializeLocalization() {
   generateEnglishTable()
   const params = getSearchParams()
-  if(params.has('lang')) {
+  if (params.has('lang')) {
     localizePage(params.get('lang'))
   }
-  if(!debugMode) {
+  if (!debugMode) {
     document.querySelectorAll(".locale-btn").forEach(el => el.hidden = true)
   }
 }

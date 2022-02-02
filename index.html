@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nodehex</title>
+    <title i18n="title_index">Nodehex</title>
     <script>
       window['ga-disable-MEASUREMENT_ID'] = true;
     </script>
@@ -161,10 +161,10 @@
     </main>
 
     <div id="cookies">
-      <h4>We use cookies</h4>
-      <p>We use cookies and other tracking technologies to improve your browsing experience on our website to analyze our website traffic, and to understand where our visitors are coming from.</p>
-      <input value="Allow cookies" class="btn" type="submit" onClick="storeCookieUsage(true)">
-      <input value="Disable cookies" class="btn" type="submit" onClick="storeCookieUsage(false)">
+      <h4 i18n="cookies_title">We use cookies</h4>
+      <p i18n="cookies_p1">We use cookies and other tracking technologies to improve your browsing experience on our website to analyze our website traffic, and to understand where our visitors are coming from.</p>
+      <a class="btn" i18n="cookies_allow" onClick="storeCookieUsage(true)">Allow cookies</a>
+      <a class="btn" i18n="cookies_reject" onClick="storeCookieUsage(false)">Disable cookies</a>
     </div>
 
     <script src="js/materialize.min.js"></script>
