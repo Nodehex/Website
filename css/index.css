@@ -986,8 +986,7 @@ footer ul li a:hover {
   vertical-align: text-top;
 }
 
-.footer-tag {
-  color: var(--color-yellow);
+.footer-tagline {
   margin-top: 30;
   height: 100px;
   width: 150px;
