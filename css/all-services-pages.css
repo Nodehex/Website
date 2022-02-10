@@ -169,10 +169,6 @@ h1, h2, h4, h5 {
   justify-content: space-around;
 }
 
-.service-header .service-block {
-  height: auto;
-}
-
 .service-header h2 {
   color: #111111;
   font-weight: bolder;
@@ -193,7 +189,7 @@ h1, h2, h4, h5 {
   background-repeat: no-repeat;
   height: 150px;
   width: 150px;
-  background-image: url("../assets/misc\ assets/HEX\ 1.svg");
+  background-image: url("../assets/misc\ assets/HEX\ 2.svg");
 }
 
 .service-header p {
@@ -344,10 +340,9 @@ a {
   margin-right: 10px;
   height: 20px;
   width: 20px;
-  background-image: url("../assets/misc\ assets/HEX\ 1.svg");
+  background-image: url("../assets/misc\ assets/HEX\ 2.svg");
   color: var(--color-yellow);
 }
-
 
 .content-link {
   text-decoration: underline;
@@ -359,7 +354,6 @@ a {
     width: 83%;
   }
 }
-
 
 #ra-background {
   background-image: url("../assets/background images/R&A background.png");
