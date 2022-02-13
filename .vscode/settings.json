@@ -1,0 +1,19 @@
+{
+  "beautify.config": {
+    "html": {
+      "wrap_attributes": "preserve",
+      "indent_char": " ",
+      "indent_size": 2,
+      "indent_with_tabs": false
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  }
+}
