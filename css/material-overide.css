@@ -1,0 +1,181 @@
+@media only screen and (max-width: 1000px) {
+    .sidenav.sidenav-fixed {
+      -webkit-transform: translateX(-105%);
+              transform: translateX(-105%);
+    }
+    .sidenav.sidenav-fixed.right-aligned {
+      -webkit-transform: translateX(105%);
+              transform: translateX(105%);
+    }
+    .sidenav > a {
+      padding: 0 16px;
+    }
+    .sidenav .user-view {
+      padding: 16px 16px 0;
+    }
+  }
+
+@media only screen and (max-width: 1000px) {
+    .pagination {
+      width: 100%;
+    }
+    .pagination li.prev,
+    .pagination li.next {
+      width: 10%;
+    }
+    .pagination li.pages {
+      width: 80%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .hide-on-med-and-down {
+      display: none !important;
+    }
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .hide-on-med-only {
+      display: none !important;
+    }
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .show-on-medium {
+      display: block !important;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .show-on-medium-and-down {
+      display: block !important;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    table.responsive-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      position: relative;
+      /* sort out borders */
+    }
+    table.responsive-table td:empty:before {
+      content: '\00a0';
+    }
+    table.responsive-table th,
+    table.responsive-table td {
+      margin: 0;
+      vertical-align: top;
+    }
+    table.responsive-table th {
+      text-align: left;
+    }
+    table.responsive-table thead {
+      display: block;
+      float: left;
+    }
+    table.responsive-table thead tr {
+      display: block;
+      padding: 0 10px 0 0;
+    }
+    table.responsive-table thead tr th::before {
+      content: "\00a0";
+    }
+    table.responsive-table tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    table.responsive-table tbody tr {
+      display: inline-block;
+      vertical-align: top;
+    }
+    table.responsive-table th {
+      display: block;
+      text-align: right;
+    }
+    table.responsive-table td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+    }
+    table.responsive-table tr {
+      border-bottom: none;
+      padding: 0 10px;
+    }
+    table.responsive-table thead {
+      border: 0;
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    nav .brand-logo {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+    nav .brand-logo.left, nav .brand-logo.right {
+      padding: 0;
+      -webkit-transform: none;
+              transform: none;
+    }
+    nav .brand-logo.left {
+      left: 0.5rem;
+    }
+    nav .brand-logo.right {
+      right: 0.5rem;
+      left: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    html {
+      font-size: 14.5px;
+    }
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 1000px) {
+    #toast-container {
+      left: 5%;
+      bottom: 7%;
+      max-width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .tabs {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .tabs .tab {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+    }
+    .tabs .tab a {
+      padding: 0 12px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .modal {
+      width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .input-field .prefix ~ input {
+      width: 86%;
+      width: calc(100% - 3rem);
+    }
+  }
