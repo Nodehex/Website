@@ -909,7 +909,7 @@ contact input[type="email"] {
   #why-nodehex {
     height: auto;
     margin: auto;
-    padding: 50px 24px 0 24px;
+    padding: 50px 24px 50px 24px;
   }
 
   #form-container {
@@ -992,9 +992,31 @@ footer ul li a:hover {
   width: 150px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1400px) {
+  .contact {
+    min-height: 1700px;
+  }
+
   footer {
-    display: none;
+    padding-top: 20px;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .footer-left {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-right {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-center {
+    margin: 0;
+    padding: 0;
   }
 }
 
