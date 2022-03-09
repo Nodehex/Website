@@ -391,6 +391,17 @@ a {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .service-header p {
+    padding-left: 0px;
+  }
+  .background-hex::before {
+    background-size: 75px 75px;
+    top: -20px;
+    left: -50px;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .service-header h2 {
     font-size: 25px;
