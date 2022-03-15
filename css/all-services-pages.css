@@ -254,6 +254,12 @@ span.emphasized-text {
   margin-bottom: 40px;
 }
 
+.service-diagram {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width:90vw;
+}
+
 .service-block li::before {
   display: inline-block;
   margin-right: 20px;
@@ -390,6 +396,11 @@ a {
   .service-header h2 {
     font-size: 30px;
   }
+
+  .service-header {
+
+    height: initial;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -407,6 +418,7 @@ a {
   .service-header h2 {
     font-size: 25px;
   }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -416,10 +428,30 @@ a {
   .service-block p {
     font-size: 16px;
   }
+
+  .information-cell h4 {
+    font-size: 16px;
+  }
+
+  .information-cell p {
+    padding-left: 5px;
+    font-size: 12px;
+  }
+
+
+
 }
 
 @media only screen and (max-width: 450px) {
   .service-block li {
     font-size: 20px;
+  }
+
+  .service-block p.before-li, .before-li {
+    margin-left: 0px;
+  }
+
+  .service-diagram.om{
+    display: none;
   }
 }
