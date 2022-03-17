@@ -91,7 +91,4 @@ function initializeLocalization() {
   if (params.has('lang')) {
     localizePage(params.get('lang'))
   }
-  if (!debugMode) {
-    document.querySelectorAll(".locale-btn").forEach(el => el.hidden = true)
-  }
 }
