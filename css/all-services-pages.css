@@ -65,8 +65,16 @@
   padding-top: 70px;
   padding-bottom: 50px;
   display: block;
-  margin-left: -80px;
-  margin-right: -80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width:90vw;
+}
+
+.service-diagram.om{
+  margin-top: 75px;
+  width:60vw;
 }
 
 .service-container {
@@ -252,12 +260,6 @@ span.emphasized-text {
 .workflow {
   margin-top: 40px;
   margin-bottom: 40px;
-}
-
-.service-diagram {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width:90vw;
 }
 
 .service-block li::before {
