@@ -1,3 +1,5 @@
+let currentLanguage = '';
+
 function generateEnglishTable() {
   const i18nElements = Array.from(document.querySelectorAll('[i18n]'))
   const englishTable = i18nElements.reduce((table, element) => {
@@ -39,10 +41,11 @@ function hasChildElementsWithText(element) {
 function localizeButtonClick(language) {
   localizePage(language)
   setSearchParam('lang', language)
+  attemptSaveCookie('lang', language)
 }
 
 function localizePage(language) {
-  if (!stringTables.uk) generateEnglishTable()
+  if (!stringTables.en) generateEnglishTable()
   debugLog(`Starting localization with language ${language}`)
   if (debugMode) highlightUnlocalized()
   toggleLocaleButtons(language)
@@ -50,8 +53,10 @@ function localizePage(language) {
   if (stringTable) {
     debugLog('Stringtable found', stringTable)
     applyStringTable(stringTable) ? debugLog('Stringtable applied') : debugLog('No translateable strings found')
+    currentLanguage = language
   } else {
     debugLog('No stringtable found')
+    currentLanguage = 'undefined'
   }
 }
 
@@ -85,10 +90,19 @@ function localizeElement(stringTable, element) {
   return false
 }
 
+function isValidLanguage(lang) {
+  return ['en', 'se'].includes(lang)
+}
+
 function initializeLocalization() {
-  generateEnglishTable()
+  if (currentLanguage === '') generateEnglishTable()
   const params = getSearchParams()
+  const cookie = retrieveCookie('lang')
   if (params.has('lang')) {
     localizePage(params.get('lang'))
+  } else if (isValidLanguage(cookie)) {
+    localizePage(cookie)
+  } else {
+    localizePage('en')
   }
 }

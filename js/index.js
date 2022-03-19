@@ -3,11 +3,12 @@ function setDebugMode(enabled) {
   return enabled
 }
 
-function debugLog(string) {
-  if (debugMode) console.log(string)
+let interruptLogging = false;
+function debugLog(string, css = '') {
+  if (debugMode && !interruptLogging) console.log(`%c${string}`, css)
 }
 
-const debugMode = setDebugMode(false)
+const debugMode = setDebugMode(true)
 
 const bigLogo = document.querySelector("#big-logo")
 const smallLogo = document.querySelector("#small-logo")
@@ -46,7 +47,7 @@ const observer = new IntersectionObserver(entries => {
 })
 
 debugLog('Initializing scripts')
-initializeLocalization()
 initializeCookies()
+initializeLocalization()
 
 observer.observe(document.querySelector(".icon-animation"))

@@ -1,21 +1,16 @@
 const allowCookiesVar = 'aeonEnableCookies';
-const cookiesDialogShownVar = 'aeonCookiesDialogShown';
+let desiredCookies = [];
 
 function initializeCookies() {
   debugLog('Initializing cookies')
-  const dialogShown = localStorage.getItem(cookiesDialogShownVar)
-  if (JSON.parse(dialogShown) === true) {
-    debugLog('Cookies dialog has been shown to user')
-    const allowCookies = localStorage.getItem(allowCookiesVar)
-    if (JSON.parse(allowCookies) === true) disableCookies(!allowCookies)
-  } else {
+  if (!isCookiesAllowed()) {
     debugLog('Showing cookies dialog')
+    deleteAllCookies()
+    disableGoogleCookies()
     showDialog()
+  } else {
+    debugLog('Cookies are allowed')
   }
-}
-
-function disableCookies(disable) {
-  window['ga-disable-MEASUREMENT_ID'] = disable;
 }
 
 function showDialog() {
@@ -26,15 +21,52 @@ function hideDialog() {
   document.getElementById('cookies').style.display = 'none';
 }
 
-function storeCookieUsage(allowCookies) {
-  debugLog('Storing cookie preferences')
-  localStorage.setItem(allowCookiesVar, allowCookies)
-  localStorage.setItem(cookiesDialogShownVar, true)
-  disableCookies(!allowCookies)
+function disableGoogleCookies() {
+  debugLog('Disabling google metrics')
+  window['ga-disable-MEASUREMENT_ID'] = true;
+}
+
+function enableGoogleCookies() {
+  debugLog('Enabling google metrics')
+  window['ga-disable-MEASUREMENT_ID'] = false;
+}
+
+function storeCookieUsage(cookiesAllowed) {
+  debugLog(`Storing cookie preferences - cookies set to ${cookiesAllowed}`)
+  attemptSaveCookie(allowCookiesVar, cookiesAllowed, cookiesAllowed)
+  if (cookiesAllowed) {
+    debugLog('Processing cookie queue')
+    desiredCookies.forEach((cookie) => attemptSaveCookie(cookie.key, cookie.value))
+    desiredCookies = []
+    enableGoogleCookies()
+  }
   hideDialog()
 }
 
 function resetCookiePreferences() {
   localStorage.setItem(allowCookiesVar, null)
-  localStorage.setItem(cookiesDialogShownVar, false)
+  disableGoogleCookies()
+}
+
+function isCookiesAllowed() {
+  const allowCookies = localStorage.getItem(allowCookiesVar)
+  return (JSON.parse(allowCookies) === true)
+}
+
+function attemptSaveCookie(key, value, force = false) {
+  if (isCookiesAllowed() || force) {
+    debugLog(`Saving cookie ${key} with value ${value}`)
+    localStorage.setItem(key, value)
+  } else {
+    debugLog(`Waiting to save ${key}: ${value} until cookies are allowed`)
+    desiredCookies.push({key, value})
+  }
+}
+
+function retrieveCookie(key) {
+  return localStorage.getItem(key)
+}
+
+function deleteAllCookies() {
+  localStorage.clear()
 }

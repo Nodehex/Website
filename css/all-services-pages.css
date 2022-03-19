@@ -69,7 +69,7 @@
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px;
-  width:90vw;
+  width:100%;
 }
 
 .service-diagram.om{
@@ -228,7 +228,7 @@ span.emphasized-text {
 .services-triangle-right {
   z-index: 5;
   position: absolute;
-  top: 50%;
+  top: 50vh;
   left: 0;
   height: 100%;
   width: 100%;
@@ -237,18 +237,18 @@ span.emphasized-text {
 .triangle {
   z-index: 5;
   position: absolute;
-  top: 30%;
+  top: 30vh;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
 .triangle-right-2 {
-  top: 300%;
+  top: 300vh;
 }
 
 .triangle-left {
-  top: 175%;
+  top: 175vh;
 }
 
 .polygon-triangle-stroke-color {
