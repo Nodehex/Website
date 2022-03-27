@@ -60,6 +60,10 @@ section h2 {
   fill: var(--color-dark);
 }
 
+a {
+  color: var(--color-yellow);
+}
+
 svg {
   pointer-events: none;
 }
