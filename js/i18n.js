@@ -5,7 +5,7 @@ function generateEnglishTable() {
   const englishTable = i18nElements.reduce((table, element) => {
     const stringName = element.getAttribute('i18n')
     if (stringName) {
-      table[stringName] = element.innerText
+      table[stringName] = element.innerHTML
     }
     return table
   }, {})

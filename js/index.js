@@ -8,7 +8,7 @@ function debugLog(string, css = '') {
   if (debugMode && !interruptLogging) console.log(`%c${string}`, css)
 }
 
-const debugMode = setDebugMode(false)
+const debugMode = setDebugMode(true)
 
 const bigLogo = document.querySelector("#big-logo")
 const smallLogo = document.querySelector("#small-logo")
