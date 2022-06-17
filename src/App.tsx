@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Website/>}></Route>
+        <Route path="/*" element={<Website/>}></Route>
       </Routes>
     </Router>
   );

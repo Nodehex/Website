@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Landing from "./pages/landing/Landing";
 import { locales } from "./i18n/locales"
+import Services from "./pages/services/Services";
 
 
 const theme = createTheme({
@@ -31,6 +32,7 @@ const Website = () => {
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Landing/>}></Route>
+        <Route path="/services/*" element={<Services/>}></Route>
       </Routes>
     </ThemeProvider>
   )
