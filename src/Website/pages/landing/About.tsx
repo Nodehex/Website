@@ -1,30 +1,23 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { Translate } from "react-i18nify";
 import { Dash } from "../../components/Branding";
-import { ThemedBox } from "../../components/Util";
+import { Content, DashTitle, ThemedBox } from "../../components/Util";
 import { fonts } from '../../components/Util'
+import { Section } from "./Landing";
 
 const About = () => {
-
   return (
-    <ThemedBox variant="dark" style={{ height: '100%', width: '100%' }}>
-      <Box pt={10}>
-        <Typography variant="h3" align="center" fontFamily={ fonts.secondary }>
-          <Dash style={{ height: '1em', display: 'inline-block' }} />
-          <Translate value="about.title" />
-        </Typography>
-        <Box m={2}>
-          <Typography variant="body1">
-            <Translate value="about.p1" />
-          </Typography>
-        </Box>
-        <Box m={2}>
-          <Typography variant="body1">
-            <Translate value="about.p2" />
-          </Typography>
-        </Box>
-      </Box>
-    </ThemedBox>
+    <Section variant="dark">
+      <Container>
+        <Grid container>
+          <Grid item md={7}>
+            <DashTitle stringKey="about.title" align="left" />
+            <Content mt={2} translateKey="about.p1" />
+            <Content mt={2} translateKey="about.p2" />
+          </Grid>
+        </Grid>
+      </Container>
+    </Section>
   );
 };
 

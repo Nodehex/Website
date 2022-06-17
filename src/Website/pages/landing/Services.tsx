@@ -3,7 +3,8 @@ import React from "react";
 import { Translate } from "react-i18nify";
 import styled from "styled-components";
 import { Dash } from "../../components/Branding";
-import { Column, Row, ThemedBox, fonts, ColorSecondary } from "../../components/Util";
+import { Column, Row, ThemedBox, fonts, ColorSecondary, Content, DashTitle } from "../../components/Util";
+import { Section } from "./Landing";
 
 interface CardProps {
   background: string;
@@ -40,11 +41,7 @@ const ServiceBox = ({ img, title, content }: { img: string, title: string, conte
               </Typography>
             </ColorSecondary>
             </Box>
-          <Box mt={2}>
-            <Typography variant="body1" align="left" color="white">
-              <Translate value={ content } />
-            </Typography>
-          </Box>
+          <Content translateKey={ content } color="white" mt={2} />
           <Button variant="contained" style={{ alignSelf: 'flex-end' }}>
             <Translate value="readMore" />
           </Button>
@@ -55,13 +52,8 @@ const ServiceBox = ({ img, title, content }: { img: string, title: string, conte
 };
 
 const Services = () => (
-  <ThemedBox variant="light" style={{ height: '100%', width: '100%' }}>
-    <Box pt={10}>
-      <Typography variant="h3" align="center" fontFamily={ fonts.secondary }>
-          <Dash style={{ height: '1em', display: 'inline-block' }} />
-          <Translate value="services.title" />
-      </Typography>
-    </Box>
+  <Section variant="light">
+    <DashTitle stringKey="services.title" />
     <Box p={3}>
       <Row style={{ width: '100%', alignItems: 'stretch' }}>
         <ServiceBox img="assets/icons/IM icon 1.svg" title="services.title_infomgmt" content="services.content_infomgmt"/>
@@ -69,7 +61,7 @@ const Services = () => (
         <ServiceBox img="assets/icons/R&A icon 1.svg" title="services.title_reporting" content="services.content_reporting"/>
       </Row>
     </Box>
-  </ThemedBox>
+  </Section>
 );
 
 export default Services

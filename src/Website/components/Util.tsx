@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Link as RouteLink, useSearchParams } from "react-router-dom";
 import { BoxProps, TypographyProps } from '@mui/system';
 import React from 'react';
+import { Translate } from 'react-i18nify';
+import { Dash } from './Branding';
 
 export const Row = styled(Box)`
   display: flex;
@@ -17,7 +19,6 @@ export const Column = styled(Box)`
 `;
 
 export const ThemedBox = (props: BoxProps & {children: React.ReactNode, variant: keyof PaletteColor}) => {
-  console.log('props.style', props.style)
   const theme = useTheme();
   const newStyle = {
     backgroundColor: theme.palette.primary[props.variant],
@@ -64,3 +65,19 @@ export const fonts = {
   primary: '"Roboto", sans-serif',
   secondary: '"Spartan", sans-serif'
 }
+
+export const DashTitle = ({ stringKey, align = "center" }: { stringKey: string, align?: "center" | "left" }) => (
+  <Typography variant="h3" align={ align } fontFamily={ fonts.secondary }>
+      <Dash style={{ height: '1em', display: 'inline-block' }} />
+      <Translate value={ stringKey } />
+  </Typography>
+);
+
+export const Content = (props: BoxProps & {translateKey: string}) => {
+  const theme = useTheme();
+  const newStyle = {
+    fontSize: '1.2em',
+    ...props.style
+  };
+  return <Box {...{...props, style: newStyle}}><Translate value={ props.translateKey} /></Box>
+};
