@@ -18,7 +18,7 @@ export const Column = styled(Box)`
   align-items: center;
 `;
 
-export const ThemedBox = (props: BoxProps & {children: React.ReactNode, variant: keyof PaletteColor}) => {
+export const ThemedBox = (props: BoxProps & {children?: React.ReactNode, variant: keyof PaletteColor}) => {
   const theme = useTheme();
   const newStyle = {
     backgroundColor: theme.palette.primary[props.variant],

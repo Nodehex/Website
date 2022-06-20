@@ -3,19 +3,19 @@ import styled from "styled-components";
 
 export const Logo = (props: BoxProps) => (
   <Box {...props}>
-    <img src="assets/Logo/Main logo.svg" alt="" style={{ height: '30px' }}></img>
+    <img src="/assets/Logo/Main logo.svg" alt="" style={{ height: '30px' }}></img>
   </Box>
 );
 
 export const TagLine = (props: BoxProps) => (
   <Box {...props}>
-    <img src="assets/Landing Page/tag line 1.svg" alt="" style={{ height: '30px' }}></img>
+    <img src="/assets/Landing Page/tag line 1.svg" alt="" style={{ height: '30px' }}></img>
   </Box>
 );
 
 export const HeroGraphic = (props: BoxProps) => (
   <Box {...props}>
-    <img src="assets/Landing page/Landing hero 3.svg" alt="" style={{ width: '100%' }}></img>
+    <img src="/assets/Landing page/Landing hero 3.svg" alt="" style={{ width: '100%' }}></img>
   </Box>
 );
 
@@ -28,6 +28,6 @@ const YellowSvg = styled.img`
 
 export const Dash = (props: BoxProps) => (
   <Box {...props}>
-    <YellowSvg src="assets/page title icons.svg" alt="" style={{ height: '100%' }}></YellowSvg>
+    <YellowSvg src="/assets/page title icons.svg" alt="" style={{ height: '100%' }}></YellowSvg>
   </Box>
 ); 

@@ -16,7 +16,7 @@ const Services = () => {
     <Page>
       <Routes>
         <Route path="/" element={<OM/>}></Route>
-        <Route path="/om" element={<OM/>}></Route>
+        <Route path="/om-manuals" element={<OM/>}></Route>
       </Routes>
     </Page>
   )

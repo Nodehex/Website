@@ -1,7 +1,9 @@
 import { Box, useTheme } from "@mui/material";
 import styled, { keyframes } from "styled-components";
 import { HeroGraphic } from "../../components/Branding";
+import { GrayDash } from "../../components/Dashes";
 import { Column, Row, ThemedBox } from "../../components/Util";
+import { Section } from "./Landing";
 
 const arrowAnimation = keyframes`
   0% {
@@ -38,12 +40,10 @@ const ChevronDown = () => {
 };
 
 const Hero = () => (
-  <ThemedBox variant="dark" style={{ width: '100%' }}>
-    <Column style={{ height: '80vh', justifyContent: 'center'}}>
-      <HeroGraphic style={{ width: '60vw' }} />
-      <ChevronDown />
-    </Column>
-  </ThemedBox>
+  <Section variant="dark">
+    <HeroGraphic style={{ width: '40vw' }} />
+    <ChevronDown />
+  </Section>
 );
 
 export default Hero

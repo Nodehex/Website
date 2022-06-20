@@ -38,10 +38,10 @@ const Links = () => (
 
 const Header = () => {
   return <>
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <Row style={{ justifyContent: 'space-between', width: '100%' }}>
-          <Logo/>
+          <Link to="/"><Logo/></Link>
           <Links/>
         </Row>
       </Toolbar>

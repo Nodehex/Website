@@ -3,6 +3,7 @@ import React from "react";
 import { Translate } from "react-i18nify";
 import styled from "styled-components";
 import { Dash } from "../../components/Branding";
+import { GrayDash, YellowDash } from "../../components/Dashes";
 import { Column, Row, ThemedBox, fonts, ColorSecondary, Content, DashTitle } from "../../components/Util";
 import { Section } from "./Landing";
 
@@ -51,17 +52,21 @@ const ServiceBox = ({ img, title, content }: { img: string, title: string, conte
   );
 };
 
-const Services = () => (
-  <Section variant="light">
-    <DashTitle stringKey="services.title" />
-    <Box p={3}>
-      <Row style={{ width: '100%', alignItems: 'stretch' }}>
-        <ServiceBox img="assets/icons/IM icon 1.svg" title="services.title_infomgmt" content="services.content_infomgmt"/>
-        <ServiceBox img="assets/icons/O&M icon 1.svg" title="services.title_om" content="services.content_om"/>
-        <ServiceBox img="assets/icons/R&A icon 1.svg" title="services.title_reporting" content="services.content_reporting"/>
-      </Row>
-    </Box>
-  </Section>
-);
+const Services = () => {
+  return (
+    <Section variant="light">
+      <DashTitle stringKey="services.title"/>
+      <Box p={3}>
+        <Row style={{ width: '100%', alignItems: 'stretch' }}>
+          <ServiceBox img="assets/icons/IM icon 1.svg" title="services.title_infomgmt" content="services.content_infomgmt"/>
+          <ServiceBox img="assets/icons/O&M icon 1.svg" title="services.title_om" content="services.content_om"/>
+          <ServiceBox img="assets/icons/R&A icon 1.svg" title="services.title_reporting" content="services.content_reporting"/>
+        </Row>
+      </Box>
+      <GrayDash  transform={[0,0]} top={ "50%" } />
+      <YellowDash  transform={[0,0]} top={ "50%" } />
+    </Section>
+  );
+};
 
 export default Services
