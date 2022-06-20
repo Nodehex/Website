@@ -8,7 +8,7 @@ import { Section } from "./Landing";
 const Why = () => {
   return (
     <Section variant="light">
-      <TriangleLeft />
+      <TriangleLeft top="-5%" />
       <Container>
         <Grid container>
           <Grid item md={2} p={5}></Grid>

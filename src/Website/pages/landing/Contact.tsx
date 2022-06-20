@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { Translate } from "react-i18nify";
 import { fonts, DashTitle } from "../../components/Util";
 import styled from 'styled-components'
@@ -9,10 +9,10 @@ const TextField = styled.input`
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  border-bottom: 1px solid white !important;
-  -webkit-box-shadow: 0 1px 0 0 white !important;
-  box-shadow: 0 1px 0 0 white !important;
+  border-bottom: 1px solid #9e9e9e;
+  box-shadow: 0 1px 0 0 #9e9e9e !important;
   background: none;
+  -webkit-box-shadow: 0 1px 0 0 #9e9e9e !important;
   outline: none;
   overflow: auto;
   -webkit-box-shadow: none;
@@ -22,6 +22,18 @@ const TextField = styled.input`
   width: 100%;
   font-family: ${ fonts.primary };
   font-size: 1.2em;
+  padding-bottom: 5px;
+  &:focus {
+  border-bottom: 1px solid #e4c040;
+  box-shadow: 0 1px 0 0 #e4c040 !important;
+  -webkit-box-shadow: 0 1px 0 0 #e4c040 !important;
+  }
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  background: none;
+  border-radius: 3px;
 `;
 
 const Contact = () => {
@@ -41,8 +53,9 @@ const Contact = () => {
       <Typography variant="h6" fontFamily={ fonts.secondary }><Translate value="contact.subject" /></Typography>
       <TextField type="text" name="subject" required color={ theme.palette.secondary.main }/>
       <Typography variant="h6" fontFamily={ fonts.secondary }><Translate value="contact.message" /></Typography>
-      <textarea name="comment" rows={ 10 } cols={ 30 }></textarea>
+      <TextArea name="comment" rows={ 10 } cols={ 30 }></TextArea>
       <input name="_formsubmit_id" type="text" style={{ display:'none' }}/>
+      <Button type="submit" variant="contained" color="secondary">Submit</Button>
     </Box>
   </>);
 };

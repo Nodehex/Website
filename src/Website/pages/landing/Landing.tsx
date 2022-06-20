@@ -1,4 +1,5 @@
 import { Box, Container, PaletteColor } from "@mui/material"
+import { isBrowser } from "react-device-detect"
 import { ThemedBox } from "../../components/Util"
 import Page from "../Page"
 import About from "./About"
@@ -9,7 +10,7 @@ import Why from "./Why"
 
 export const Section = ({ children, variant, backgroundOverride }: { children: React.ReactNode, variant: keyof PaletteColor, backgroundOverride?: React.CSSProperties }) => {
   const style: React.CSSProperties = {
-    height: '100vh',
+    minHeight: '100vh',
     width: '100%',
     position: 'relative',
     backgroundColor: 'rgba(0,0,0,0)',
@@ -17,22 +18,22 @@ export const Section = ({ children, variant, backgroundOverride }: { children: R
   };
   let backgroundStyle: React.CSSProperties = {
     position: 'absolute',
-    height: '100vh',
+    height: '100%',
     width: '100%',
     zIndex: 1,
     overflow: 'visible',
   };
-  if (backgroundOverride) {
+  if (backgroundOverride && isBrowser) {
     backgroundStyle = backgroundOverride;
   }
   const contentStyle: React.CSSProperties = {
-    height: '100vh',
+    minHeight: '100vh',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
+    position: 'relative',
     backgroundColor: 'rgba(0,0,0,0)',
     zIndex: 2,
   };

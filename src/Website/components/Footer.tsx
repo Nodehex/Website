@@ -13,7 +13,7 @@ const FooterListItem = ({ link, stringKey }: {link: string, stringKey: string}) 
 );
 
 const FooterList = ({ titleKey, children }: { titleKey: string, children: React.ReactNode}) => (
-  <Column style={{ alignItems: 'flex-start' }}>
+  <Column style={{ alignItems: 'flex-start', flexGrow: '1', marginTop: '20%' }}>
     <ColorSecondary>
       <Typography variant="h5" fontFamily={ fonts.secondary }>
         <Translate value={ titleKey }/>
@@ -28,7 +28,7 @@ const Footer = () => {
     <footer style={{ width: '100%' }}>
       <ThemedBox variant="main" p={5}>
         <Container>
-          <Row style={{ justifyContent: 'space-evenly'}}>
+          <Row style={{ justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
             <Column>
               <Logo />
               <TagLine mt={2} />

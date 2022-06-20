@@ -43,7 +43,7 @@ const ServiceBox = ({ img, title, content }: { img: string, title: string, conte
             </ColorSecondary>
             </Box>
           <Content translateKey={ content } color="white" mt={2} />
-          <Button variant="contained" style={{ alignSelf: 'flex-end' }}>
+          <Button variant="contained" style={{ alignSelf: 'flex-end' }} color="secondary">
             <Translate value="readMore" />
           </Button>
         </Box>
@@ -55,9 +55,11 @@ const ServiceBox = ({ img, title, content }: { img: string, title: string, conte
 const Services = () => {
   return (
     <Section variant="light">
-      <DashTitle stringKey="services.title"/>
+      <Box mt={3}>
+        <DashTitle stringKey="services.title"/>
+      </Box>
       <Box p={3}>
-        <Row style={{ width: '100%', alignItems: 'stretch' }}>
+        <Row style={{ width: '100%', alignItems: 'stretch', flexWrap: 'wrap' }}>
           <ServiceBox img="assets/icons/IM icon 1.svg" title="services.title_infomgmt" content="services.content_infomgmt"/>
           <ServiceBox img="assets/icons/O&M icon 1.svg" title="services.title_om" content="services.content_om"/>
           <ServiceBox img="assets/icons/R&A icon 1.svg" title="services.title_reporting" content="services.content_reporting"/>

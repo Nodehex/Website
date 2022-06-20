@@ -1,6 +1,7 @@
 import { Box, useTheme } from "@mui/material";
+import { BrowserView, MobileView } from "react-device-detect";
 import styled, { keyframes } from "styled-components";
-import { HeroGraphic } from "../../components/Branding";
+import { HeroGraphic, Logo, TagLine } from "../../components/Branding";
 import { GrayDash } from "../../components/Dashes";
 import { Column, Row, ThemedBox } from "../../components/Util";
 import { Section } from "./Landing";
@@ -41,8 +42,17 @@ const ChevronDown = () => {
 
 const Hero = () => (
   <Section variant="dark">
-    <HeroGraphic style={{ width: '40vw' }} />
-    <ChevronDown />
+    <BrowserView>
+      <HeroGraphic style={{ width: '40vw' }} />
+      <ChevronDown />
+    </BrowserView>
+    <MobileView>
+      <Box p={10}>
+        <Logo style={{ width: '100%', textAlign: 'center' }} />
+        <Box mt={7} />
+        <TagLine mt={2} style={{ width: '100%', textAlign: 'center' }} />
+      </Box>
+    </MobileView>
   </Section>
 );
 

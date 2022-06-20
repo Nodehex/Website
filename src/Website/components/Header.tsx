@@ -1,4 +1,5 @@
 import { AppBar, Box, Toolbar } from "@mui/material"
+import { BrowserView, MobileView } from "react-device-detect";
 import { Translate } from "react-i18nify";
 import styled from "styled-components";
 import LocaleSelector from "../i18n/LocaleSelector";
@@ -38,14 +39,23 @@ const Links = () => (
 
 const Header = () => {
   return <>
-    <AppBar position="fixed">
-      <Toolbar>
-        <Row style={{ justifyContent: 'space-between', width: '100%' }}>
-          <Link to="/"><Logo/></Link>
-          <Links/>
+    <BrowserView>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Row style={{ justifyContent: 'space-between', width: '100%' }}>
+            <Link to="/"><Logo/></Link>
+            <Links/>
+          </Row>
+        </Toolbar>
+      </AppBar>
+    </BrowserView>
+    <MobileView>
+      <AppBar position="fixed">
+        <Row m={2} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+          <Logo />
         </Row>
-      </Toolbar>
-    </AppBar>
+      </AppBar>
+    </MobileView>
   </>
 }
 

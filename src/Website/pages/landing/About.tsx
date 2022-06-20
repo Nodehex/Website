@@ -24,7 +24,7 @@ const About = () => {
       <YellowDash transform={[0,-50]}/>
       <Container>
         <Grid container>
-          <Grid item md={7}>
+          <Grid item md={7} p={5}>
             <DashTitle stringKey="about.title" align="left" />
             <Content mt={2} translateKey="about.p1" />
             <Content mt={2} translateKey="about.p2" />

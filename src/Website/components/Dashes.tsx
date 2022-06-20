@@ -1,5 +1,6 @@
 import { PaletteColor, useTheme } from "@mui/material";
 import styled from "styled-components";
+import { BrowserView } from 'react-device-detect'
 
 const coordsToPoints = (coords: Array<Array<number>>, transform: Array<number>) => {
   const [x, y] = transform;
@@ -26,11 +27,11 @@ export const GrayDash = ({transform = [0,0], top = "0", zIndex = -1}: {transform
     [74.2,77],
     [69,77],
   ];
-  return (<>
+  return (<BrowserView>
     <StyledSVG  viewBox="0 0 100 100" preserveAspectRatio="none" offset={ top } style={{ zIndex }}>
       <polygon points={ coordsToPoints(points, transform) } fill={ theme.palette.primary.dark } />
     </StyledSVG>
-  </>)
+  </BrowserView>)
 };
 
 export const YellowDash = ({transform = [0,0], top = "0", zIndex = -1}: {transform?: Array<number>, top?: string, zIndex?: number}) => {
@@ -41,11 +42,11 @@ export const YellowDash = ({transform = [0,0], top = "0", zIndex = -1}: {transfo
     [71.2,62],
     [66,62]
   ];
-  return (<>
+  return (<BrowserView>
     <StyledSVG  viewBox="0 0 100 100" preserveAspectRatio="none" offset={ top } style={{ zIndex }}>
       <polygon  points={ coordsToPoints(points, transform) } fill={ theme.palette.secondary.main } />
     </StyledSVG>
-  </>)
+  </BrowserView>)
 };
 
 export const TriangleLeft = ({transform = [0,0], top = "0", zIndex = -1}: {transform?: Array<number>, top?: string, zIndex?: number}) => {
@@ -55,11 +56,11 @@ export const TriangleLeft = ({transform = [0,0], top = "0", zIndex = -1}: {trans
     [25,50],
     [0,100]
   ];
-  return (<>
+  return (<BrowserView>
     <StyledSVG  viewBox="0 0 100 100" preserveAspectRatio="none" offset={ top }>
       <polygon  points={ coordsToPoints(points, transform) } fill={ theme.palette.secondary.main } />
     </StyledSVG>
-  </>)
+  </BrowserView>)
 };
 
 export const InvertedTriangle = ({transform = [0,0], top = "0", zIndex = -1}: {transform?: Array<number>, top?: string, zIndex?: number}) => {
@@ -71,9 +72,9 @@ export const InvertedTriangle = ({transform = [0,0], top = "0", zIndex = -1}: {t
     [85,100],
     [0,100]
   ];
-  return (<>
+  return (<BrowserView>
     <StyledSVG  viewBox="0 0 100 100" preserveAspectRatio="none" offset={ top }>
       <polygon  points={ coordsToPoints(points, transform) } fill={ theme.palette.primary.dark } />
     </StyledSVG>
-  </>)
+  </BrowserView>)
 };

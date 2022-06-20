@@ -8,7 +8,7 @@ const Page = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <ThemedBox variant="dark">
-      <Column style={{ minHeight: '100vh', width: '100%' }}>
+      <Column style={{ width: '100%' }}>
         <Header/>
         <Box style={{ flexGrow: '1', width: '100%' }}>
           { children }
