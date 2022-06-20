@@ -1,34 +1,44 @@
 {
-  "title_index": "Nodehex",
-  "title_infomgmt": "Nodehex - Informationshantering",
-  "title_om": "Nodehex - Drift- och underhållsmanualer",
-  "title_reporting": "Nodehex - Rapporter och analyser",
-  "title_privacy": "Nodehex - Integritetspolicy",
+  "title": {
+    "index": "Nodehex",
+    "infomgmt": "Nodehex - Informationshantering",
+    "om": "Nodehex - Drift- och underhållsmanualer",
+    "reporting": "Nodehex - Rapporter och analyser",
+    "privacy": "Nodehex - Integritetspolicy"
+  },
   "header": {
     "services": "TJÄNSTER",
     "about": "OM",
     "contact": "KONTAKT",
     "home": "HEM"
   },
-  "services_title": "TJÄNSTER",
-  "services_title_infomgmt": "INFORMATIONSHANTERING",
-  "services_content_infomgmt": "Hantering och koordinering av digitala tillgångar, data och rådgivning gällande processer och implementering av informationshanteringssystem för datacenter i hyperskala, bostads- och specialistinfrastruktur.",
-  "read_more": "LÄS MER",
-  "services_title_om": "DoU-MANUALER",
-  "services_content_om": "Underhåll av högkvalitativa byggnader kräver ofta enastående grundinformation. Vi hanterar manualprocessen och säkrar att er driftavdelning står på stadig grund.",
-  "services_title_reporting": "RAPPORTER & ANALYSER",
-  "services_content_reporting": "Spårning av utförsäljning, analyser av nyckelpunkter och tydliga, lättsmälta informationspaneler säkerställer att ni har informationen ni behöver för att noga följa dokumentationens utveckling.",
-  "about_title": "OM NODEHEX",
-  "about_p1": "Nodehex är en specialistgrupp för informationshantering av datacenter i hyperskala och kommersiella byggprojekt. Vårt team har bred erfarenhet av att leverera och hantera dokumentationstjänster för ett stort antal projekt inom datacenter i hyperskala samt den specialistinfrastruktur, de kontor och övriga kringliggande byggnader som möjliggör dem. Vi simplifierar processen genom att förstå kundbehov och krav samt ta bort oklarheter kring dokumentation för att implementera en struktur som säkerställer ett bestående intryck av informationshanteringen genom alla uppdragskritiska system.",
-  "about_p2": "Våra tjänster fokuserar på att tillhandahålla en högkvalitativ, datadriven och framtung insats för att säkerställa effektiv leverans från design till avveckling. Detta kombineras med support under första driftåret, en smidig övergång till högkvalitativ dokumentation för driftavdelningen att använda, en anläggning är bara så bra som informationen den understöds av.",
-  "why_title": "VARFÖR NODEHEX",
-  "why_p1": "Nodehex är ett tvärvetenskapligt, multikulturellt team av informationshanteringsspecialister, datavetare, mjukvaruutvecklare och formgivare som har arbetat inom bygg- och IT-branscherna under de senaste 10 åren.",
-  "why_p2": "Vår expertis har utvecklats genom storskaliga infrastrukturprojekt, byggnader för datacenter i hyperskala och specialistanläggningar. Vi strävar efter att utnyttja framväxande teknologier inom den digitala byggsektorn för att extrahera det enorma värde av projektdatat och tillhandahålla expertkonsultation av process- och informationshantering.",
-  "contact_title": "KONTAKT",
-  "contact_name": "Namn",
-  "contact_email": "E-post",
-  "contact_subject": "Ämne",
-  "contact_message": "Meddelande",
+  "services": {
+    "title": "TJÄNSTER",
+    "title_infomgmt": "INFORMATIONSHANTERING",
+    "content_infomgmt": "Hantering och koordinering av digitala tillgångar, data och rådgivning gällande processer och implementering av informationshanteringssystem för datacenter i hyperskala, bostads- och specialistinfrastruktur.",
+    "title_om": "DoU-MANUALER",
+    "content_om": "Underhåll av högkvalitativa byggnader kräver ofta enastående grundinformation. Vi hanterar manualprocessen och säkrar att er driftavdelning står på stadig grund.",
+    "title_reporting": "RAPPORTER & ANALYSER",
+    "content_reporting": "Spårning av utförsäljning, analyser av nyckelpunkter och tydliga, lättsmälta informationspaneler säkerställer att ni har informationen ni behöver för att noga följa dokumentationens utveckling."
+  },
+  "readMore": "LÄS MER",
+  "about": {
+    "title": "OM NODEHEX",
+    "p1": "Nodehex är en specialistgrupp för informationshantering av datacenter i hyperskala och kommersiella byggprojekt. Vårt team har bred erfarenhet av att leverera och hantera dokumentationstjänster för ett stort antal projekt inom datacenter i hyperskala samt den specialistinfrastruktur, de kontor och övriga kringliggande byggnader som möjliggör dem. Vi simplifierar processen genom att förstå kundbehov och krav samt ta bort oklarheter kring dokumentation för att implementera en struktur som säkerställer ett bestående intryck av informationshanteringen genom alla uppdragskritiska system.",
+    "p2": "Våra tjänster fokuserar på att tillhandahålla en högkvalitativ, datadriven och framtung insats för att säkerställa effektiv leverans från design till avveckling. Detta kombineras med support under första driftåret, en smidig övergång till högkvalitativ dokumentation för driftavdelningen att använda, en anläggning är bara så bra som informationen den understöds av."
+  },
+  "why": {
+    "title": "VARFÖR NODEHEX",
+    "p1": "Nodehex är ett tvärvetenskapligt, multikulturellt team av informationshanteringsspecialister, datavetare, mjukvaruutvecklare och formgivare som har arbetat inom bygg- och IT-branscherna under de senaste 10 åren.",
+    "p2": "Vår expertis har utvecklats genom storskaliga infrastrukturprojekt, byggnader för datacenter i hyperskala och specialistanläggningar. Vi strävar efter att utnyttja framväxande teknologier inom den digitala byggsektorn för att extrahera det enorma värde av projektdatat och tillhandahålla expertkonsultation av process- och informationshantering."
+  },
+  "contact": {
+    "title": "KONTAKT",
+    "name": "Namn",
+    "email": "E-post",
+    "subject": "Ämne",
+    "message": "Meddelande"
+  },
   "footer": {
     "tagline": "Construction data, digitalised",
     "general": "Allmänt",
@@ -144,8 +154,10 @@
   "privacy_h2_10": "Information för barn",
   "privacy_p11_1": "En annan prioritet för oss är att skydda barn när de använder internet. Vi uppmanar föräldrar och målsmän att observera, delta och/eller övervaka och vägleda barnens aktivitet på internet.",
   "privacy_p11_2": "Nodehex AB samlar inte till vår vetskap personuppgifter om barn under 13 år. Om du misstänker att ditt barn har delgett sådan information på vår webbplats, uppmanar vi dig att genast kontakta oss för att ska kunna radera sådan information från våra register snarast möjligt.",
-  "cookies_title": "Vi använder kakor",
-  "cookies_p1": "Vi använder kakor ('cookies') och andra spårningsverktyg för att förbättra din upplevelse av vår webbplats och analysera webbplatstrafik, inklusive land.",
-  "cookies_allow": "Tillåt",
-  "cookies_reject": "Neka"
+  "cookies": {
+    "title": "Vi använder kakor",
+    "p1": "Vi använder kakor ('cookies') och andra spårningsverktyg för att förbättra din upplevelse av vår webbplats och analysera webbplatstrafik, inklusive land.",
+    "allow": "Tillåt",
+    "reject": "Neka"
+  }
 }
