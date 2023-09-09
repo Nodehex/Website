@@ -34,7 +34,7 @@ const Arrow = styled.span`
 const ChevronDown = () => {
   const theme = useTheme();
   return (
-    <Box mt={5}>
+    <Box mt={5} style={{ display: 'flex', justifyContent: 'space-around'}}>
       <Arrow color={ theme.palette.secondary.main }/>
     </Box>
   )

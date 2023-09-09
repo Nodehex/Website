@@ -46,11 +46,12 @@ const StyledRouteLink = styled(RouteLink)`
 `;
 
 
-export const Link = ({to, children}: {to: string, children: React.ReactNode}) => {
+export const Link = ({to, children, searchParamsOverride}: {to: string, children: React.ReactNode, searchParamsOverride?: string}) => {
   const theme = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
+  const routeSearchParams = searchParamsOverride ?? searchParams.toString();
   return (
-  < StyledRouteLink to={to+'?'+searchParams.toString()} color={ theme.palette.secondary.main }>
+  < StyledRouteLink to={to+'?'+routeSearchParams} color={ theme.palette.secondary.main }>
     {children}
   </StyledRouteLink>
   )

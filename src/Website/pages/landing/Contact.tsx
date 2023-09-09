@@ -43,6 +43,7 @@ const Contact = () => {
       component="form"
       action="https://formsubmit.co/contact-web@nodehex.com"
       method="POST"
+      id="contact"
     >
       <DashTitle stringKey="contact.title" align="left" />
       <input name="_redirect" type="hidden" id="name" value="https://nodehex.com"/>

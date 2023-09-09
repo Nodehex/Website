@@ -22,7 +22,7 @@ const About = () => {
     <Section variant="dark" backgroundOverride={backgroundOverride}>
       <InvertedTriangle />
       <YellowDash transform={[0,-50]}/>
-      <Container>
+      <Container id="about">
         <Grid container>
           <Grid item md={7} p={5}>
             <DashTitle stringKey="about.title" align="left" />

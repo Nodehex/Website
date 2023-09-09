@@ -17,17 +17,17 @@ const Spacer = styled.div`
 const Links = () => (
   <Row>
     <Spacer>
-      <Link to="./services">
+      <Link to="/#services">
         <HeaderText><Translate value={"header.services"}/></HeaderText>
       </Link>
     </Spacer>
     <Spacer>
-      <Link to="./about">
+      <Link to="/#about">
         <HeaderText><Translate value={"header.about"}/></HeaderText>
       </Link>
     </Spacer>
     <Spacer>
-      <Link to="./contact">
+      <Link to="/#contact">
         <HeaderText><Translate value={"header.contact"}/></HeaderText>
       </Link>
     </Spacer>
