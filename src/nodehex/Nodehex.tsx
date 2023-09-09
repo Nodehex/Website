@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './util/i18n'
 import { createContext, useState } from 'react';
 import Landing from './pages/landing/Landing';
+import Navbar from './common/Navbar';
 
 const StyleWrapper = styled.div`
     color: ${ props => props.theme.primary };
@@ -15,6 +16,7 @@ const Nodehex = () => {
     return (
         <LanguageContext.Provider value={language}>
             <StyleWrapper>
+                <Navbar />
                 <Landing />
             </StyleWrapper>
         </LanguageContext.Provider>

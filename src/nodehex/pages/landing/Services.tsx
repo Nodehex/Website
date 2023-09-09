@@ -39,7 +39,7 @@ const ServiceBox = ({ img, title, content, url }: { img: string, title: string, 
           <Box mt={2}>
             <ColorSecondary>
               <Typography variant="h6" align="center" fontFamily={ fonts.secondary }>
-                { t("title") }
+                { t(title) }
               </Typography>
             </ColorSecondary>
             </Box>
