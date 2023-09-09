@@ -2,27 +2,26 @@ import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag"
 import styled from 'styled-components';
+import en from './strings/en.json'
+import se from './strings/se.json'
+
+export type LocaleDefinition = {
+  [key: string]: {
+    [key:string]: string
+  } | LocaleDefinition | string
+};
+
+export const locales: LocaleDefinition = {
+  en,
+  se
+};
 
 const resources = {
     se: {
-        translation: {
-            header: {
-                services: "TJÄNSTER",
-                about: "OM",
-                contact: "KONTAKT",
-                home: "HEM",
-            }
-        }
+        translation: locales.en
     },
     en: {
-        translation: {
-            header: {
-                services: "SERVICES",
-                about: "ABOUT",
-                contact: "CONTACT",
-                home: "HOME",
-            }
-        }
+        translation: locales.se
     }
 };
 

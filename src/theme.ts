@@ -1,3 +1,5 @@
+import { createTheme, ThemeProvider } from "@mui/material";
+
 export const nodehex = {
     primary: 'white',
     accent: '#e4c040',
@@ -11,3 +13,20 @@ export const nodehex = {
         content: '"Roboto", sans-serif'
     }
 };
+
+export const muiTheme = createTheme({
+    palette: {
+            primary: {
+            light: nodehex.grey,
+            main: nodehex.grey,
+            dark: nodehex.dark,
+            contrastText: '#white',
+        },
+            secondary: {
+            light: nodehex.accent,
+            main: nodehex.accent,
+            dark: nodehex.accent,
+            contrastText: '#000000',
+        },
+    }
+});

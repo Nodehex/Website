@@ -2,6 +2,7 @@ import Page from './common/Page';
 import styled from 'styled-components';
 import './util/i18n'
 import { createContext, useState } from 'react';
+import Landing from './pages/landing/Landing';
 
 const StyleWrapper = styled.div`
     color: ${ props => props.theme.primary };
@@ -14,7 +15,7 @@ const Nodehex = () => {
     return (
         <LanguageContext.Provider value={language}>
             <StyleWrapper>
-                <Page />
+                <Landing />
             </StyleWrapper>
         </LanguageContext.Provider>
     );

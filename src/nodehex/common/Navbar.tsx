@@ -34,17 +34,6 @@ const LinkContainer = styled.div`
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
-    // const [language, setLanguage] = useContext(LanguageContext);
-
-    const toggleLanguage = () => {
-        const newLanguage = i18n.language == 'se' ? 'en' : 'se';
-        i18n.changeLanguage(newLanguage)
-    };
-
-    const LanguageToggleFlag = () => {
-        const newLanguage = i18n.language == 'se' ? 'gb' : 'se';
-        return <ReactCountryFlag svg countryCode={newLanguage }  height="16"></ReactCountryFlag>
-    };
 
     return <NavbarContainer>
         <Image src="assets/main-logo.svg" alt="Nodehex AB" />
